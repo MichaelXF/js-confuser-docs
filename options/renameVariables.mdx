@@ -93,12 +93,16 @@ console.log(jRLf713)
 
 ###### `options.renameVariables(varName)`
 
-Control which variable names are changed. Returns a `boolean`. | Parameter | Type | Description | | `varName` | `string` | The variable name proposed to be changed. |
+Control which variable names are changed. Returns a `boolean`.
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `varName` | `string` | The variable name proposed to be changed. |
 
 ```js
 module.exports = {
   target: "node",
-
+  
   // Disable renaming a certain variable
   renameVariables: (varName) => varName != "jQuery",
 };

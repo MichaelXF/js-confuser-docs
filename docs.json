@@ -26,13 +26,13 @@
         "group": "Getting Started",
         "pages": [
           "index",
-          "what-is-obfuscation",
-          "playground",
-          "installation",
-          "usage",
-          "faq",
-          "best-practices",
-          "roadmap"
+          "getting-started/what-is-obfuscation",
+          "getting-started/playground",
+          "getting-started/installation",
+          "getting-started/usage",
+          "getting-started/faq",
+          "getting-started/best-practices",
+          "getting-started/roadmap"
         ]
       },
       {
@@ -50,7 +50,7 @@
             "group": "Identifiers",
             "pages": [
               "identifier-generator",
-              "rename-variables",
+              "options/renameVariables",
               "rename-globals",
               "options/renameLabels",
               "moved-declarations"
