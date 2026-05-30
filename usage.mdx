@@ -3,11 +3,7 @@ title: "Usage"
 description: "Learn how to use JS-Confuser's API"
 ---
 
-JS-Confuser exposes a simple API that allows you to obfuscate your code with just a few lines of code.
-
-#### Example
-
-The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
+JS-Confuser exposes a simple API that allows you to obfuscate your code with just a few lines of code. The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
 ```js
 import JSConfuser from "js-confuser";
@@ -33,9 +29,9 @@ JSConfuser.obfuscate(sourceCode, options)
 
 ---
 
-#### API Methods
+### API Methods
 
-###### `JSConfuser.obfuscate(sourceCode, options)`
+#### `JSConfuser.obfuscate(sourceCode, options)`
 
 Obfuscates source code. Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to an object of the obfuscated result.
 
@@ -44,7 +40,7 @@ Obfuscates source code. Returns a [Promise](https://developer.mozilla.org/en-US/
 | `sourceCode` | `string` | The JavaScript code to be obfuscated. |
 | `options` | `object` | The obfuscator settings. |
 
-Return Type: `Promise`
+Return Type: `Promise<ObfuscationResult>`
 
 | Property | Type | Description |
 | --- | --- | --- |
@@ -52,7 +48,7 @@ Return Type: `Promise`
 
 ---
 
-###### `JSConfuser.obfuscateAST(AST, options)`
+#### `JSConfuser.obfuscateAST(AST, options)`
 
 Obfuscates a Babel AST. Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -65,8 +61,8 @@ Note: Mutates the object.
 
 ---
 
-##### API Internals
+### API Internals
 
-###### `JSConfuser.presets`
+#### `JSConfuser.presets`
 
 The internal object where JS-Confuser presets are stored. The presets (`"low"`, `"medium"`, and `"high"`) can be accessed through: `JSConfuser.presets["high"]`
