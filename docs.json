@@ -100,10 +100,7 @@
     "strict": true
   },
   "background": {
-    "decoration": "gradient",
-    "color": {
-      "dark": "#0f1214"
-    }
+    "decoration": "gradient"
   },
   "icons": {
     "library": "fontawesome"
