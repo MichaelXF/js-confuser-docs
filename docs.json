@@ -24,7 +24,18 @@
         "pages": [
           "index",
           "what-is-obfuscation",
-          "playground"
+          "playground",
+          "installation",
+          "usage",
+          "faq",
+          "best-practices",
+          "roadmap"
+        ]
+      },
+      {
+        "group": "Options",
+        "pages": [
+          "all-options"
         ]
       }
     ]
