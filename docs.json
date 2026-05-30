@@ -63,6 +63,10 @@
   "navbar": {
     "links": [
       {
+        "href": "https://js-confuser.com/editor",
+        "label": "Try It Out"
+      },
+      {
         "href": "https://github.com/MichaelXF/js-confuser",
         "label": "GitHub"
       },
