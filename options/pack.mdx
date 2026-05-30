@@ -1,9 +1,10 @@
 ---
 title: "Pack"
-description: "Packs the output code into a single `Function()` call. Designed to escape strict mode constraints."
+description: "Packs the output code into a single `Function()` call. Designed to escape strict mode constraints"
 ---
 
-Option name: `"pack"` Option values: `true/false`
+- Option name: `"pack"`
+- Option values: `true/false`
 
 > \[!WARNING\] Requires Eval The obfuscated code will contain unsafe eval expressions. The code will not work properly in [environments that have disabled eval](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_eval_expressions)
 

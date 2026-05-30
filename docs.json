@@ -35,12 +35,12 @@
       {
         "group": "Options",
         "pages": [
-          "all-options",
+          "options/all-options",
           {
             "group": "Build Settings",
             "pages": [
-              "target",
-              "pack"
+              "options/target",
+              "options/pack"
             ]
           }
         ]
@@ -48,10 +48,10 @@
       {
         "group": "Presets",
         "pages": [
-          "all-presets",
-          "high-preset",
-          "medium-preset",
-          "low-preset"
+          "presets/all-presets",
+          "presets/high",
+          "presets/medium",
+          "presets/low"
         ]
       }
     ]
