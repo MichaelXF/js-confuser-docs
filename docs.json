@@ -52,7 +52,7 @@
               "identifier-generator",
               "rename-variables",
               "rename-globals",
-              "untitled-page",
+              "options/renameLabels",
               "moved-declarations"
             ]
           }
