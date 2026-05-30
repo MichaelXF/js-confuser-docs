@@ -18,20 +18,16 @@
         ]
       }
     ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "what-is-obfuscation",
+          "playground"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
