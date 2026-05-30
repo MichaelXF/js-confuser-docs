@@ -1,5 +1,6 @@
 ---
 title: "Usage"
+description: "Learn how to use JS-Confuser's API"
 ---
 
 JS-Confuser exposes a simple API that allows you to obfuscate your code with just a few lines of code.
@@ -38,11 +39,16 @@ JSConfuser.obfuscate(sourceCode, options)
 
 Obfuscates source code. Returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to an object of the obfuscated result.
 
-| Parameter | Type | Description | | --- | --- | | `sourceCode` | `string` | The JavaScript code to be obfuscated. | | `options` | `object` | The obfuscator settings. |
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `sourceCode` | `string` | The JavaScript code to be obfuscated. |
+| `options` | `object` | The obfuscator settings. |
 
 Return Type: `Promise`
 
-| Property | Type | Description | | --- | --- | | `code` | `string` | The obfuscated code. |
+| Property | Type | Description |
+| --- | --- | --- |
+| `code` | `string` | The obfuscated code. |
 
 ---
 
@@ -52,7 +58,10 @@ Obfuscates a Babel AST. Returns a [Promise](https://developer.mozilla.org/en-US/
 
 Note: Mutates the object.
 
-| Parameter | Type | Description | | --- | --- | | `AST` | `object` | The Babel AST. This object will be mutated. | | `options` |  `object`| The obfuscator settings. |
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `AST` | `object` | The Babel AST. This object will be mutated. |
+| `options` | `object` | The obfuscator settings. |
 
 ---
 
