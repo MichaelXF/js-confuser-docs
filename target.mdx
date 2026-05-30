@@ -1,0 +1,34 @@
+---
+title: "Target"
+description: "The execution context for your output."
+---
+
+Option name: `"target"` Option values: `"browser"/"node"`
+
+---
+
+#### Usage Example
+
+The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
+
+```js
+import JSConfuser from "js-confuser";
+import {readFileSync, writeFileSync} from "fs";
+
+// Read input code
+const sourceCode = readFileSync("input.js", "utf8");
+const options = {
+  target: 'node',
+  compact: true,
+};
+
+JSConfuser.obfuscate(sourceCode, options).then((result)=>{
+  // Write output code
+  writeFileSync("output.js", result.code);
+}).catch(err=>{
+  // Error occurred
+  console.error(err);  
+});
+```
+
+---
