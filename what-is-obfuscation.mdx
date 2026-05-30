@@ -28,7 +28,7 @@ This example has `Compact` enabled. This simply removes comments and whitespace 
 // Verify the user's license key
 async function checkUserLicense(){
   const licenseKey = "YOUR_LICENSE_KEY";
-
+  
   // Send a request to the license server
   const response = await fetch({
     url: "https://api.example.com/check-license",
@@ -36,7 +36,7 @@ async function checkUserLicense(){
     body: JSON.stringify({ licenseKey })
   });
   const data = await response.json();
-
+  
   // User does not have a valid license :(
   if (!data.licenseStatus) {
     alert("You do not have a valid license.");

@@ -45,6 +45,16 @@
               "options/target",
               "options/pack"
             ]
+          },
+          {
+            "group": "Identifiers",
+            "pages": [
+              "identifier-generator",
+              "rename-variables",
+              "rename-globals",
+              "untitled-page",
+              "moved-declarations"
+            ]
           }
         ]
       },
