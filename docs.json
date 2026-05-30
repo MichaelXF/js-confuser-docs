@@ -5,7 +5,7 @@
   "colors": {
     "primary": "#3399ff",
     "light": "#3399ff",
-    "dark": "#15803D"
+    "dark": "#3399ff"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -86,7 +86,8 @@
       "mcp",
       "cursor",
       "vscode"
-    ]
+    ],
+    "display": "toc"
   },
   "footer": {
     "socials": {
@@ -97,5 +98,18 @@
   "appearance": {
     "default": "dark",
     "strict": true
+  },
+  "background": {
+    "decoration": "gradient",
+    "color": {
+      "dark": "#0f1214"
+    }
+  },
+  "icons": {
+    "library": "fontawesome"
+  },
+  "banner": {
+    "content": "This is not finished. Live documentation: https://js-confuser.com/docs",
+    "dismissible": true
   }
 }
