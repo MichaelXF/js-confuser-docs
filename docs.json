@@ -109,7 +109,7 @@
     "strict": true
   },
   "background": {
-    "decoration": "gradient"
+    "decoration": "grid"
   },
   "icons": {
     "library": "fontawesome"
