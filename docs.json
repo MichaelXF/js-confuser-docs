@@ -25,7 +25,6 @@
       {
         "group": "Getting Started",
         "pages": [
-          "index",
           "getting-started/what-is-obfuscation",
           "getting-started/playground",
           "getting-started/installation",
@@ -36,9 +35,18 @@
         ]
       },
       {
+        "group": "Presets",
+        "pages": [
+          "presets",
+          "presets/high",
+          "presets/medium",
+          "presets/low"
+        ]
+      },
+      {
         "group": "Options",
         "pages": [
-          "options/all-options",
+          "options",
           {
             "group": "Build Settings",
             "pages": [
@@ -49,22 +57,74 @@
           {
             "group": "Identifiers",
             "pages": [
-              "identifier-generator",
+              "options/identifierGenerator",
               "options/renameVariables",
-              "rename-globals",
+              "options/renameGlobals",
               "options/renameLabels",
-              "moved-declarations"
+              "options/movedDeclarations"
+            ]
+          },
+          {
+            "group": "Strings",
+            "pages": [
+              "options/stringCompression",
+              "options/stringConcealing",
+              "options/customStringEncodings",
+              "options/stringEncoding",
+              "options/stringSplitting"
+            ]
+          },
+          {
+            "group": "Data",
+            "pages": [
+              "options/calculator",
+              "options/objectExtraction",
+              "options/globalConcealing",
+              "options/shuffle",
+              "options/duplicateLiteralsRemoval"
+            ]
+          },
+          {
+            "group": "Control-Flow",
+            "pages": [
+              "options/controlFlowFlattening",
+              "options/dispatcher",
+              "options/opaquePredicates",
+              "options/deadCode",
+              "options/astScrambler"
+            ]
+          },
+          {
+            "group": "Functions",
+            "pages": [
+              "options/variableMasking",
+              "options/flatten",
+              "options/rgf"
+            ]
+          },
+          {
+            "group": "Lock",
+            "pages": [
+              "options/domainLock",
+              "options/startDate",
+              "options/endDate",
+              "options/tamperProtection",
+              "options/selfDefending",
+              "options/customLocks",
+              "options/integrity",
+              "options/antiDebug",
+              "options/countermeasures"
+            ]
+          },
+          {
+            "group": "Output",
+            "pages": [
+              "options/hexadecimalNumbers",
+              "options/compact",
+              "options/minify",
+              "options/preserveFunctionLength"
             ]
           }
-        ]
-      },
-      {
-        "group": "Presets",
-        "pages": [
-          "presets/all-presets",
-          "presets/high",
-          "presets/medium",
-          "presets/low"
         ]
       }
     ]
