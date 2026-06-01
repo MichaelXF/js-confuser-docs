@@ -66,24 +66,24 @@ Tamper Protection with `Global Concealing` can detect at runtime if certain glob
 
 ##### Native function check
 
----js
+```js
 var _fetch = fetch;
 fetch = (...args)=>{
   console.log("Fetch request intercepted!", ...args)
   return _fetch(...args)
 }
----
+```
 
 This monkey-patch can be detected by inspecting the `fetch.toString()` value:
 
----js
+```js
 // Untampered
 fetch.toString() // "function fetch() { [native code] }"
 
 
 // Tampered
 fetch.toString()  // "(...args)=>{\n  console.log("Fetch request intercepted!", ...args)\n  return _fetch(...args)\n}"
----
+```
 
 Certain global functions are checked before each invocation to ensure that (1) the arguments cannot be intercepted and (2) their behavior cannot be altered.
 
@@ -91,10 +91,10 @@ Certain global functions are checked before each invocation to ensure that (1) t
 
 A direct `eval` invocation can access the local scope, only if it has not been redefined.
 
----js
+```js
 let root = {};
 eval("root=this"); // Window {window: ...}
----
+```
 
 This method securely obtains the real global object for both the browser and NodeJS. Properties on the global object can still be changed however.
 
