@@ -25,6 +25,13 @@
       {
         "group": "Getting Started",
         "pages": [
+          "index",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Getting Started",
+        "pages": [
           "getting-started/what-is-obfuscation",
           "getting-started/playground",
           "getting-started/installation",
@@ -32,15 +39,6 @@
           "getting-started/faq",
           "getting-started/best-practices",
           "getting-started/roadmap"
-        ]
-      },
-      {
-        "group": "Presets",
-        "pages": [
-          "presets",
-          "presets/high",
-          "presets/medium",
-          "presets/low"
         ]
       },
       {
@@ -126,6 +124,15 @@
             ]
           }
         ]
+      },
+      {
+        "group": "Presets",
+        "pages": [
+          "presets",
+          "presets/high",
+          "presets/medium",
+          "presets/low"
+        ]
       }
     ]
   },
@@ -136,12 +143,12 @@
         "label": "Try It Out"
       },
       {
-        "href": "https://github.com/MichaelXF/js-confuser",
-        "label": "GitHub"
-      },
-      {
         "href": "https://npmjs.com/package/js-confuser",
         "label": "NPM"
+      },
+      {
+        "href": "https://github.com/MichaelXF/js-confuser",
+        "label": "GitHub"
       }
     ]
   },
