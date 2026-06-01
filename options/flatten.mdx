@@ -18,49 +18,49 @@ This example showcases how `Flatten` transforms the code. Try it out by changing
 
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
-(function(){
-        var stringToPrint = "Hello World";
-        var timesPrinted = 0;
+(function () {
+  var stringToPrint = 'Hello World';
+  var timesPrinted = 0;
 
-        function printString(){
-          timesPrinted++;
-          console.log(stringToPrint);
-        }
+  function printString() {
+    timesPrinted++;
+    console.log(stringToPrint);
+  }
 
-        printString(); // "Hello World"
-      })();
+  printString(); // "Hello World"
+})();
 
 // Output.js
-function HHBO9j([], HHBO9j) {
-  var DEx1fXX = "Hello World",
-    _fwZmR = 0;
-  function gxiYpls(...gxiYpls) {
-    var Hjy2D7 = {
-      get "xdKCsuD"() {
-        return _fwZmR;
+function Kh0SB5U([], Kh0SB5U) {
+  var QTLXFv = 'Hello World',
+    BS2DWlx = 0;
+  function dkivS0(...dkivS0) {
+    var qCL5ohY = {
+      get Tni5fwT() {
+        return BS2DWlx;
       },
-      set "xdKCsuD"(gxiYpls) {
-        _fwZmR = gxiYpls;
+      set Tni5fwT(dkivS0) {
+        BS2DWlx = dkivS0;
       },
-      get "TvK0xy"() {
-        return DEx1fXX;
-      }
+      get Vb9YZ2S() {
+        return QTLXFv;
+      },
     };
-    return HHBO9j.Kcq9i4(gxiYpls, Hjy2D7);
+    return Kh0SB5U.VN5FhW9(dkivS0, qCL5ohY);
   }
-  gxiYpls();
+  dkivS0();
 }
-function DEx1fXX([], HHBO9j) {
-  HHBO9j.xdKCsuD++;
-  console.log(HHBO9j.TvK0xy);
+function QTLXFv([], Kh0SB5U) {
+  Kh0SB5U.Tni5fwT++;
+  console.log(Kh0SB5U.Vb9YZ2S);
 }
-(function (...qVFMWT) {
-  var HB_Ov4r = {
-    "Kcq9i4"(...qVFMWT) {
-      return DEx1fXX(...qVFMWT);
-    }
+(function (...Z1zFms) {
+  var SWxKdgW = {
+    VN5FhW9(...Z1zFms) {
+      return QTLXFv(...Z1zFms);
+    },
   };
-  return HHBO9j(qVFMWT, HB_Ov4r);
+  return Kh0SB5U(Z1zFms, SWxKdgW);
 })();
 ```
 

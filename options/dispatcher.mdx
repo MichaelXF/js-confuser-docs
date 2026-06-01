@@ -18,48 +18,50 @@ This example showcases how `Dispatcher` transforms the code. Try it out by chang
 
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
-function print(x){
+function print(x) {
   console.log(x);
 }
 
-print("Hello World"); // "Hello World"
+print('Hello World'); // "Hello World"
 
 // Output.js
-var u0rA6M = Object.create(null),
-  vG8QRL;
-function bFSejcz(bFSejcz, UTWskj, sVTvGf7, wck76LF = {}) {
-  var ofWzDs,
-    N0D5bvA = {
-      "7e2GW1": function () {
-        var [bFSejcz] = vG8QRL;
-        console.log(bFSejcz);
-      }
+var J3T0HA = Object.create(null),
+  kMpvRp;
+function y_HbQi(y_HbQi, ctAICl, gsB58K, _FkLgC = {}) {
+  var eiExJq,
+    GieXeza = {
+      RXYVhs: function () {
+        var [y_HbQi] = kMpvRp;
+        console.log(y_HbQi);
+      },
     };
-  if (UTWskj === "LTkdNGWkG4") {
-    vG8QRL = [];
+  if (ctAICl === 's8B7teeO4R') {
+    kMpvRp = [];
   }
-  if (UTWskj === "vGrT8NlMEW") {
-    function VoXFO9y() {
-      var UTWskj = function (...UTWskj) {
-          vG8QRL = UTWskj;
-          return N0D5bvA[bFSejcz].apply(this);
+  if (ctAICl === '4o1PIdcOEJ') {
+    function zGCFd9r() {
+      var ctAICl = function (...ctAICl) {
+          kMpvRp = ctAICl;
+          return GieXeza[y_HbQi].apply(this);
         },
-        sVTvGf7 = wck76LF[bFSejcz];
-      if (sVTvGf7) {
-        kN7ttmL(UTWskj, sVTvGf7);
+        gsB58K = _FkLgC[y_HbQi];
+      if (gsB58K) {
+        VtIz3bc(ctAICl, gsB58K);
       }
-      return UTWskj;
+      return ctAICl;
     }
-    ofWzDs = u0rA6M[bFSejcz] || (u0rA6M[bFSejcz] = VoXFO9y());
+    eiExJq = J3T0HA[y_HbQi] || (J3T0HA[y_HbQi] = zGCFd9r());
   } else {
-    ofWzDs = N0D5bvA[bFSejcz]();
+    eiExJq = GieXeza[y_HbQi]();
   }
-  return sVTvGf7 === "nm87c6OTXI" ? {
-    OoOagRpSBF: ofWzDs
-  } : ofWzDs;
+  return gsB58K === 'iuLcd5ewv6'
+    ? {
+        vYSjcMKmfa: eiExJq,
+      }
+    : eiExJq;
 }
-function kN7ttmL() {}
-vG8QRL = ["Hello World"], bFSejcz("7e2GW1");
+function VtIz3bc() {}
+((kMpvRp = ['Hello World']), y_HbQi('RXYVhs'));
 ```
 
 ---

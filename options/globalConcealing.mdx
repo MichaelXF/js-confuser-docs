@@ -18,118 +18,97 @@ This example showcases how `Global Concealing` transforms the code. Try it out b
 
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
-console.log("Hello World");
+console.log('Hello World');
 
 // Output.js
-var oXJ7VQj = MV867b();
-function MV867b() {
-  var oXJ7VQj = [function () {
-      return globalThis;
-    }, function () {
-      return global;
-    }, function () {
-      return window;
-    }, function () {
-      return new Function("return this")();
-    }],
-    MV867b,
-    ZfKER5 = [];
+var J2Ms4e = V3R3Rw();
+function V3R3Rw() {
+  var J2Ms4e = [
+      function () {
+        return globalThis;
+      },
+      function () {
+        return global;
+      },
+      function () {
+        return window;
+      },
+      function () {
+        return new Function('return this')();
+      },
+    ],
+    V3R3Rw,
+    _KdsRmO = [];
   try {
-    MV867b = Object;
-    ZfKER5.push("".__proto__.constructor.name);
+    V3R3Rw = Object;
+    _KdsRmO.push(''.__proto__.constructor.name);
   } catch (e) {}
-  L7HXl39: for (var cNDl_73 = 0; cNDl_73 < oXJ7VQj.length; cNDl_73++) try {
-    MV867b = oXJ7VQj[cNDl_73]();
-    for (var zXXk4RD = 0; zXXk4RD < ZfKER5.length; zXXk4RD++) if (typeof MV867b[ZfKER5[zXXk4RD]] === "undefined") continue L7HXl39;
-    return MV867b;
-  } catch (e) {}
-  return MV867b || this;
+  BMw3DI: for (var Qk4sfdl = 0; Qk4sfdl < J2Ms4e.length; Qk4sfdl++)
+    try {
+      V3R3Rw = J2Ms4e[Qk4sfdl]();
+      for (var sNM5NU = 0; sNM5NU < _KdsRmO.length; sNM5NU++)
+        if (typeof V3R3Rw[_KdsRmO[sNM5NU]] === 'undefined') continue BMw3DI;
+      return V3R3Rw;
+    } catch (e) {}
+  return V3R3Rw || this;
 }
-function ZfKER5(MV867b) {
-  switch (MV867b) {
-    case "a3R02g":
-      return oXJ7VQj.zHSXDO;
-    case "vOR8Vu":
-      return oXJ7VQj.FBek0aZ;
-    case "kouUfOx":
-      return oXJ7VQj.IHNgVZr;
-    case "h4PG0n":
-      return oXJ7VQj.jLRD6LT;
-    case "onyhR7":
-      return oXJ7VQj._OHtTB4;
-    case "bOJsne6":
-      return oXJ7VQj.MeSHFqS;
-    case "Ci87p7":
-      return oXJ7VQj.wy9T54G;
-    case "xr8mCU":
-      return oXJ7VQj.PB8w99z;
-    case "pcFJA9":
-      return oXJ7VQj.vmV9t2;
-    case "FdDvpO":
-      return oXJ7VQj.tmUGOK;
-    case "E3XO4KL":
-      return oXJ7VQj.QDXN3o;
-    case "rgbBJ8K":
-      return oXJ7VQj.w8yeT4;
-    case "6zQ9EP":
-      return oXJ7VQj.eFCNp8_;
-    case "XffrAv":
-      return oXJ7VQj.Jm8Hxv;
-    case "rMYPV0":
-      return oXJ7VQj.b8bzpgo;
-    case "EMRnVZ":
-      return oXJ7VQj.v_4A_0w;
-    case "p4nJvql":
-      return oXJ7VQj.GbUC3K;
-    case "Z0hLCI":
-      return oXJ7VQj.GLt9eY;
-    case "GRuHSpu":
-      return oXJ7VQj.VLwvIo;
-    case "ZVTek2":
-      return oXJ7VQj.UrbRSe;
-    case "i5P9Zmr":
-      return oXJ7VQj.gICEnpY;
-    case "YtjfSI":
-      return oXJ7VQj.gxCU6D;
-    case "v6Zk9qb":
-      return oXJ7VQj.NC6TPCV;
-    case "TbS40uj":
-      return oXJ7VQj.yaJP9wN;
-    case "G36GGH":
-      return oXJ7VQj.AQ0Xr4;
-    case "sfycPd":
-      return oXJ7VQj.CGBXCbn;
-    case "C7MZuz":
-      return oXJ7VQj.myOi1Ru;
-    case "noD652X":
-      return oXJ7VQj.q7JqvkJ;
-    case "fi52AQW":
-      return oXJ7VQj.MuVmvGj;
-    case "IVlYba":
-      return oXJ7VQj.lqAYWj;
-    case "e8jv5vZ":
-      return oXJ7VQj.dSImk7Z;
-    case "cT97VLD":
-      return oXJ7VQj.oGiuTu;
-    case "dTkfB5m":
-      return oXJ7VQj.UfKimz;
-    case "IAel9M":
-      return oXJ7VQj.pOloxi4;
-    case "VCZS3Yu":
-      return oXJ7VQj.Xc5_wb5;
-    case "DhDGIgn":
-      return oXJ7VQj.v7Odn6;
-    case "gPxRdk_":
-      return oXJ7VQj.console;
-    case "xHO9v6":
-      return oXJ7VQj.YeHvh3;
-    case "eFsZwM":
-      return oXJ7VQj.sXYNuQ;
-    case "zlQGaww":
-      return oXJ7VQj.fcClCKw;
+function _KdsRmO(V3R3Rw) {
+  switch (V3R3Rw) {
+    case 'l0Jerho':
+      return J2Ms4e.xuDEHlF;
+    case 'sK50pX':
+      return J2Ms4e.xJfq6k;
+    case 'SmIT0w':
+      return J2Ms4e.Z__jDNQ;
+    case '4BwVB2':
+      return J2Ms4e.ytkDn3;
+    case 'DbXn6On':
+      return J2Ms4e.JZBsja0;
+    case 'OmIBSu':
+      return J2Ms4e.GKkDL4d;
+    case 'yvXITQ':
+      return J2Ms4e.z_C2Lo;
+    case 'VPM7d4x':
+      return J2Ms4e.C99Hl9;
+    case 'blt0CI':
+      return J2Ms4e.vgkAOQd;
+    case 'MAaonzn':
+      return J2Ms4e.console;
+    case 'B3fI326':
+      return J2Ms4e.CnEKQd;
+    case '8lDfRT':
+      return J2Ms4e.m8qNDmw;
+    case 'R3CMCB':
+      return J2Ms4e.F47GnZS;
+    case 'uOi041':
+      return J2Ms4e.HSeBre;
+    case 'Q8U7zM':
+      return J2Ms4e.nWaysY;
+    case 'wR3izgy':
+      return J2Ms4e.LvUGoy;
+    case '6GhqGFQ':
+      return J2Ms4e.c3SNmVD;
+    case 'fVbq5Et':
+      return J2Ms4e.deJ1Sq4;
+    case 'nvvCqYt':
+      return J2Ms4e.D5KPB38;
+    case '4iDNDY':
+      return J2Ms4e.nWjQ3A;
+    case 'p9Ev41w':
+      return J2Ms4e.tE0m51;
+    case 'rQLLt6':
+      return J2Ms4e.BH_dgx;
+    case 'AHMaWje':
+      return J2Ms4e.oBnFgQ0;
+    case 'qHO57B':
+      return J2Ms4e.PFTPYOG;
+    case 'oLgNyL6':
+      return J2Ms4e.Pb9K6Qg;
+    case 'SBsw0Zb':
+      return J2Ms4e.FrW7iQs;
   }
 }
-ZfKER5("gPxRdk_").log("Hello World");
+_KdsRmO('MAaonzn').log('Hello World');
 ```
 
 ---

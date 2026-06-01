@@ -18,99 +18,220 @@ This example showcases how `String Concealing` transforms the code. Try it out b
 
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
-var str = "Hello, World!";
+var str = 'Hello, World!';
 console.log(str);
 
 // Output.js
-function BqdooxF(BqdooxF) {
-  var SzVhyfq = "NqIdUYGenclsSfiTApJX%$0;*4vzuw=?.`)^7(htbHMOWg/a2]#D\"y6RErKFQ~x_o|P5,&9{1B+C!LVj@Z}[>:k<38m",
-    eITdNF9 = "" + (BqdooxF || ""),
-    DQXnYk = eITdNF9.length,
-    bC_kTk = [],
-    Vy8FN1A = 0,
-    WKPl7mR = 0,
-    uRcyoWS = -1;
-  for (var hmsq6eE = 0; hmsq6eE < DQXnYk; hmsq6eE++) {
-    var lVHhzS = SzVhyfq.indexOf(eITdNF9[hmsq6eE]);
-    if (lVHhzS === -1) continue;
-    if (uRcyoWS < 0) {
-      uRcyoWS = lVHhzS;
+function sOrIuqi(sOrIuqi) {
+  var u3GQZH =
+      '"6=x>0u).^/*swW89pYD,tyXe%hRU~H_`}nkFif{c<TJE1PS+vra35lCmO:g2$GbN@?&Boq;7K4QV[zZILd#A]j!M|(',
+    pdrqviF = '' + (sOrIuqi || ''),
+    ZmndRNy = pdrqviF.length,
+    Yo8sgS = [],
+    xTSMiO = 0,
+    tm352T8 = 0,
+    z0TwI49 = -1;
+  for (var iPNWbD = 0; iPNWbD < ZmndRNy; iPNWbD++) {
+    var BxiyKiQ = u3GQZH.indexOf(pdrqviF[iPNWbD]);
+    if (BxiyKiQ === -1) continue;
+    if (z0TwI49 < 0) {
+      z0TwI49 = BxiyKiQ;
     } else {
-      uRcyoWS += lVHhzS * 91;
-      Vy8FN1A |= uRcyoWS << WKPl7mR;
-      WKPl7mR += (uRcyoWS & 8191) > 88 ? 13 : 14;
+      z0TwI49 += BxiyKiQ * 91;
+      xTSMiO |= z0TwI49 << tm352T8;
+      tm352T8 += (z0TwI49 & 8191) > 88 ? 13 : 14;
       do {
-        bC_kTk.push(Vy8FN1A & 0xff);
-        Vy8FN1A >>= 8;
-        WKPl7mR -= 8;
-      } while (WKPl7mR > 7);
-      uRcyoWS = -1;
+        Yo8sgS.push(xTSMiO & 0xff);
+        xTSMiO >>= 8;
+        tm352T8 -= 8;
+      } while (tm352T8 > 7);
+      z0TwI49 = -1;
     }
   }
-  if (uRcyoWS > -1) {
-    bC_kTk.push((Vy8FN1A | uRcyoWS << WKPl7mR) & 0xff);
+  if (z0TwI49 > -1) {
+    Yo8sgS.push((xTSMiO | (z0TwI49 << tm352T8)) & 0xff);
   }
-  return DyMRXYl(bC_kTk);
+  return I67mQz(Yo8sgS);
 }
-function SzVhyfq(SzVhyfq) {
-  if (typeof eITdNF9[SzVhyfq] === 'undefined') {
-    return eITdNF9[SzVhyfq] = BqdooxF(DQXnYk[SzVhyfq]);
+function u3GQZH(u3GQZH) {
+  if (typeof pdrqviF[u3GQZH] === 'undefined') {
+    return (pdrqviF[u3GQZH] = sOrIuqi(ZmndRNy[u3GQZH]));
   }
-  return eITdNF9[SzVhyfq];
+  return pdrqviF[u3GQZH];
 }
-var eITdNF9 = {},
-  DQXnYk = ["<9|.#CXq", "z;2cN)KKgi,B=h#)^rx\"]LTf@_HeP(y^bvn=+&;&U", "pJRu|j;er%l%tI.Mw,hU\"LP@MiN1dz((n{tc~y)\"~ix]o[Cv<|D.}[WIiTz", "&2lCC2#/4ia?St]bZBMD,1wCM%^)L*At", "+i%l$:6/Zr]&$Al%H{mn%FgCF|onoT8Ay|iR~Qd_Fs1U8U", "2(!#u{rH.PJCc~8HhO0R4hNK{oEu.d;bJrVUS&N", "DvqC7@we)Q$fAzG", "B;flQ2g^rxKPO}RHoF4G*r]HDS.z/4e(JJq6B7n/:fKLN", "z6|nR_~Hm%r9B4Vvabt\";!2@2Pc1Mv!4nOG!tai\"XX8+}h_wuvfReQW=d", "*%~+|/Dq", "%Q$u{+Qk%6I).[(*/DGcGyMSDr%!b2qO;q", "hwh!HBOaXS;|~*qMhG/?j#uJ3%bp{9t?Pg+n;:xSGRy\"q", "cvV!.^w&li$1&4itoxGclrj:LFauUtuM[imn=BjHU", "*|gUgEI*v|Jl6~St>uzwH,WJ4KEE)]EMy6}Ym\"N", "Q,f+$!M\"xn3we}HX1FNV1!KJqJQ_shfX", "y%%lS#0*<oa&/Kh(s;ke=bN", "VgN`xj]fY", "Rxf\"}#]XGKzz]130)Q.zl+4CGl<LD[Atx2R6O9}*E|>Jd9$uc(gl", ">47L.b!Sd6W\"Di)?{N", "WbZDE9&rTJxBQ2KH3u2]o/LHQsm5?[eX6GoG]EinWF3qQTG", "0;6\"3[1/npp*94@b:N", "Ev0u@!|w@ys;sv]t3n\"lb}OXn%Axq>94v;~lQ9!J0fqaozFp<%&R#KSI", "%Q%eC#|^@rHx<i/bD6}LoRUKSibB940HnwnVo/>\"8xLUbd", "YrACkV$yISW", "^w~l^@1/Fp@9MhbXU_~lb^Kkl%!.q", "zOIz7FrCv%K$q", "{,<GDK+bNraBB1^p+E(R@+dynfp=6]I=f([wvF7*j_D@(48u*{d", "6{7R@#jqJXO@)~c", "a{r6R(,@)S?F{vY4:gWea_sXpS`$7d", "hr(!v6M\"GX19Mf\"b#S6R%xJ*;oIVI#St+x2c", "mnCnR/WI", "T/dw|/v+Qxhx&*d*}DxUCrPGfF=*]2eJj4!+#/Br5rC/svS", "l(cC}h7Ja_027[N7ku_c51M\"Y", "EF9uPy[wb|=1aI*w", "&u/UCxYfPT9BM}d4#6lLv6~wVTos>[$u!,nG", ",(EGSxPSaPDE)Y6b<M9\"6}9*M%>_q", "GS*B|1b@yfv&+&Xz%btUf&VG,oK\"b[b?qr*GF1S/]SN|:QoM`20\"v", ";,;\":g.J[6v*NT)?s/ue", ")QCLt,1=4pzeq", "YS%w5yL:_y#BS2kub%nGNtN", "A{)Lf!k*5o^&H23)kgbDv!pH56cD@ak0grA=/Eq<2Jb", "`d*`g@+/pJh&8&u7j|rnS+hJ$o*!XI2z@d,L+r>\"mp^F0(ku2N", "W,1c`@nnj_a$y2Rw", "Tvo]Th7S7c_$Cv30>2tu;aV+QnL/@[E)n,Cwl2WbMp80JY", "R|\"y/}(^CnDJev`;i_.CC&Wbcpl1jF!thx`=sRi\"ZQ^", "Zd:{[xdfu|Xzp7e?qrW?Q>geG", "h{ZneR|w.$i)S{:zI.2]S#g_4pwz$1c4c^L+J", "})t!~)$XuF19kZ^49?xuuhsq5QAxS{@vDv=\"3Fpa{%Ia?ii", "mMtumBJ@ef+L3T{?b|=ca}pq", "G6p=8{~w!y[9m4^=*T=ut,=kw$,Q@^|7AOYRA", "5?/?52BD?Q7&M}sX#bczyKV/2J\"*|*e?.+NVM]|wYK_$)f<)+iqV!7N", "6;e\"eQEb|SPsM~|*/)cVcr#=8x4G|UshDb1]nR(erx(ppAF^/S<c&jFq", "JGdwIQ>)oS<r^i.(Pcwlc25_YXzK8Q+4N67l", "6iV{(alnzx2E\"T4)zvT\"ta.=yob", "|x9U<hR^4%A=*zEH_,{\"&j_&OsdGnTopt(:#lhv+AJ+.8*~^", "mxJ.&+$eJXR4udp%wQ+DT+x@Qihluap%5)[Y", "s;{uTxiIp6p&IYh4DcJzu", "/rdl[xJ/xy~iNdd7.+_U`@$H_y2ECvmH9N", "t|w+b_|H@cUKj9G", "72~+G#j&ayUK&7ibL;0et,|qaQg]%z{hGq", "Lxi?n!:p4%>+t}Atp(d", "]6qC=~?Z:f\"B,1I(AG~e", "q.&+xy9JfxACg]rwRxV]w\"\"=tfNV,*u=<Mh\"njM\"5S*", "mp!v?6\"=8KixI(YXk2mYZ!n/~F_s3d.p(Q0R`@jDF|e,7{G", "0SEcPx3\"ZrZ._9?w)wg?zb4e=FN60Y", "uO=?Q/]a/s89Z@ShGc\"L#C=SeK<L:Uu;a{SRwa5D3%SfD9t(Xb%L$b]aKi", "w6+ycro=tKA1c(D)o,].WC8pfPD!ezvucw4Gi", "V,bC>\"IMliF\"{hS%}iOL}xgqd", "Gc6!ihJ7NPdG3{v7YTPD2,PG?$&@dvn4[B;]$!cyqr30?I9?Y{=\",)]X#c", "^6LUI/%\"/F[4rU", "&GAV|ZPSfPx$lY", "2)OL8:l9/P15Z2nXar>{yK0k9K&.M]S", "Op=u,+|fFE,.h]f%VxQR(^ga\"6S(x]xMH{I", "MS{Uv[voT_l%yQo;hc0R8:hK5X_Pi(,hj?3B4FN", "Rr/]nxYe&6\"_K&LX0.BD1!Ff7XB4.z^(aD(?O@+GOpi%4UzHJ/dlcjoG;ft", "jg&eyKYXzxG;A[`?uTh?>gtr!i{4ntv7(QnG", "lwEcx)b/QF8XN{)=<%4C,)S*kf1u>TQMDDnc>F%*._P4ThbJ1%\"wd+E+<fK", "$GWwp[Y476gFnzku8t[Y+rhI]Pp*7[k)LN", "M(/U/K)I@cK9FdG*fJAGa(P+YX;x.zS%hpnc", "ji]G:{@/z%;%I(UJ0w&l$&+K!ilK1z\"bdJhu^:N", "YS&eAr!*\"XnGnTK7qUV\"U2pyBxS=Nzb?E2w!R>Rw+%b@:&<wkN", "({*]_y(C.Ja*bd6HfSS+zV4ycxFE!Fw^kg7eqQs_dr2xoFr^y,yu9#sf?JI(q", "e,#.Q)KI", "bD#z1RBrNP=1K}2bBD$\"L2cyXc@95zG", "]d?!9xb\"Ws<7q", "w{w!7^5w_Se;IY^p^rrGKym/dXOFZQruG{JC~2eyFi%G0(l", "h(aB,Q+Sri>0~*I(tD1])].*4x%R@^Y?OO%LM^fy#S7&*Aw^E2R\"p", "g{Mz5j^^G", "=,MD>F%/@Qy!7{jz,;lz)\"mS]_Ajq1WXyb$+:r1/|ri)@F94;6eVFD>@Mi", "LF`=<VM\"WxrLL27J=b?Bvr[rEfs(q", "q__GZ!VJHKZ.9Zz;_,\"y@{QIY", "tSocC[.*R%u&[vpty,>?u\"P/!E?!|2|p;,<\"j{N", "nO.cE_OfF%c;|1Lz", "z{hcqQtq]6EUC98w;,NcnQN", "h(&#w~rq", "<22]6t;y&K,BKhuMvq", "Vi2c`V3NACO@@*jY", "^Onc"];
-function bC_kTk() {
-  var BqdooxF = [function () {
-      return globalThis;
-    }, function () {
-      return global;
-    }, function () {
-      return window;
-    }, function () {
-      return new Function("return this")();
-    }],
-    SzVhyfq,
-    eITdNF9 = [];
+var pdrqviF = {},
+  ZmndRNy = [
+    '(WH3b4G:iw$6]INY(gx',
+    'j{da+Bt6KWuZcRaR[BfVk$NIe:u:}>:FK"',
+    '4+x7TQC~JWkxs{3U%P_H&CuTsWZ2Jhv{`af3I3@O88',
+    'u;g[NA:e%po["',
+    ')4ArUc4jc,*7,FbT_O,_%#c=',
+    'EGHvKG`e9O)Zl$:F`u5Cez1S9bJ+h$VDTubVb:kL&D',
+    '5leH;G0<HgqPP$@p(U#0',
+    'KTTa=2Q]RgrU=iYcjnx`i$Jb,l46M;bX?B>r%K&kkOM[o+|X^PV;A#"',
+    '/4F4=G&~k2$?]I$k%~SKGPh=fwR/K2jc[Gz>MgA3ZYu=>8}p|p>/',
+    'gl<H&n5<J.xd>8FH<pBhs4m:h,s@k:,Rw8N^pLKa.:jPSq/',
+    'M,a5clW.3O,ZkRMT/YzUj106vYJp!=',
+    '/s9^qZ#6KG;I2eeUHnra5m!<{:uw&W)%,ax',
+    'y~a5@+MG_8x^$FK_&Uw)%',
+    '2cMKH]Kw&DrIDWU<.k`vC[65<:&`pFJDX6',
+    '+;|.3[CXx',
+    'zWz_5my=',
+    '&uS3&CGugg>^!WRUz*oC<KU=',
+    'Q_MKSd6%rOZ%*d{iu;w_8O0DkOto"2H~CghQ&5`N:WXV::]k0;w/',
+    'U,elzo7YQm87h$@X;Tr`=L(nkDNq`R8RTcX}U',
+    ')lW_@5;aM,aU$FM9K@IlF$4c4*DZXf3Ukib3!o;Ohpy,l$bHA"',
+    ']+t4x4$<<pSK"',
+    'CXb>NF~<xDTID8vc%J_vE$]6HtmqU>qe@x!>FlPcZ.',
+    '3;R/X;9=',
+    '*;,_)G{O<,y+p+Hp=2f>',
+    'm1f>2Pg<X,BtJ:w',
+    'S;X>Wo~)hg#b6',
+    'ac~_u+z3M@nWgd/hNp#5!V.j_by,>Rx%WuTQS:)b>l%',
+    'Nct/nK&k]DNtm#}Fo"',
+    '7gq)_39jLO"Q"A/h62jv&ngXrl_eh0"X,`j)p385iD,n_WO<Gg@.',
+    '@X7ljrikzb$WS=',
+    ']Wr`+B?P(W2vN#0JEO)}nkm4sG7&#SNeD~.H?2uj_tew1>',
+    'pYYQS:%QgppR(LJ%Qig.#g{b>Nu$Zq3nl^nR~#BY"?ha|F^',
+    'Ws#5T$56',
+    'i8z_oF/eJmwBeg]RlpnR=n85=^(4$e#nAuGVD',
+    'JOL._Kg~G*5)?o[{!gJ7E$?u(WV.Eg_H&"',
+    '>`}R8G_S$WW,m8VDU@R[cKIP"^',
+    'hle^nIfs5w^XAg#<8b@at#l:D^P_19|~Du[;joUYe,xQjh*',
+    'B+UC*4I:Op|yv7_X+s}R^Cj:3N%emx$X<;h7M3_O6^',
+    'CuCUez@QOp',
+    'fO`QO7;w7pg)Xf;_&^+uxP@X82}g8h(F&BC^C[9Ps@H)H$xp;Bg~Q#.jT,}+6',
+    'ycpHvqOk|@AqdW&e6bW})L5~IYs$59Qhw;Q0',
+    'g,IK#;s3{:%+y0UHq_SV3[R52.Zq/LIRHPT`B+Ic]lg',
+    'yOIumA9eQG+o~itcFsB47L43UG]&Rx~H=>w4o59.=8M42>',
+    't8h`]3<oz.@m07R~J;~UU3[ZpbEV|e8',
+    'qpu3[C85>',
+    'Sh0CFIXo@bfV4W;_t~_3h',
+    ']%ra{d|Z"Y4*FR)%zu=a?28</Wyw|2feqKa."jT=',
+    'sh*7L#ePK,//Sf9,kh"^8o?I`scI_htU"Po4UIzel:}psRHX6lhQ/+"',
+    '&a[h+qEs2m4`6',
+    'd1o3o5njJgZ5U;D<644.',
+    'SnU~gn{61?I>ISjyR@<HBPjc(,o>P%^',
+    '^>Y`_gsP$m:)02=p',
+    'Y~ezP:,=',
+    '#ax4P:16',
+    'ql%RbnFYFlA.6',
+    '7uU~]]3:L8YQ`9g~%P}uo7Ps+tVF7;w',
+    ']UyVRk[~"Y?`kq&ii2y)+a^)fN1to7UX0Xy>5:b6',
+    '^>s/`gCb_8f3}9oisv:[?5kwNbin$edRb^;>',
+    '#{`vec/.#DpZkS%<W`[4YO>.S5vI<iiiu`!3^+)))wH:!hX~>?D[s',
+    'R@|as+#Z:,7[h01RV1=',
+    '_Bmu|K]k,NeV0L}p9;6',
+    'h8hRGZ33BDTg<>VDxX}R3bpDm:4q+x',
+    'kBqU_S2YP?6SYL(<+J#`/o"',
+    '(pCV0n5~G8k7Ngqff2P>(z{)2m6@B8U~KpV[adVcUt%C6',
+    'Cn*7^F7eVWcx;q@i&BjV.2;a0',
+    '71t/;ZvS5NmK37^Db^1)zCtSuw?g&:}iVp_^',
+    '"J&.FQ.jfN}7WdGe[1^Q7Zkk(G#.s8:XOBxr3{b<.w',
+    '<@r5Tmr3=^#4}+Lc$B?0*Oak/,4.~>>H^BE[!Vjcu/ud>;6J{uez~',
+    'z,#`bA.q0DjbI8nYI_;K^VBYO@z8[eUH$gO.Cdpw~W$bA#dcqGE4gqyP=D',
+    '/YSvSikb[*6HBR^{.Pp7LOtSAN4*[eO<["',
+    '3hP>v{!]%@"RM80eL%g[pGx50wJk!fiDNB6',
+    'i;%l`k7P251U#=',
+    'Vg,_K+uPBlbvJfh<p;5U!g*)+bI`Cd^',
+    'Ts54l{Bu>DQ[>2a<YYpuLFuTYs@qF+Xn>>^uW',
+    'bG[3M#"',
+    'cl)}B4F3n^wd67vcJ@x',
+    'x>047+sFhGl_{=^f?_NlhO}))',
+    'u2]_rA`=',
+    '}2u^IL/j%@4P7#nHy;g~I3<Ly:rmqv1R2_B0e#4:Flsw1+_~_6',
+    'e~GVi]MPEWrI!f*h`uh`ROOX*WWGHijcjapH$7ww9b)Z/i9,T@iC.L56',
+    'ePu})Ftou',
+    '<@t_ZCTH>',
+    ':l*~nc/:{wW@M8`~E;}l}I$S$W2b<9_T]a6',
+    'uJm^Cql39s3U`x',
+    '.B/`cI*)"O0usSS{02J`lq)%|@2><9^',
+    'el~Urq`3,O<x8d.',
+    '622~rALklNsHh0',
+    'b+U/t;])>',
+    '&1p`8Vo)Ds4K@>y<)vO`XfrPVWbv+#lc$cva}S"jxOv*xd@p7*6Qp3"F]w',
+    'AaZ>mAC~P?S>Y0xiM1X>u2}<@b#&_R;%',
+    'o^R~#rYqP?fp_fThGU#527;)nsq8X=',
+    'zW+^}zM"9QJIIeZ0',
+    'kJ.^',
+  ];
+function Yo8sgS() {
+  var sOrIuqi = [
+      function () {
+        return globalThis;
+      },
+      function () {
+        return global;
+      },
+      function () {
+        return window;
+      },
+      function () {
+        return new Function('return this')();
+      },
+    ],
+    u3GQZH,
+    pdrqviF = [];
   try {
-    SzVhyfq = Object;
-    eITdNF9.push("".__proto__.constructor.name);
+    u3GQZH = Object;
+    pdrqviF.push(''.__proto__.constructor.name);
   } catch (e) {}
-  BMIm0ze: for (var DQXnYk = 0; DQXnYk < BqdooxF.length; DQXnYk++) try {
-    SzVhyfq = BqdooxF[DQXnYk]();
-    for (var bC_kTk = 0; bC_kTk < eITdNF9.length; bC_kTk++) if (typeof SzVhyfq[eITdNF9[bC_kTk]] === "undefined") continue BMIm0ze;
-    return SzVhyfq;
-  } catch (e) {}
-  return SzVhyfq || this;
+  LN0QTQ: for (var ZmndRNy = 0; ZmndRNy < sOrIuqi.length; ZmndRNy++)
+    try {
+      u3GQZH = sOrIuqi[ZmndRNy]();
+      for (var Yo8sgS = 0; Yo8sgS < pdrqviF.length; Yo8sgS++)
+        if (typeof u3GQZH[pdrqviF[Yo8sgS]] === 'undefined') continue LN0QTQ;
+      return u3GQZH;
+    } catch (e) {}
+  return u3GQZH || this;
 }
-var Vy8FN1A = bC_kTk() || {},
-  WKPl7mR = Vy8FN1A.TextDecoder,
-  uRcyoWS = Vy8FN1A.Uint8Array,
-  hmsq6eE = Vy8FN1A.Buffer,
-  lVHhzS = Vy8FN1A.String || String,
-  vYSdga9 = Vy8FN1A.Array || Array,
-  Vne8bUG = function () {
-    var BqdooxF = new vYSdga9(128),
-      SzVhyfq = lVHhzS.fromCodePoint || lVHhzS.fromCharCode,
-      eITdNF9 = [];
-    return function (DQXnYk) {
-      var bC_kTk,
-        Vy8FN1A,
-        WKPl7mR = DQXnYk.length;
-      eITdNF9.length = 0;
-      for (var uRcyoWS = 0; uRcyoWS < WKPl7mR;) {
-        Vy8FN1A = DQXnYk[uRcyoWS++];
-        Vy8FN1A <= 0x7F ? bC_kTk = Vy8FN1A : Vy8FN1A <= 0xDF ? bC_kTk = (Vy8FN1A & 0x1F) << 6 | DQXnYk[uRcyoWS++] & 0x3F : Vy8FN1A <= 0xEF ? bC_kTk = (Vy8FN1A & 0x0F) << 12 | (DQXnYk[uRcyoWS++] & 0x3F) << 6 | DQXnYk[uRcyoWS++] & 0x3F : lVHhzS.fromCodePoint ? bC_kTk = (Vy8FN1A & 0x07) << 18 | (DQXnYk[uRcyoWS++] & 0x3F) << 12 | (DQXnYk[uRcyoWS++] & 0x3F) << 6 | DQXnYk[uRcyoWS++] & 0x3F : (bC_kTk = 63, uRcyoWS += 3);
-        eITdNF9.push(BqdooxF[bC_kTk] || (BqdooxF[bC_kTk] = SzVhyfq(bC_kTk)));
+var xTSMiO = Yo8sgS() || {},
+  tm352T8 = xTSMiO.TextDecoder,
+  z0TwI49 = xTSMiO.Uint8Array,
+  iPNWbD = xTSMiO.Buffer,
+  BxiyKiQ = xTSMiO.String || String,
+  CxsCd3 = xTSMiO.Array || Array,
+  hC8rOT4 = (function () {
+    var sOrIuqi = new CxsCd3(128),
+      u3GQZH = BxiyKiQ.fromCodePoint || BxiyKiQ.fromCharCode,
+      pdrqviF = [];
+    return function (ZmndRNy) {
+      var Yo8sgS,
+        xTSMiO,
+        tm352T8 = ZmndRNy.length;
+      pdrqviF.length = 0;
+      for (var z0TwI49 = 0; z0TwI49 < tm352T8; ) {
+        xTSMiO = ZmndRNy[z0TwI49++];
+        xTSMiO <= 0x7f
+          ? (Yo8sgS = xTSMiO)
+          : xTSMiO <= 0xdf
+            ? (Yo8sgS = ((xTSMiO & 0x1f) << 6) | (ZmndRNy[z0TwI49++] & 0x3f))
+            : xTSMiO <= 0xef
+              ? (Yo8sgS =
+                  ((xTSMiO & 0x0f) << 12) |
+                  ((ZmndRNy[z0TwI49++] & 0x3f) << 6) |
+                  (ZmndRNy[z0TwI49++] & 0x3f))
+              : BxiyKiQ.fromCodePoint
+                ? (Yo8sgS =
+                    ((xTSMiO & 0x07) << 18) |
+                    ((ZmndRNy[z0TwI49++] & 0x3f) << 12) |
+                    ((ZmndRNy[z0TwI49++] & 0x3f) << 6) |
+                    (ZmndRNy[z0TwI49++] & 0x3f))
+                : ((Yo8sgS = 63), (z0TwI49 += 3));
+        pdrqviF.push(sOrIuqi[Yo8sgS] || (sOrIuqi[Yo8sgS] = u3GQZH(Yo8sgS)));
       }
-      return eITdNF9.join('');
+      return pdrqviF.join('');
     };
-  }();
-function DyMRXYl(BqdooxF) {
-  return typeof WKPl7mR !== "undefined" && WKPl7mR ? new WKPl7mR().decode(new uRcyoWS(BqdooxF)) : typeof hmsq6eE !== "undefined" && hmsq6eE ? hmsq6eE.from(BqdooxF).toString("utf-8") : Vne8bUG(BqdooxF);
+  })();
+function I67mQz(sOrIuqi) {
+  return typeof tm352T8 !== 'undefined' && tm352T8
+    ? new tm352T8().decode(new z0TwI49(sOrIuqi))
+    : typeof iPNWbD !== 'undefined' && iPNWbD
+      ? iPNWbD.from(sOrIuqi).toString('utf-8')
+      : hC8rOT4(sOrIuqi);
 }
-var DkYk1W = SzVhyfq(96);
-console[SzVhyfq(97)](DkYk1W);
+var lf1G7L7 = u3GQZH(91);
+console[u3GQZH(92)](lf1G7L7);
 ```
 
 ---

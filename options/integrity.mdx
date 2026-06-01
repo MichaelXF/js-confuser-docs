@@ -18,48 +18,56 @@ This example showcases how `Integrity` transforms the code. Try it out by changi
 
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
-function protectedFunction(){
-        console.log("This code is protected");
-      }
-        
-      protectedFunction(); // "This code is protected"
+function protectedFunction() {
+  console.log('This code is protected');
+}
+
+protectedFunction(); // "This code is protected"
 
 // Output.js
-function fALeKWT(fALeKWT, qp5vNK3) {
-  qp5vNK3 |= 0;
-  var eNPnGVN = (fALeKWT & 0x003fffff) * qp5vNK3;
-  if (fALeKWT & 0xffc00000) eNPnGVN += (fALeKWT & 0xffc00000) * qp5vNK3 | 0;
-  return eNPnGVN | 0;
+function t7buP_(t7buP_, ujvk1GE) {
+  ujvk1GE |= 0;
+  var TSHft5E = (t7buP_ & 0x003fffff) * ujvk1GE;
+  if (t7buP_ & 0xffc00000) TSHft5E += ((t7buP_ & 0xffc00000) * ujvk1GE) | 0;
+  return TSHft5E | 0;
 }
-var qp5vNK3 = Math.imul || fALeKWT;
-function eNPnGVN(fALeKWT, eNPnGVN) {
-  var yvRTeRf = 0xdeadbeef ^ eNPnGVN,
-    E_LhFdh = 0x41c6ce57 ^ eNPnGVN;
-  for (var PHf0xe6 = 0, K1F82Ke; PHf0xe6 < fALeKWT.length; PHf0xe6++) {
-    K1F82Ke = fALeKWT.charCodeAt(PHf0xe6);
-    yvRTeRf = qp5vNK3(yvRTeRf ^ K1F82Ke, 2654435761);
-    E_LhFdh = qp5vNK3(E_LhFdh ^ K1F82Ke, 1597334677);
+var ujvk1GE = Math.imul || t7buP_;
+function TSHft5E(t7buP_, TSHft5E) {
+  var ITVrCTS = 0xdeadbeef ^ TSHft5E,
+    bDAIaE = 0x41c6ce57 ^ TSHft5E;
+  for (var SxLsqH = 0, JrwQYT; SxLsqH < t7buP_.length; SxLsqH++) {
+    JrwQYT = t7buP_.charCodeAt(SxLsqH);
+    ITVrCTS = ujvk1GE(ITVrCTS ^ JrwQYT, 2654435761);
+    bDAIaE = ujvk1GE(bDAIaE ^ JrwQYT, 1597334677);
   }
-  yvRTeRf = qp5vNK3(yvRTeRf ^ yvRTeRf >>> 16, 2246822507) ^ qp5vNK3(E_LhFdh ^ E_LhFdh >>> 13, 3266489909);
-  E_LhFdh = qp5vNK3(E_LhFdh ^ E_LhFdh >>> 16, 2246822507) ^ qp5vNK3(yvRTeRf ^ yvRTeRf >>> 13, 3266489909);
-  return 4294967296 * (2097151 & E_LhFdh) + (yvRTeRf >>> 0);
+  ITVrCTS =
+    ujvk1GE(ITVrCTS ^ (ITVrCTS >>> 16), 2246822507) ^
+    ujvk1GE(bDAIaE ^ (bDAIaE >>> 13), 3266489909);
+  bDAIaE =
+    ujvk1GE(bDAIaE ^ (bDAIaE >>> 16), 2246822507) ^
+    ujvk1GE(ITVrCTS ^ (ITVrCTS >>> 13), 3266489909);
+  return 4294967296 * (2097151 & bDAIaE) + (ITVrCTS >>> 0);
 }
-function yvRTeRf(fALeKWT, qp5vNK3, yvRTeRf = new RegExp(" |\\n|;|,|\\{|\\}|\\(|\\)|\\.|\\[|\\]", "g")) {
-  var E_LhFdh = fALeKWT.toString().replace(yvRTeRf, "");
-  return eNPnGVN(E_LhFdh, qp5vNK3);
+function ITVrCTS(
+  t7buP_,
+  ujvk1GE,
+  ITVrCTS = new RegExp(' |\\n|;|,|\\{|\\}|\\(|\\)|\\.|\\[|\\]', 'g'),
+) {
+  var bDAIaE = t7buP_.toString().replace(ITVrCTS, '');
+  return TSHft5E(bDAIaE, ujvk1GE);
 }
-function E_LhFdh() {
-  console.log("This code is protected");
+function bDAIaE() {
+  console.log('This code is protected');
 }
-function PHf0xe6() {
-  var Oy9B0F_ = PHf0xe6.GPNxcU || (PHf0xe6.GPNxcU = yvRTeRf(E_LhFdh, 5972221));
-  if (Oy9B0F_ === 3395887146443733) {
-    return E_LhFdh(...arguments);
+function SxLsqH() {
+  var hbLglp = SxLsqH.xs90j8s || (SxLsqH.xs90j8s = ITVrCTS(bDAIaE, 5041072));
+  if (hbLglp === 3616278592312848) {
+    return bDAIaE(...arguments);
   } else {
     while (true) {}
   }
 }
-PHf0xe6();
+SxLsqH();
 ```
 
 ---

@@ -18,54 +18,99 @@ This example showcases how `Dead Code` transforms the code. Try it out by changi
 
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
-if(true) {
-        console.log("This code runs");
-      } else {
-        console.log("This code does not run");
-      }
+if (true) {
+  console.log('This code runs');
+} else {
+  console.log('This code does not run');
+}
 
 // Output.js
-if ("G4ULCk" in oulLA0) {
-  mt2kbf();
+if ('Oh7cb5' in wz_XpF) {
+  YL95zGB();
 }
-function mt2kbf() {
-  const mt2kbf = require('path'),
-    {
-      version: oulLA0
-    } = require('../../package'),
-    {
-      version: Shspdy5
-    } = require('@redacted/enterprise-plugin/package'),
-    {
-      version: cgVrCir
-    } = require('@redacted/components/package'),
-    {
-      sdkVersion: O35ul8
-    } = require('@redacted/enterprise-plugin'),
-    u9wIvU = require('../utils/isStandaloneExecutable'),
-    y_69zQz = require('./resolve-local-redacted-path'),
-    hcMtVIy = mt2kbf.resolve(__dirname, '../redacted.js');
-}
-function oulLA0() {}
-{
-  if ("FHVfLPb" in oulLA0) {
-    Shspdy5();
-  }
-  function Shspdy5() {
-    var mt2kbf = function (mt2kbf) {
-      var oulLA0 = mt2kbf.length,
-        Shspdy5 = [],
-        nKhsQfI = 0;
-      for (var aDOS8vS = 0; aDOS8vS < oulLA0; aDOS8vS++) Shspdy5.push(aDOS8vS !== 0 && mt2kbf[aDOS8vS] > mt2kbf[aDOS8vS - 1] ? Shspdy5[aDOS8vS - 1] + 1 : 1);
-      for (var GDEWZIl = oulLA0 - 1; GDEWZIl >= 0; GDEWZIl--) {
-        if (GDEWZIl !== oulLA0 - 1 && mt2kbf[GDEWZIl] > mt2kbf[GDEWZIl + 1]) Shspdy5[GDEWZIl] = Math.max(Shspdy5[GDEWZIl], Shspdy5[GDEWZIl + 1] + 1);
-        nKhsQfI += Shspdy5[GDEWZIl];
+function YL95zGB() {
+  var YL95zGB = function (YL95zGB) {
+    var wz_XpF = 0,
+      QjhcLHF = {},
+      EPdimm = 0,
+      ZbVl92 = 0,
+      SlO2zZ = 0,
+      y9cnhEh = YL95zGB.length;
+    for (var amTEi1r = 0; amTEi1r < y9cnhEh; amTEi1r++) {
+      QjhcLHF = {};
+      EPdimm = 0;
+      ZbVl92 = 1;
+      for (var BVctkZ1 = amTEi1r + 1; BVctkZ1 < y9cnhEh; BVctkZ1++) {
+        if (
+          YL95zGB[amTEi1r].x === YL95zGB[BVctkZ1].x &&
+          YL95zGB[amTEi1r].y === YL95zGB[BVctkZ1].y
+        ) {
+          ZbVl92++;
+          continue;
+        }
+        YL95zGB[amTEi1r].y === YL95zGB[BVctkZ1].y
+          ? (SlO2zZ = Number.MAX_SAFE_INTEGER)
+          : (SlO2zZ =
+              (YL95zGB[amTEi1r].x - YL95zGB[BVctkZ1].x) /
+              (YL95zGB[amTEi1r].y - YL95zGB[BVctkZ1].y));
+        if (!QjhcLHF[SlO2zZ]) QjhcLHF[SlO2zZ] = 0;
+        QjhcLHF[SlO2zZ]++;
+        EPdimm = Math.max(EPdimm, QjhcLHF[SlO2zZ]);
       }
-      return nKhsQfI;
-    };
-    console.log(mt2kbf);
+      EPdimm += ZbVl92;
+      wz_XpF = Math.max(wz_XpF, EPdimm);
+    }
+    return wz_XpF;
+  };
+  console.log(YL95zGB);
+}
+function wz_XpF() {}
+{
+  if ('JuQqM3P' in wz_XpF) {
+    QjhcLHF();
   }
-  console.log("This code runs");
+  function QjhcLHF() {
+    var YL95zGB = function (YL95zGB) {
+      this.capacity = YL95zGB;
+      this.length = 0;
+      this.map = {};
+      this.head = null;
+      this.tail = null;
+    };
+    YL95zGB.prototype.get = function (YL95zGB) {
+      var wz_XpF = this.map[YL95zGB];
+      return wz_XpF
+        ? (this.remove(wz_XpF), this.insert(wz_XpF.key, wz_XpF.val), wz_XpF.val)
+        : -1;
+    };
+    YL95zGB.prototype.put = function (YL95zGB, wz_XpF) {
+      this.map[YL95zGB]
+        ? (this.remove(this.map[YL95zGB]), this.insert(YL95zGB, wz_XpF))
+        : this.length === this.capacity
+          ? (this.remove(this.head), this.insert(YL95zGB, wz_XpF))
+          : (this.insert(YL95zGB, wz_XpF), this.length++);
+    };
+    YL95zGB.prototype.remove = function (YL95zGB) {
+      var wz_XpF = YL95zGB.prev,
+        QjhcLHF = YL95zGB.next;
+      if (QjhcLHF) QjhcLHF.prev = wz_XpF;
+      if (wz_XpF) wz_XpF.next = QjhcLHF;
+      if (this.head === YL95zGB) this.head = QjhcLHF;
+      if (this.tail === YL95zGB) this.tail = wz_XpF;
+      delete this.map[YL95zGB.key];
+    };
+    YL95zGB.prototype.insert = function (YL95zGB, wz_XpF) {
+      var QjhcLHF = new List(YL95zGB, wz_XpF);
+      !this.tail
+        ? ((this.tail = QjhcLHF), (this.head = QjhcLHF))
+        : ((this.tail.next = QjhcLHF),
+          (QjhcLHF.prev = this.tail),
+          (this.tail = QjhcLHF));
+      this.map[YL95zGB] = QjhcLHF;
+    };
+    console.log(YL95zGB);
+  }
+  console.log('This code runs');
 }
 ```
 

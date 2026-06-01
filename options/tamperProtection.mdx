@@ -11,7 +11,7 @@ slug: "options/lock.tamperProtection"
 
 <Card title="Requires Non-Strict Mode" type="warning">
 The obfuscated code will not work properly in Strict Mode.
-You can use the [Pack](./Pack) option to bypass Strict Mode constraints.
+You can use the [Pack](./pack) option to bypass Strict Mode constraints.
 </Card>
 
 
@@ -30,168 +30,166 @@ This example showcases how `Tamper Protection` transforms the code. Try it out b
 
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
-function onTamperDetected(){
-        throw new Error('Tampering detected!');
-      }
+function onTamperDetected() {
+  throw new Error('Tampering detected!');
+}
 
-      fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(data => {
-          console.log(data); // Array of users with names, usernames, and emails
-        });
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data); // Array of users with names, usernames, and emails
+  });
 
 // Output.js
-var GCdM_Uj = IuN6MN();
-function IuN6MN() {
-  var GCdM_Uj = !1;
-  eval("GCdM_Uj" + " = true");
-  if (!GCdM_Uj) {
-    MNzI7D();
+var _aOKDnP = gIq8mSC();
+function gIq8mSC() {
+  var _aOKDnP = !1;
+  eval('_aOKDnP' + ' = true');
+  if (!_aOKDnP) {
+    eC3IYJ();
     return {};
   }
-  const IuN6MN = eval("this");
-  return IuN6MN;
+  const gIq8mSC = eval('this');
+  return gIq8mSC;
 }
-function l6e7tY(IuN6MN) {
-  switch (IuN6MN) {
-    case "k0IWUK":
-      return GCdM_Uj.l3kseAb;
-    case "TY5K17":
-      return GCdM_Uj.fetch;
-    case "RY3d93":
-      return GCdM_Uj.LJ8VnmY;
-    case "a3rsctb":
-      return GCdM_Uj.nyJIOA;
-    case "evtqzO":
-      return GCdM_Uj.B8gUc0P;
-    case "JHxLwFz":
-      return GCdM_Uj.wzEtTc;
-    case "NF4srn":
-      return GCdM_Uj.ORggvb;
-    case "w3iZrB":
-      return GCdM_Uj.FC9jd20;
-    case "vFT2wE":
-      return GCdM_Uj.jm7s0bp;
-    case "JEhosFJ":
-      return GCdM_Uj.sztXRv;
-    case "C3lsSd":
-      return GCdM_Uj.wDbvCMa;
-    case "jtnnyR":
-      return GCdM_Uj.pF4GgmY;
-    case "CDlhf6D":
-      return GCdM_Uj.j1hjeVe;
-    case "AdL7xP":
-      return GCdM_Uj.rmir8W5;
-    case "E2GRW4q":
-      return GCdM_Uj.DP6oGa;
-    case "rp4l7cC":
-      return GCdM_Uj.yOqB7oM;
-    case "IbtPGy":
-      return GCdM_Uj.Object;
-    case "wIQPY1x":
-      return GCdM_Uj.in7Pjv;
-    case "yxSB76":
-      return GCdM_Uj.eEQevd;
-    case "ttm2id":
-      return GCdM_Uj.CnzpAP;
-    case "ANtsgz":
-      return GCdM_Uj.Error;
-    case "l4kFOG7":
-      return GCdM_Uj.P6UU8dd;
-    case "0r9MKFO":
-      return GCdM_Uj.ufhivfz;
-    case "I4XaDIO":
-      return GCdM_Uj.ESX6zg;
-    case "nOQw1cL":
-      return GCdM_Uj.console;
-    case "Kffnrae":
-      return GCdM_Uj.Tdfsbe;
-    case "Mpcq61Y":
-      return GCdM_Uj.KirjaK8;
-    case "PDyE7o":
-      return GCdM_Uj.amO2aq;
-    case "abvUwE":
-      return GCdM_Uj.NszNSj;
-    case "LjulGC":
-      return GCdM_Uj.dac5MT1;
-    case "KS283n":
-      return GCdM_Uj.NPezJx7;
-    case "4sx432c":
-      return GCdM_Uj.cxsWSzj;
-    case "KE1sVKH":
-      return GCdM_Uj.vLysRg;
-    case "ol4yTjR":
-      return GCdM_Uj.vwZmTZ;
-    case "ZFrYiO":
-      return GCdM_Uj.lSAuEx;
+function n1lfww(gIq8mSC) {
+  switch (gIq8mSC) {
+    case 'yM1fOd2':
+      return _aOKDnP.II421M;
+    case 'Kpg8TM':
+      return _aOKDnP.dPth4F;
+    case 'RMEH1fE':
+      return _aOKDnP.fetch;
+    case 'KVAQwQu':
+      return _aOKDnP.yuGPTN;
+    case 'DJssWq':
+      return _aOKDnP.xw4gZA;
+    case 'pRd42Dc':
+      return _aOKDnP.bWQsfJ;
+    case 'JNfAvn':
+      return _aOKDnP.gmz_15;
+    case 'NmM7nTb':
+      return _aOKDnP.TSRdBK;
+    case 'f4ipc21':
+      return _aOKDnP.T82ejTR;
+    case 'hRWRtpd':
+      return _aOKDnP.uGm5GYV;
+    case 'zbvy8A':
+      return _aOKDnP.IPC8SrV;
+    case 'IzX2Sc6':
+      return _aOKDnP.console;
+    case 'oggEEq':
+      return _aOKDnP.zyp6Ez;
+    case 'ZQGO4F':
+      return _aOKDnP.Ub0Sgx;
+    case 'NCfRuju':
+      return _aOKDnP.cTNCgUv;
+    case 'xdG3Mc':
+      return _aOKDnP.Error;
+    case 'qAAAQS':
+      return _aOKDnP.U3Jz73H;
+    case 'ET4eR1':
+      return _aOKDnP.mkfOga;
+    case 'xaotWvc':
+      return _aOKDnP.Z0erxhz;
+    case '58Tgiv':
+      return _aOKDnP.I4Jyqy;
+    case 'ph4HUvo':
+      return _aOKDnP.VvofUr;
+    case 'ofGYpgl':
+      return _aOKDnP.WGXq2J;
+    case 'kL1FQm':
+      return _aOKDnP.Object;
+    case 'dWbwLNh':
+      return _aOKDnP.uY7cES;
+    case 'DbVQV0x':
+      return _aOKDnP.e6bX9fv;
+    case 'RtKbFC':
+      return _aOKDnP.KJHUok;
+    case '0l3tLCF':
+      return _aOKDnP.DpgZWw;
+    case 'olLilp':
+      return _aOKDnP.mJ5tfZ;
+    case 'cr1uaEU':
+      return _aOKDnP.z8mEWd;
+    case 'BuuPkSO':
+      return _aOKDnP.MS0bYFF;
   }
 }
-var Dpaq4P = !1;
-function MNzI7D() {
-  if (Dpaq4P) return;
-  Dpaq4P = !0;
-  gdV8vh();
+var ketUd4 = !1;
+function eC3IYJ() {
+  if (ketUd4) return;
+  ketUd4 = !0;
+  zU8Bpu();
 }
-function hhsA6U() {
-  function GCdM_Uj(GCdM_Uj, IuN6MN) {
-    const Dpaq4P = GCdM_Uj.length,
-      hhsA6U = IuN6MN.length;
-    let gdV8vh = 0;
-    if (hhsA6U > Dpaq4P) {
+function oVgFfy() {
+  function _aOKDnP(_aOKDnP, gIq8mSC) {
+    const ketUd4 = _aOKDnP.length,
+      oVgFfy = gIq8mSC.length;
+    let zU8Bpu = 0;
+    if (oVgFfy > ketUd4) {
       return -1;
     }
-    for (let m57ona = 0; m57ona <= Dpaq4P - hhsA6U; m57ona++) for (let l6e7tY = 0; l6e7tY < hhsA6U; l6e7tY++) if (GCdM_Uj[m57ona + l6e7tY] === IuN6MN[l6e7tY]) {
-      gdV8vh++;
-      if (gdV8vh === hhsA6U) {
-        return m57ona;
-      }
-    } else {
-      gdV8vh = 0;
-      break;
-    }
+    for (let tvqo5Q = 0; tvqo5Q <= ketUd4 - oVgFfy; tvqo5Q++)
+      for (let n1lfww = 0; n1lfww < oVgFfy; n1lfww++)
+        if (_aOKDnP[tvqo5Q + n1lfww] === gIq8mSC[n1lfww]) {
+          zU8Bpu++;
+          if (zU8Bpu === oVgFfy) {
+            return tvqo5Q;
+          }
+        } else {
+          zU8Bpu = 0;
+          break;
+        }
     return -1;
   }
-  function IuN6MN(IuN6MN) {
-    if (GCdM_Uj("" + IuN6MN, "{ [native code] }") === -1 || typeof l6e7tY("IbtPGy").getOwnPropertyDescriptor(IuN6MN, "toString") !== "undefined") {
-      MNzI7D();
+  function gIq8mSC(gIq8mSC) {
+    if (
+      _aOKDnP('' + gIq8mSC, '{ [native code] }') === -1 ||
+      typeof n1lfww('kL1FQm').getOwnPropertyDescriptor(gIq8mSC, 'toString') !==
+        'undefined'
+    ) {
+      eC3IYJ();
       return;
     }
-    return IuN6MN;
+    return gIq8mSC;
   }
-  var Dpaq4P = arguments;
-  if (Dpaq4P.length === 1) {
-    return IuN6MN(Dpaq4P[0]);
-  } else if (Dpaq4P.length === 2) {
-    var hhsA6U = Dpaq4P[0],
-      gdV8vh = Dpaq4P[1],
-      m57ona = hhsA6U[gdV8vh];
-    m57ona = IuN6MN(m57ona);
-    return m57ona.bind(hhsA6U);
+  var ketUd4 = arguments;
+  if (ketUd4.length === 1) {
+    return gIq8mSC(ketUd4[0]);
+  } else if (ketUd4.length === 2) {
+    var oVgFfy = ketUd4[0],
+      zU8Bpu = ketUd4[1],
+      tvqo5Q = oVgFfy[zU8Bpu];
+    tvqo5Q = gIq8mSC(tvqo5Q);
+    return tvqo5Q.bind(oVgFfy);
   }
 }
 (function () {
-  function GCdM_Uj() {
+  function _aOKDnP() {
     try {
-      var GCdM_Uj = [];
-      delete GCdM_Uj.length;
+      var _aOKDnP = [];
+      delete _aOKDnP.length;
     } catch (e) {
       return !0;
     }
     return !1;
   }
-  if (GCdM_Uj()) {
-    MNzI7D();
-    hhsA6U = void 0;
+  if (_aOKDnP()) {
+    eC3IYJ();
+    oVgFfy = void 0;
   }
 })();
-function gdV8vh() {
-  throw new (l6e7tY("ANtsgz"))('Tampering detected!');
+function zU8Bpu() {
+  throw new (n1lfww('xdG3Mc'))('Tampering detected!');
 }
-hhsA6U(l6e7tY("TY5K17"))('https://jsonplaceholder.typicode.com/users').then(GCdM_Uj => {
-  return GCdM_Uj.json();
-}).then(GCdM_Uj => {
-  hhsA6U(l6e7tY("nOQw1cL"), "log")(GCdM_Uj);
-});
+oVgFfy(n1lfww('RMEH1fE'))('https://jsonplaceholder.typicode.com/users')
+  .then((_aOKDnP) => {
+    return _aOKDnP.json();
+  })
+  .then((_aOKDnP) => {
+    oVgFfy(n1lfww('IzX2Sc6'), 'log')(_aOKDnP);
+  });
 ```
 
 ---

@@ -18,34 +18,34 @@ This example showcases how `Custom Locks` transforms the code. Try it out by cha
 
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
-function countermeasures(){
-        throw new Error("Invalid browser!");
-      }
-      console.log("This only runs in Chrome!");
+function countermeasures() {
+  throw new Error('Invalid browser!');
+}
+console.log('This only runs in Chrome!');
 
 // Output.js
-function q1j6If5() {
-  return navigator.userAgent.includes("Chrome");
+function bZxCa61() {
+  return navigator.userAgent.includes('Chrome');
 }
-if (!q1j6If5()) {
-  iAAgMD();
+if (!bZxCa61()) {
+  jqPYcD();
 }
-var MQCF2Nc = !1;
-function iAAgMD() {
-  if (MQCF2Nc) return;
-  MQCF2Nc = !0;
-  F2JEDCh();
+var OoanRy = !1;
+function jqPYcD() {
+  if (OoanRy) return;
+  OoanRy = !0;
+  nzFTQeO();
 }
-function F2JEDCh() {
-  function MQCF2Nc() {
-    return navigator.userAgent.includes("Chrome");
+function nzFTQeO() {
+  function OoanRy() {
+    return navigator.userAgent.includes('Chrome');
   }
-  if (!MQCF2Nc()) {
-    iAAgMD();
+  if (!OoanRy()) {
+    jqPYcD();
   }
-  throw new Error("Invalid browser!");
+  throw new Error('Invalid browser!');
 }
-console.log("This only runs in Chrome!");
+console.log('This only runs in Chrome!');
 ```
 
 ---

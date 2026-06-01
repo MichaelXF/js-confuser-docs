@@ -11,7 +11,7 @@ slug: "options/controlFlowFlattening"
 
 <Card title="Requires Non-Strict Mode" type="warning">
 The obfuscated code will not work properly in Strict Mode.
-You can use the [Pack](./Pack) option to bypass Strict Mode constraints.
+You can use the [Pack](./pack) option to bypass Strict Mode constraints.
 </Card>
 
 ---
@@ -24,8 +24,8 @@ This example showcases how `Control Flow Flattening` transforms the code. Try it
 
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
-function countTo(num){
-  for ( var i = 1; i <= num; i++ ) {
+function countTo(num) {
+  for (var i = 1; i <= num; i++) {
     console.log(i);
   }
 }
@@ -34,38 +34,69 @@ var number = 10;
 countTo(number); // 1,2,3,4,5,6,7,8,9,10
 
 // Output.js
-function* yasJVf(C3mXydC, S_H1fkA, XDrWbPL, roP9WwA = {
-  K5V4Br: {}
-}, h8JiqyB) {
-  while (C3mXydC + S_H1fkA + XDrWbPL !== 184) with (roP9WwA.k3U6TWo || roP9WwA) switch (C3mXydC + S_H1fkA + XDrWbPL) {
-    case 186:
-      roP9WwA.k3U6TWo = roP9WwA.TF8YNh, C3mXydC += XDrWbPL - 53, S_H1fkA += C3mXydC - 359;
-      break;
-    case 219:
-    case XDrWbPL - 289:
-    case -184:
-      [JLPHpl.u3LNnlY] = h8JiqyB;
-      for (JLPHpl._crSQGf = 1; JLPHpl._crSQGf <= JLPHpl.u3LNnlY; JLPHpl._crSQGf++) console.log(JLPHpl._crSQGf);
-      return;
-    case -107:
-    case -88:
-    default:
-      [roP9WwA.K5V4Br.h7COToO, roP9WwA.K5V4Br.XXMLwtK] = [125, -15];
-      roP9WwA.k3U6TWo = roP9WwA.K5V4Br, S_H1fkA += C3mXydC - -429, XDrWbPL += S_H1fkA - 175;
-      break;
-    case C3mXydC - 130:
-      [roP9WwA.K5V4Br.h7COToO, roP9WwA.K5V4Br.XXMLwtK] = [-81, 158];
-      K5V4Br.BGFBvl = function (...C3mXydC) {
-        return yasJVf(-63, -226, 147, {
-          K5V4Br: roP9WwA.K5V4Br,
-          JLPHpl: {}
-        }, C3mXydC).next().value;
-      };
-      K5V4Br.c5nZyL = C3mXydC + -178;
-      return (1, K5V4Br.BGFBvl)(K5V4Br.c5nZyL);
-  }
+function* Z4mJ0m1(
+  RoLGPx,
+  eLyC87v,
+  HCI_1Jd = {
+    Hy3VoZ: {},
+  },
+  kaKl4P,
+) {
+  while (RoLGPx + eLyC87v !== -180)
+    with (HCI_1Jd.ubOTpUk || HCI_1Jd)
+      switch (RoLGPx + eLyC87v) {
+        case HCI_1Jd.Hy3VoZ.gzozXI + -398:
+          ((HCI_1Jd.ubOTpUk = HCI_1Jd.MSLcZwF),
+            (RoLGPx += eLyC87v - 10),
+            (eLyC87v += RoLGPx - -333));
+          break;
+        case -4:
+        case -182:
+          ((HCI_1Jd.ubOTpUk = HCI_1Jd.JhcduE),
+            (RoLGPx += eLyC87v - 190),
+            (eLyC87v += RoLGPx - -92));
+          break;
+        default:
+          HCI_1Jd.Hy3VoZ.gzozXI = -196;
+          ((HCI_1Jd.ubOTpUk = HCI_1Jd.GkmY3oQ),
+            (RoLGPx += eLyC87v - -33),
+            (eLyC87v += RoLGPx - -32));
+          break;
+        case eLyC87v - -139:
+          HCI_1Jd.Hy3VoZ.gzozXI = -169;
+          ((HCI_1Jd.ubOTpUk = HCI_1Jd.QPJDWZK),
+            (RoLGPx += eLyC87v - 208),
+            (eLyC87v += RoLGPx - -333));
+          break;
+        case HCI_1Jd.Hy3VoZ.gzozXI + -93:
+          [SHZ9jOD.JGeP63R] = kaKl4P;
+          for (
+            SHZ9jOD.x9PEct = RoLGPx + -106;
+            SHZ9jOD.x9PEct <= SHZ9jOD.JGeP63R;
+            SHZ9jOD.x9PEct++
+          )
+            console.log(SHZ9jOD.x9PEct);
+          return;
+        case -31:
+        case 201:
+          HCI_1Jd.Hy3VoZ.gzozXI = 214;
+          Hy3VoZ.FoAIh1o = function (...RoLGPx) {
+            return Z4mJ0m1(
+              107,
+              14,
+              {
+                Hy3VoZ: HCI_1Jd.Hy3VoZ,
+                SHZ9jOD: {},
+              },
+              RoLGPx,
+            ).next().value;
+          };
+          Hy3VoZ.iy1HkYw = RoLGPx + 185;
+          return (1, Hy3VoZ.FoAIh1o)(Hy3VoZ.iy1HkYw);
+        case 9:
+      }
 }
-yasJVf(188, 100, -230).next().value;
+Z4mJ0m1(-175, 144).next().value;
 ```
 
 ---
@@ -76,7 +107,7 @@ yasJVf(188, 100, -230).next().value;
 
 Control Flow Flattening requires non-strict mode to work. This is because the `with` statement is used to conceal local scope variables.
 
-- It is recommended to enable the [Pack](./Pack) option when using Control Flow Flattening.
+- It is recommended to enable the [Pack](./pack) option when using Control Flow Flattening.
 
 #### Control Flow Flattening Process
 

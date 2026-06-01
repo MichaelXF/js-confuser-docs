@@ -18,17 +18,17 @@ This example showcases how `Variable Masking` transforms the code. Try it out by
 
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
-function add3(x, y, z){
-        return x + y + z;
-      }
+function add3(x, y, z) {
+  return x + y + z;
+}
 
-      console.log(add3(1, 2, 3)); // 6
+console.log(add3(1, 2, 3)); // 6
 
 // Output.js
-function sYVSWz(...sYVSWz) {
-  return sYVSWz[0] + sYVSWz[1] + sYVSWz[2];
+function YW9d5f(...YW9d5f) {
+  return YW9d5f[0] + YW9d5f[1] + YW9d5f[2];
 }
-console.log(sYVSWz(1, 2, 3));
+console.log(YW9d5f(1, 2, 3));
 ```
 
 ---

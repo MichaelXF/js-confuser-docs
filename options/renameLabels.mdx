@@ -18,25 +18,25 @@ This example showcases how `Rename Labels` transforms the code. Try it out by ch
 
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
-A: for(var i = 0; i < 10; i++) {
-        if (i % 2 === 0) {
-          continue A;
-        }
-        
-        B: {
-          console.log(i);
-          break B;
-        }
-      }
+A: for (var i = 0; i < 10; i++) {
+  if (i % 2 === 0) {
+    continue A;
+  }
+
+  B: {
+    console.log(i);
+    break B;
+  }
+}
 
 // Output.js
-for (var HyChla = 0; HyChla < 10; HyChla++) {
-  if (HyChla % 2 === 0) {
+for (var LUZZjuD = 0; LUZZjuD < 10; LUZZjuD++) {
+  if (LUZZjuD % 2 === 0) {
     continue;
   }
-  YN8M9_: {
-    console.log(HyChla);
-    break YN8M9_;
+  CjWQ8Co: {
+    console.log(LUZZjuD);
+    break CjWQ8Co;
   }
 }
 ```

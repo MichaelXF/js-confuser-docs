@@ -25,13 +25,16 @@ This example showcases how `Pack` transforms the code. Try it out by changing th
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
 // Strict mode JavaScript blocks eval() access to local variables
-var myVar = "Initial Value";
-eval((/* @js-confuser-var */ "myVar") + ' = "Modified Value"');
+var myVar = 'Initial Value';
+eval(/* @js-confuser-var */ 'myVar' + ' = "Modified Value"');
 
 console.log(myVar); // "Modified Value"
 
 // Output.js
-Function("UKPw2c3", "var GKB2SF9=\"Initial Value\";eval(\"GKB2SF9\"+\" = \\\"Modified Value\\\"\");return console.log(GKB2SF9);")({});
+Function(
+  'kLY5cJU',
+  'var AF2Aid="Initial Value";eval("AF2Aid"+" = \\"Modified Value\\"");return console.log(AF2Aid);',
+)({});
 ```
 
 ---

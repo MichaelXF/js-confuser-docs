@@ -19,19 +19,19 @@ This example showcases how `Object Extraction` transforms the code. Try it out b
 ```js title="Input.js" lines interactive-mode="obfuscate"
 // Input.js
 var utils = {
-  isString: x=>typeof x === "string",
-  isBoolean: x=>typeof x === "boolean"
-}
-if ( utils.isString("Hello") ) {
-  console.log("Correct type"); // "Correct type"
+  isString: (x) => typeof x === 'string',
+  isBoolean: (x) => typeof x === 'boolean',
+};
+if (utils.isString('Hello')) {
+  console.log('Correct type'); // "Correct type"
 }
 
 // Output.js
-var biY9nuU = biY9nuU => {
-  return typeof biY9nuU === "string";
+var PiPR_F = (PiPR_F) => {
+  return typeof PiPR_F === 'string';
 };
-if (biY9nuU("Hello")) {
-  console.log("Correct type");
+if (PiPR_F('Hello')) {
+  console.log('Correct type');
 }
 ```
 
