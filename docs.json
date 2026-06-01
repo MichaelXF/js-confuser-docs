@@ -25,13 +25,6 @@
       {
         "group": "Getting Started",
         "pages": [
-          "index",
-          "quickstart"
-        ]
-      },
-      {
-        "group": "Getting Started",
-        "pages": [
           "getting-started/what-is-obfuscation",
           "getting-started/playground",
           "getting-started/installation",
