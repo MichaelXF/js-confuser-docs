@@ -1,6 +1,7 @@
 ---
 title: "String Compression"
 description: "String Compression uses zlib compression algorithm to compress strings."
+slug: "options/stringCompression"
 ---
 
 - Option name: `"stringCompression"`
@@ -15,24 +16,223 @@ description: "String Compression uses zlib compression algorithm to compress str
 
 This example showcases how `String Compression` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  stringCompression: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
 var str = "Hello, World!";
 console.log(str);
 
 var str2 = "Hello, World!";
 console.log(str2);
-      
+
+// Output.js
+var qQJ5Mjf = function () {
+  var PMarrb = String.fromCharCode,
+    iaoJEV3 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+    fJIcET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-$",
+    YAeaka = {};
+  function B36_IwV(B36_IwV, lklubz) {
+    if (!YAeaka[B36_IwV]) {
+      YAeaka[B36_IwV] = {};
+      for (var ERrT_Me = 0; ERrT_Me < B36_IwV.length; ERrT_Me++) YAeaka[B36_IwV][B36_IwV.charAt(ERrT_Me)] = ERrT_Me;
+    }
+    return YAeaka[B36_IwV][lklubz];
+  }
+  var lklubz = {
+    compressToBase64: function (YAeaka) {
+      if (null == YAeaka) return "";
+      var B36_IwV = lklubz._compress(YAeaka, 6, function (B36_IwV) {
+        return iaoJEV3.charAt(B36_IwV);
+      });
+      switch (B36_IwV.length % 4) {
+        default:
+        case 0:
+          return B36_IwV;
+        case 1:
+          return B36_IwV + "===";
+        case 2:
+          return B36_IwV + "==";
+        case 3:
+          return B36_IwV + "=";
+      }
+    },
+    decompressFromBase64: function (YAeaka) {
+      return null == YAeaka ? "" : "" == YAeaka ? null : lklubz._decompress(YAeaka.length, 32, function (lklubz) {
+        return B36_IwV(iaoJEV3, YAeaka.charAt(lklubz));
+      });
+    },
+    compressToUTF16: function (fJIcET) {
+      return null == fJIcET ? "" : lklubz._compress(fJIcET, 15, function (YAeaka) {
+        return PMarrb(YAeaka + 32);
+      }) + " ";
+    },
+    decompressFromUTF16: function (fJIcET) {
+      return null == fJIcET ? "" : "" == fJIcET ? null : lklubz._decompress(fJIcET.length, 16384, function (YAeaka) {
+        return fJIcET.charCodeAt(YAeaka) - 32;
+      });
+    },
+    compressToUint8Array: function (qFAmRx) {
+      for (var KCsf58 = lklubz.compress(qFAmRx), DGYIGj2 = new Uint8Array(2 * KCsf58.length), NHen6W = 0, W392pua = KCsf58.length; NHen6W < W392pua; NHen6W++) {
+        var b9R1Hjw = KCsf58.charCodeAt(NHen6W);
+        DGYIGj2[2 * NHen6W] = b9R1Hjw >>> 8, DGYIGj2[2 * NHen6W + 1] = b9R1Hjw % 256;
+      }
+      return DGYIGj2;
+    },
+    decompressFromUint8Array: function (eR2P4A) {
+      if (null == eR2P4A) return lklubz.decompress(eR2P4A);
+      for (var GC7jhP = new Array(eR2P4A.length / 2), RzN7j10 = 0, BM_sw47 = GC7jhP.length; RzN7j10 < BM_sw47; RzN7j10++) GC7jhP[RzN7j10] = 256 * eR2P4A[2 * RzN7j10] + eR2P4A[2 * RzN7j10 + 1];
+      var fImjML = [];
+      return GC7jhP.forEach(function (GC7jhP) {
+        fImjML.push(PMarrb(GC7jhP));
+      }), lklubz.decompress(fImjML.join(""));
+    },
+    compressToEncodedURIComponent: function (iaoJEV3) {
+      return null == iaoJEV3 ? "" : lklubz._compress(iaoJEV3, 6, function (YAeaka) {
+        return fJIcET.charAt(YAeaka);
+      });
+    },
+    decompressFromEncodedURIComponent: function (YAeaka) {
+      return null == YAeaka ? "" : "" == YAeaka ? null : (YAeaka = YAeaka.replace(/ /g, "+"), lklubz._decompress(YAeaka.length, 32, function (lklubz) {
+        return B36_IwV(fJIcET, YAeaka.charAt(lklubz));
+      }));
+    },
+    compress: function (fJIcET) {
+      return lklubz._compress(fJIcET, 16, function (YAeaka) {
+        return PMarrb(YAeaka);
+      });
+    },
+    _compress: function (Xsg0wGh, AZaL63, zBsDN2o) {
+      if (null == Xsg0wGh) return "";
+      var Io8Mi18,
+        YdPxeaf,
+        pprnP_,
+        NEq86aQ = {},
+        ws2nNH = {},
+        jbcEVqa = "",
+        aORDE7 = "",
+        _C0RZB = "",
+        OU2CTj = 2,
+        M6pBShc = 3,
+        jP_Q6z = 2,
+        oRz3fD = [],
+        TYbhLT = 0,
+        w9vHKws = 0;
+      for (pprnP_ = 0; pprnP_ < Xsg0wGh.length; pprnP_++) if (jbcEVqa = Xsg0wGh.charAt(pprnP_), Object.prototype.hasOwnProperty.call(NEq86aQ, jbcEVqa) || (NEq86aQ[jbcEVqa] = M6pBShc++, ws2nNH[jbcEVqa] = !0), aORDE7 = _C0RZB + jbcEVqa, Object.prototype.hasOwnProperty.call(NEq86aQ, aORDE7)) _C0RZB = aORDE7;else {
+        if (Object.prototype.hasOwnProperty.call(ws2nNH, _C0RZB)) {
+          if (_C0RZB.charCodeAt(0) < 256) {
+            for (Io8Mi18 = 0; Io8Mi18 < jP_Q6z; Io8Mi18++) TYbhLT <<= 1, w9vHKws == AZaL63 - 1 ? (w9vHKws = 0, oRz3fD.push(zBsDN2o(TYbhLT)), TYbhLT = 0) : w9vHKws++;
+            for (YdPxeaf = _C0RZB.charCodeAt(0), Io8Mi18 = 0; Io8Mi18 < 8; Io8Mi18++) TYbhLT = TYbhLT << 1 | 1 & YdPxeaf, w9vHKws == AZaL63 - 1 ? (w9vHKws = 0, oRz3fD.push(zBsDN2o(TYbhLT)), TYbhLT = 0) : w9vHKws++, YdPxeaf >>= 1;
+          } else {
+            for (YdPxeaf = 1, Io8Mi18 = 0; Io8Mi18 < jP_Q6z; Io8Mi18++) TYbhLT = TYbhLT << 1 | YdPxeaf, w9vHKws == AZaL63 - 1 ? (w9vHKws = 0, oRz3fD.push(zBsDN2o(TYbhLT)), TYbhLT = 0) : w9vHKws++, YdPxeaf = 0;
+            for (YdPxeaf = _C0RZB.charCodeAt(0), Io8Mi18 = 0; Io8Mi18 < 16; Io8Mi18++) TYbhLT = TYbhLT << 1 | 1 & YdPxeaf, w9vHKws == AZaL63 - 1 ? (w9vHKws = 0, oRz3fD.push(zBsDN2o(TYbhLT)), TYbhLT = 0) : w9vHKws++, YdPxeaf >>= 1;
+          }
+          0 == --OU2CTj && (OU2CTj = Math.pow(2, jP_Q6z), jP_Q6z++), delete ws2nNH[_C0RZB];
+        } else for (YdPxeaf = NEq86aQ[_C0RZB], Io8Mi18 = 0; Io8Mi18 < jP_Q6z; Io8Mi18++) TYbhLT = TYbhLT << 1 | 1 & YdPxeaf, w9vHKws == AZaL63 - 1 ? (w9vHKws = 0, oRz3fD.push(zBsDN2o(TYbhLT)), TYbhLT = 0) : w9vHKws++, YdPxeaf >>= 1;
+        0 == --OU2CTj && (OU2CTj = Math.pow(2, jP_Q6z), jP_Q6z++), NEq86aQ[aORDE7] = M6pBShc++, _C0RZB = String(jbcEVqa);
+      }
+      if ("" !== _C0RZB) {
+        if (Object.prototype.hasOwnProperty.call(ws2nNH, _C0RZB)) {
+          if (_C0RZB.charCodeAt(0) < 256) {
+            for (Io8Mi18 = 0; Io8Mi18 < jP_Q6z; Io8Mi18++) TYbhLT <<= 1, w9vHKws == AZaL63 - 1 ? (w9vHKws = 0, oRz3fD.push(zBsDN2o(TYbhLT)), TYbhLT = 0) : w9vHKws++;
+            for (YdPxeaf = _C0RZB.charCodeAt(0), Io8Mi18 = 0; Io8Mi18 < 8; Io8Mi18++) TYbhLT = TYbhLT << 1 | 1 & YdPxeaf, w9vHKws == AZaL63 - 1 ? (w9vHKws = 0, oRz3fD.push(zBsDN2o(TYbhLT)), TYbhLT = 0) : w9vHKws++, YdPxeaf >>= 1;
+          } else {
+            for (YdPxeaf = 1, Io8Mi18 = 0; Io8Mi18 < jP_Q6z; Io8Mi18++) TYbhLT = TYbhLT << 1 | YdPxeaf, w9vHKws == AZaL63 - 1 ? (w9vHKws = 0, oRz3fD.push(zBsDN2o(TYbhLT)), TYbhLT = 0) : w9vHKws++, YdPxeaf = 0;
+            for (YdPxeaf = _C0RZB.charCodeAt(0), Io8Mi18 = 0; Io8Mi18 < 16; Io8Mi18++) TYbhLT = TYbhLT << 1 | 1 & YdPxeaf, w9vHKws == AZaL63 - 1 ? (w9vHKws = 0, oRz3fD.push(zBsDN2o(TYbhLT)), TYbhLT = 0) : w9vHKws++, YdPxeaf >>= 1;
+          }
+          0 == --OU2CTj && (OU2CTj = Math.pow(2, jP_Q6z), jP_Q6z++), delete ws2nNH[_C0RZB];
+        } else for (YdPxeaf = NEq86aQ[_C0RZB], Io8Mi18 = 0; Io8Mi18 < jP_Q6z; Io8Mi18++) TYbhLT = TYbhLT << 1 | 1 & YdPxeaf, w9vHKws == AZaL63 - 1 ? (w9vHKws = 0, oRz3fD.push(zBsDN2o(TYbhLT)), TYbhLT = 0) : w9vHKws++, YdPxeaf >>= 1;
+        0 == --OU2CTj && (OU2CTj = Math.pow(2, jP_Q6z), jP_Q6z++);
+      }
+      for (YdPxeaf = 2, Io8Mi18 = 0; Io8Mi18 < jP_Q6z; Io8Mi18++) TYbhLT = TYbhLT << 1 | 1 & YdPxeaf, w9vHKws == AZaL63 - 1 ? (w9vHKws = 0, oRz3fD.push(zBsDN2o(TYbhLT)), TYbhLT = 0) : w9vHKws++, YdPxeaf >>= 1;
+      for (;;) {
+        if (TYbhLT <<= 1, w9vHKws == AZaL63 - 1) {
+          oRz3fD.push(zBsDN2o(TYbhLT));
+          break;
+        }
+        w9vHKws++;
+      }
+      return oRz3fD.join("");
+    },
+    decompress: function (fJIcET) {
+      return null == fJIcET ? "" : "" == fJIcET ? null : lklubz._decompress(fJIcET.length, 32768, function (YAeaka) {
+        return fJIcET.charCodeAt(YAeaka);
+      });
+    },
+    _decompress: function (FkPLQB, Ix5Cm_, LnJMK2S) {
+      var UekkW7H,
+        pnk8Utt,
+        D_pRYhw,
+        QSQmpD,
+        AkElQlS,
+        _Vjcspg,
+        EKgcyo,
+        RS8Y4i = [],
+        SewxclB = 4,
+        fMBNwon = 4,
+        VJfMfzC = 3,
+        FELE4_ = "",
+        lg9F1S5 = [],
+        Xu97wS = {
+          val: LnJMK2S(0),
+          position: Ix5Cm_,
+          index: 1
+        };
+      for (UekkW7H = 0; UekkW7H < 3; UekkW7H++) RS8Y4i[UekkW7H] = UekkW7H;
+      for (D_pRYhw = 0, AkElQlS = Math.pow(2, 2), _Vjcspg = 1; _Vjcspg != AkElQlS;) QSQmpD = Xu97wS.val & Xu97wS.position, Xu97wS.position >>= 1, 0 == Xu97wS.position && (Xu97wS.position = Ix5Cm_, Xu97wS.val = LnJMK2S(Xu97wS.index++)), D_pRYhw |= (QSQmpD > 0 ? 1 : 0) * _Vjcspg, _Vjcspg <<= 1;
+      switch (D_pRYhw) {
+        case 0:
+          for (D_pRYhw = 0, AkElQlS = Math.pow(2, 8), _Vjcspg = 1; _Vjcspg != AkElQlS;) QSQmpD = Xu97wS.val & Xu97wS.position, Xu97wS.position >>= 1, 0 == Xu97wS.position && (Xu97wS.position = Ix5Cm_, Xu97wS.val = LnJMK2S(Xu97wS.index++)), D_pRYhw |= (QSQmpD > 0 ? 1 : 0) * _Vjcspg, _Vjcspg <<= 1;
+          EKgcyo = PMarrb(D_pRYhw);
+          break;
+        case 1:
+          for (D_pRYhw = 0, AkElQlS = Math.pow(2, 16), _Vjcspg = 1; _Vjcspg != AkElQlS;) QSQmpD = Xu97wS.val & Xu97wS.position, Xu97wS.position >>= 1, 0 == Xu97wS.position && (Xu97wS.position = Ix5Cm_, Xu97wS.val = LnJMK2S(Xu97wS.index++)), D_pRYhw |= (QSQmpD > 0 ? 1 : 0) * _Vjcspg, _Vjcspg <<= 1;
+          EKgcyo = PMarrb(D_pRYhw);
+          break;
+        case 2:
+          return "";
+      }
+      for (RS8Y4i[3] = EKgcyo, pnk8Utt = EKgcyo, lg9F1S5.push(EKgcyo);;) {
+        if (Xu97wS.index > FkPLQB) return "";
+        for (D_pRYhw = 0, AkElQlS = Math.pow(2, VJfMfzC), _Vjcspg = 1; _Vjcspg != AkElQlS;) QSQmpD = Xu97wS.val & Xu97wS.position, Xu97wS.position >>= 1, 0 == Xu97wS.position && (Xu97wS.position = Ix5Cm_, Xu97wS.val = LnJMK2S(Xu97wS.index++)), D_pRYhw |= (QSQmpD > 0 ? 1 : 0) * _Vjcspg, _Vjcspg <<= 1;
+        switch (EKgcyo = D_pRYhw) {
+          case 0:
+            for (D_pRYhw = 0, AkElQlS = Math.pow(2, 8), _Vjcspg = 1; _Vjcspg != AkElQlS;) QSQmpD = Xu97wS.val & Xu97wS.position, Xu97wS.position >>= 1, 0 == Xu97wS.position && (Xu97wS.position = Ix5Cm_, Xu97wS.val = LnJMK2S(Xu97wS.index++)), D_pRYhw |= (QSQmpD > 0 ? 1 : 0) * _Vjcspg, _Vjcspg <<= 1;
+            RS8Y4i[fMBNwon++] = PMarrb(D_pRYhw), EKgcyo = fMBNwon - 1, SewxclB--;
+            break;
+          case 1:
+            for (D_pRYhw = 0, AkElQlS = Math.pow(2, 16), _Vjcspg = 1; _Vjcspg != AkElQlS;) QSQmpD = Xu97wS.val & Xu97wS.position, Xu97wS.position >>= 1, 0 == Xu97wS.position && (Xu97wS.position = Ix5Cm_, Xu97wS.val = LnJMK2S(Xu97wS.index++)), D_pRYhw |= (QSQmpD > 0 ? 1 : 0) * _Vjcspg, _Vjcspg <<= 1;
+            RS8Y4i[fMBNwon++] = PMarrb(D_pRYhw), EKgcyo = fMBNwon - 1, SewxclB--;
+            break;
+          case 2:
+            return lg9F1S5.join("");
+        }
+        if (0 == SewxclB && (SewxclB = Math.pow(2, VJfMfzC), VJfMfzC++), RS8Y4i[EKgcyo]) FELE4_ = RS8Y4i[EKgcyo];else {
+          if (EKgcyo !== fMBNwon) return null;
+          FELE4_ = pnk8Utt + pnk8Utt.charAt(0);
+        }
+        lg9F1S5.push(FELE4_), RS8Y4i[fMBNwon++] = pnk8Utt + FELE4_.charAt(0), pnk8Utt = FELE4_, 0 == --SewxclB && (SewxclB = Math.pow(2, VJfMfzC), VJfMfzC++);
+      }
+    }
+  };
+  return lklubz;
+}();
+"function" == typeof define && define.amd ? define(function () {
+  return qQJ5Mjf;
+}) : "undefined" != typeof module && null != module ? module.exports = qQJ5Mjf : "undefined" != typeof angular && null != angular && angular.module("LZString", []).factory("LZString", function () {
+  return qQJ5Mjf;
+});
+var PMarrb;
+(function () {
+  var iaoJEV3 = "\u0262\u4C2D\u4C3E\u6054@\u3AC4\u0293F\u0230\u0405\u01EC\u4020 ",
+    fJIcET = qQJ5Mjf.decompressFromUTF16(iaoJEV3),
+    ivBXqaH = fJIcET.split("|");
+  PMarrb = function (iaoJEV3) {
+    return ivBXqaH[iaoJEV3];
+  };
+})();
+var iaoJEV3 = PMarrb(0);
+console[PMarrb(1)](iaoJEV3);
+var fJIcET = PMarrb(0);
+console[PMarrb(1)](fJIcET);
 ```
 
 ---

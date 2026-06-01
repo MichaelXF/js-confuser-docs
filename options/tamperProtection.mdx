@@ -1,6 +1,7 @@
 ---
 title: "Tamper Protection"
 description: "Tamper Protection safeguards the runtime behavior from being altered by JavaScript pitfalls.\n\n**⚠️ Tamper Protection requires eval and ran in a non-strict mode environment!**\n\n- **This can break your code.**\n- **Due to the security concerns of arbitrary code execution, you must enable this yourself.**\n"
+slug: "options/lock.tamperProtection"
 ---
 
 - Option name: `"lock.tamperProtection"`
@@ -16,7 +17,7 @@ You can use the [Pack](./Pack) option to bypass Strict Mode constraints.
 
 <Card title="Requires Eval" type="warning">
 The obfuscated code will contain unsafe eval expressions.
-The code will not work properly in [environments that have disabled eval](https://developer.mozilla.org/en-US/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_eval_expressions)
+The code will not work properly in [environments that have disabled eval](https://developer.mozilla.org/en-US/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_eval_expressions).
 </Card>
 
 ---
@@ -27,24 +28,9 @@ The code will not work properly in [environments that have disabled eval](https:
 
 This example showcases how `Tamper Protection` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  lock: {
-    tamperProtection: true,
-    countermeasures: 'onTamperDetected',
-  },
-  globalConcealing: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
-
-      function onTamperDetected(){
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
+function onTamperDetected(){
         throw new Error('Tampering detected!');
       }
 
@@ -53,7 +39,159 @@ module.exports = {
         .then(data => {
           console.log(data); // Array of users with names, usernames, and emails
         });
-      
+
+// Output.js
+var GCdM_Uj = IuN6MN();
+function IuN6MN() {
+  var GCdM_Uj = !1;
+  eval("GCdM_Uj" + " = true");
+  if (!GCdM_Uj) {
+    MNzI7D();
+    return {};
+  }
+  const IuN6MN = eval("this");
+  return IuN6MN;
+}
+function l6e7tY(IuN6MN) {
+  switch (IuN6MN) {
+    case "k0IWUK":
+      return GCdM_Uj.l3kseAb;
+    case "TY5K17":
+      return GCdM_Uj.fetch;
+    case "RY3d93":
+      return GCdM_Uj.LJ8VnmY;
+    case "a3rsctb":
+      return GCdM_Uj.nyJIOA;
+    case "evtqzO":
+      return GCdM_Uj.B8gUc0P;
+    case "JHxLwFz":
+      return GCdM_Uj.wzEtTc;
+    case "NF4srn":
+      return GCdM_Uj.ORggvb;
+    case "w3iZrB":
+      return GCdM_Uj.FC9jd20;
+    case "vFT2wE":
+      return GCdM_Uj.jm7s0bp;
+    case "JEhosFJ":
+      return GCdM_Uj.sztXRv;
+    case "C3lsSd":
+      return GCdM_Uj.wDbvCMa;
+    case "jtnnyR":
+      return GCdM_Uj.pF4GgmY;
+    case "CDlhf6D":
+      return GCdM_Uj.j1hjeVe;
+    case "AdL7xP":
+      return GCdM_Uj.rmir8W5;
+    case "E2GRW4q":
+      return GCdM_Uj.DP6oGa;
+    case "rp4l7cC":
+      return GCdM_Uj.yOqB7oM;
+    case "IbtPGy":
+      return GCdM_Uj.Object;
+    case "wIQPY1x":
+      return GCdM_Uj.in7Pjv;
+    case "yxSB76":
+      return GCdM_Uj.eEQevd;
+    case "ttm2id":
+      return GCdM_Uj.CnzpAP;
+    case "ANtsgz":
+      return GCdM_Uj.Error;
+    case "l4kFOG7":
+      return GCdM_Uj.P6UU8dd;
+    case "0r9MKFO":
+      return GCdM_Uj.ufhivfz;
+    case "I4XaDIO":
+      return GCdM_Uj.ESX6zg;
+    case "nOQw1cL":
+      return GCdM_Uj.console;
+    case "Kffnrae":
+      return GCdM_Uj.Tdfsbe;
+    case "Mpcq61Y":
+      return GCdM_Uj.KirjaK8;
+    case "PDyE7o":
+      return GCdM_Uj.amO2aq;
+    case "abvUwE":
+      return GCdM_Uj.NszNSj;
+    case "LjulGC":
+      return GCdM_Uj.dac5MT1;
+    case "KS283n":
+      return GCdM_Uj.NPezJx7;
+    case "4sx432c":
+      return GCdM_Uj.cxsWSzj;
+    case "KE1sVKH":
+      return GCdM_Uj.vLysRg;
+    case "ol4yTjR":
+      return GCdM_Uj.vwZmTZ;
+    case "ZFrYiO":
+      return GCdM_Uj.lSAuEx;
+  }
+}
+var Dpaq4P = !1;
+function MNzI7D() {
+  if (Dpaq4P) return;
+  Dpaq4P = !0;
+  gdV8vh();
+}
+function hhsA6U() {
+  function GCdM_Uj(GCdM_Uj, IuN6MN) {
+    const Dpaq4P = GCdM_Uj.length,
+      hhsA6U = IuN6MN.length;
+    let gdV8vh = 0;
+    if (hhsA6U > Dpaq4P) {
+      return -1;
+    }
+    for (let m57ona = 0; m57ona <= Dpaq4P - hhsA6U; m57ona++) for (let l6e7tY = 0; l6e7tY < hhsA6U; l6e7tY++) if (GCdM_Uj[m57ona + l6e7tY] === IuN6MN[l6e7tY]) {
+      gdV8vh++;
+      if (gdV8vh === hhsA6U) {
+        return m57ona;
+      }
+    } else {
+      gdV8vh = 0;
+      break;
+    }
+    return -1;
+  }
+  function IuN6MN(IuN6MN) {
+    if (GCdM_Uj("" + IuN6MN, "{ [native code] }") === -1 || typeof l6e7tY("IbtPGy").getOwnPropertyDescriptor(IuN6MN, "toString") !== "undefined") {
+      MNzI7D();
+      return;
+    }
+    return IuN6MN;
+  }
+  var Dpaq4P = arguments;
+  if (Dpaq4P.length === 1) {
+    return IuN6MN(Dpaq4P[0]);
+  } else if (Dpaq4P.length === 2) {
+    var hhsA6U = Dpaq4P[0],
+      gdV8vh = Dpaq4P[1],
+      m57ona = hhsA6U[gdV8vh];
+    m57ona = IuN6MN(m57ona);
+    return m57ona.bind(hhsA6U);
+  }
+}
+(function () {
+  function GCdM_Uj() {
+    try {
+      var GCdM_Uj = [];
+      delete GCdM_Uj.length;
+    } catch (e) {
+      return !0;
+    }
+    return !1;
+  }
+  if (GCdM_Uj()) {
+    MNzI7D();
+    hhsA6U = void 0;
+  }
+})();
+function gdV8vh() {
+  throw new (l6e7tY("ANtsgz"))('Tampering detected!');
+}
+hhsA6U(l6e7tY("TY5K17"))('https://jsonplaceholder.typicode.com/users').then(GCdM_Uj => {
+  return GCdM_Uj.json();
+}).then(GCdM_Uj => {
+  hhsA6U(l6e7tY("nOQw1cL"), "log")(GCdM_Uj);
+});
 ```
 
 ---
@@ -66,7 +204,7 @@ Tamper Protection with `Global Concealing` can detect at runtime if certain glob
 
 ##### Native function check
 
-```js
+```js lines
 var _fetch = fetch;
 fetch = (...args)=>{
   console.log("Fetch request intercepted!", ...args)
@@ -76,7 +214,7 @@ fetch = (...args)=>{
 
 This monkey-patch can be detected by inspecting the `fetch.toString()` value:
 
-```js
+```js lines
 // Untampered
 fetch.toString() // "function fetch() { [native code] }"
 
@@ -91,7 +229,7 @@ Certain global functions are checked before each invocation to ensure that (1) t
 
 A direct `eval` invocation can access the local scope, only if it has not been redefined.
 
-```js
+```js lines
 let root = {};
 eval("root=this"); // Window {window: ...}
 ```

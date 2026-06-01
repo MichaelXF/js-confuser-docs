@@ -1,6 +1,7 @@
 ---
 title: "Pack"
 description: "Packs the output code into a single `Function()` call. Designed to escape strict mode constraints."
+slug: "options/pack"
 ---
 
 - Option name: `"pack"`
@@ -10,7 +11,7 @@ description: "Packs the output code into a single `Function()` call. Designed to
 
 <Card title="Requires Eval" type="warning">
 The obfuscated code will contain unsafe eval expressions.
-The code will not work properly in [environments that have disabled eval](https://developer.mozilla.org/en-US/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_eval_expressions)
+The code will not work properly in [environments that have disabled eval](https://developer.mozilla.org/en-US/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_eval_expressions).
 </Card>
 
 ---
@@ -21,25 +22,16 @@ The code will not work properly in [environments that have disabled eval](https:
 
 This example showcases how `Pack` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  pack: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
-
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
 // Strict mode JavaScript blocks eval() access to local variables
 var myVar = "Initial Value";
 eval((/* @js-confuser-var */ "myVar") + ' = "Modified Value"');
 
 console.log(myVar); // "Modified Value"
-      
+
+// Output.js
+Function("UKPw2c3", "var GKB2SF9=\"Initial Value\";eval(\"GKB2SF9\"+\" = \\\"Modified Value\\\"\");return console.log(GKB2SF9);")({});
 ```
 
 ---

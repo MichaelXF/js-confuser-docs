@@ -1,6 +1,7 @@
 ---
 title: "Control Flow Flattening"
 description: "Control-flow Flattening hinders program comprehension by creating convoluted switch statements.\n\n**⚠️ Significantly impacts performance, use sparingly!**"
+slug: "options/controlFlowFlattening"
 ---
 
 - Option name: `"controlFlowFlattening"`
@@ -21,18 +22,8 @@ You can use the [Pack](./Pack) option to bypass Strict Mode constraints.
 
 This example showcases how `Control Flow Flattening` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  controlFlowFlattening: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
 function countTo(num){
   for ( var i = 1; i <= num; i++ ) {
     console.log(i);
@@ -42,6 +33,39 @@ function countTo(num){
 var number = 10;
 countTo(number); // 1,2,3,4,5,6,7,8,9,10
 
+// Output.js
+function* yasJVf(C3mXydC, S_H1fkA, XDrWbPL, roP9WwA = {
+  K5V4Br: {}
+}, h8JiqyB) {
+  while (C3mXydC + S_H1fkA + XDrWbPL !== 184) with (roP9WwA.k3U6TWo || roP9WwA) switch (C3mXydC + S_H1fkA + XDrWbPL) {
+    case 186:
+      roP9WwA.k3U6TWo = roP9WwA.TF8YNh, C3mXydC += XDrWbPL - 53, S_H1fkA += C3mXydC - 359;
+      break;
+    case 219:
+    case XDrWbPL - 289:
+    case -184:
+      [JLPHpl.u3LNnlY] = h8JiqyB;
+      for (JLPHpl._crSQGf = 1; JLPHpl._crSQGf <= JLPHpl.u3LNnlY; JLPHpl._crSQGf++) console.log(JLPHpl._crSQGf);
+      return;
+    case -107:
+    case -88:
+    default:
+      [roP9WwA.K5V4Br.h7COToO, roP9WwA.K5V4Br.XXMLwtK] = [125, -15];
+      roP9WwA.k3U6TWo = roP9WwA.K5V4Br, S_H1fkA += C3mXydC - -429, XDrWbPL += S_H1fkA - 175;
+      break;
+    case C3mXydC - 130:
+      [roP9WwA.K5V4Br.h7COToO, roP9WwA.K5V4Br.XXMLwtK] = [-81, 158];
+      K5V4Br.BGFBvl = function (...C3mXydC) {
+        return yasJVf(-63, -226, 147, {
+          K5V4Br: roP9WwA.K5V4Br,
+          JLPHpl: {}
+        }, C3mXydC).next().value;
+      };
+      K5V4Br.c5nZyL = C3mXydC + -178;
+      return (1, K5V4Br.BGFBvl)(K5V4Br.c5nZyL);
+  }
+}
+yasJVf(188, 100, -230).next().value;
 ```
 
 ---

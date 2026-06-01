@@ -1,6 +1,7 @@
 ---
 title: "Dead Code"
 description: "Randomly injects dead code."
+slug: "options/deadCode"
 ---
 
 - Option name: `"deadCode"`
@@ -15,25 +16,57 @@ description: "Randomly injects dead code."
 
 This example showcases how `Dead Code` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  deadCode: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
-
-      if(true) {
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
+if(true) {
         console.log("This code runs");
       } else {
         console.log("This code does not run");
       }
-      
+
+// Output.js
+if ("G4ULCk" in oulLA0) {
+  mt2kbf();
+}
+function mt2kbf() {
+  const mt2kbf = require('path'),
+    {
+      version: oulLA0
+    } = require('../../package'),
+    {
+      version: Shspdy5
+    } = require('@redacted/enterprise-plugin/package'),
+    {
+      version: cgVrCir
+    } = require('@redacted/components/package'),
+    {
+      sdkVersion: O35ul8
+    } = require('@redacted/enterprise-plugin'),
+    u9wIvU = require('../utils/isStandaloneExecutable'),
+    y_69zQz = require('./resolve-local-redacted-path'),
+    hcMtVIy = mt2kbf.resolve(__dirname, '../redacted.js');
+}
+function oulLA0() {}
+{
+  if ("FHVfLPb" in oulLA0) {
+    Shspdy5();
+  }
+  function Shspdy5() {
+    var mt2kbf = function (mt2kbf) {
+      var oulLA0 = mt2kbf.length,
+        Shspdy5 = [],
+        nKhsQfI = 0;
+      for (var aDOS8vS = 0; aDOS8vS < oulLA0; aDOS8vS++) Shspdy5.push(aDOS8vS !== 0 && mt2kbf[aDOS8vS] > mt2kbf[aDOS8vS - 1] ? Shspdy5[aDOS8vS - 1] + 1 : 1);
+      for (var GDEWZIl = oulLA0 - 1; GDEWZIl >= 0; GDEWZIl--) {
+        if (GDEWZIl !== oulLA0 - 1 && mt2kbf[GDEWZIl] > mt2kbf[GDEWZIl + 1]) Shspdy5[GDEWZIl] = Math.max(Shspdy5[GDEWZIl], Shspdy5[GDEWZIl + 1] + 1);
+        nKhsQfI += Shspdy5[GDEWZIl];
+      }
+      return nKhsQfI;
+    };
+    console.log(mt2kbf);
+  }
+  console.log("This code runs");
+}
 ```
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "RGF"
 description: "RGF (Runtime-Generated-Functions) creates executable code from strings.\n        - **This can break your code.**\n        - **Due to the security concerns of arbitrary code execution, you must enable this yourself.**\n        - The arbitrary code is also obfuscated."
+slug: "options/rgf"
 ---
 
 - Option name: `"rgf"`
@@ -10,7 +11,7 @@ description: "RGF (Runtime-Generated-Functions) creates executable code from str
 
 <Card title="Requires Eval" type="warning">
 The obfuscated code will contain unsafe eval expressions.
-The code will not work properly in [environments that have disabled eval](https://developer.mozilla.org/en-US/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_eval_expressions)
+The code will not work properly in [environments that have disabled eval](https://developer.mozilla.org/en-US/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_eval_expressions).
 </Card>
 
 ---
@@ -21,23 +22,29 @@ The code will not work properly in [environments that have disabled eval](https:
 
 This example showcases how `RGF` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  rgf: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
 function printToConsole(message) {
   console.log(message);
 }
 
 printToConsole("Hello World"); // "Hello World"
+
+// Output.js
+function bug9eX(bug9eX = !0) {
+  return bug9eX;
+}
+var GLm3bM = bug9eX(),
+  iJyOgn = [q5gkRCL("function utGfI8(){var[utGfI8,RbmRhqZ]=arguments;function DJV5G4S(utGfI8){console.log(utGfI8)}return DJV5G4S.apply(this,RbmRhqZ)}utGfI8;")];
+function CZ2N4d() {
+  return iJyOgn[0].apply(this, [iJyOgn, arguments]);
+}
+function q5gkRCL(bug9eX) {
+  if (GLm3bM) {
+    return eval(bug9eX);
+  }
+}
+CZ2N4d("Hello World");
 ```
 
 ---

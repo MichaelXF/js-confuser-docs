@@ -1,6 +1,7 @@
 ---
 title: "Object Extraction"
 description: "Extracts object properties into separate variables."
+slug: "options/objectExtraction"
 ---
 
 - Option name: `"objectExtraction"`
@@ -15,24 +16,22 @@ description: "Extracts object properties into separate variables."
 
 This example showcases how `Object Extraction` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  objectExtraction: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
 var utils = {
   isString: x=>typeof x === "string",
   isBoolean: x=>typeof x === "boolean"
 }
 if ( utils.isString("Hello") ) {
   console.log("Correct type"); // "Correct type"
+}
+
+// Output.js
+var biY9nuU = biY9nuU => {
+  return typeof biY9nuU === "string";
+};
+if (biY9nuU("Hello")) {
+  console.log("Correct type");
 }
 ```
 

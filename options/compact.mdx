@@ -1,6 +1,7 @@
 ---
 title: "Compact"
 description: "Remove's whitespace from the final output."
+slug: "options/compact"
 ---
 
 - Option name: `"compact"`
@@ -15,17 +16,8 @@ description: "Remove's whitespace from the final output."
 
 This example showcases how `Compact` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  compact: true,
-  renameVariables: false,
-  minify: true,
-};
-===END OPTIONS===
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
 /**
  * Computes the nth Fibonacci number iteratively
  * @param {number} num
@@ -47,7 +39,9 @@ function fibonacci(num) {
 for (var i = 1; i <= 25; i++) {
   console.log(i, fibonacci(i));
 }
-      
+
+// Output.js
+function fibonacci(num){var a=0,b=1,c=num;while(num-->1){c=a+b;a=b;b=c}return c}for(var i=1;i<=25;i++)console.log(i,fibonacci(i));
 ```
 
 ---

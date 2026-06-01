@@ -1,6 +1,7 @@
 ---
 title: "Rename Variables"
 description: "Determines if variables should be renamed."
+slug: "options/renameVariables"
 ---
 
 - Option name: `"renameVariables"`
@@ -15,17 +16,8 @@ description: "Determines if variables should be renamed."
 
 This example showcases how `Rename Variables` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
 var twoSum = function (nums, target) {
   var hash = {};
   var len = nums.length;
@@ -47,6 +39,28 @@ var test = function () {
 };
 
 test();
+
+// Output.js
+var C4kdnl = function (C4kdnl, vdTtcO) {
+    var KkIkTR = {},
+      lZj3Tnk = C4kdnl.length;
+    for (var prTWnON = 0; prTWnON < lZj3Tnk; prTWnON++) {
+      if (C4kdnl[prTWnON] in KkIkTR) {
+        return [KkIkTR[C4kdnl[prTWnON]], prTWnON];
+      }
+      KkIkTR[vdTtcO - C4kdnl[prTWnON]] = prTWnON;
+    }
+    return [-1, -1];
+  },
+  vdTtcO = function () {
+    var vdTtcO = [2, 7, 11, 15],
+      srcCU8O = 9,
+      ViBhbCp = [0, 1],
+      D1q6oJ = C4kdnl(vdTtcO, srcCU8O);
+    ok(D1q6oJ[0] === ViBhbCp[0]);
+    ok(D1q6oJ[1] === ViBhbCp[1]);
+  };
+vdTtcO();
 ```
 
 ---
@@ -57,7 +71,7 @@ test();
 
 The comment syntax `/* @js-confuser-var */ "varName"` provides a method to access variable mappings. This is especially useful for `eval()` scenarios where you want preserve the mapping.
 
-```js
+```js lines
 // Input
 var message = "Hello world!";
 eval(`console.log(${ /* @js-confuser-var */ "message"  })`);
@@ -76,7 +90,7 @@ Even if `Rename Variables` is disabled, the comment `/* @js-confuser-var */` wil
 
 The prefix `__NO_JS_CONFUSER_RENAME__` disables renaming a certain variable. This can be useful for debugging the obfuscator.
 
-```js
+```js lines
 // Input
 var __NO_JS_CONFUSER_RENAME__message1 = "My first message"
 var message2 = "My other message"

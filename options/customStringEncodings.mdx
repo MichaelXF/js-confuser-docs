@@ -1,6 +1,7 @@
 ---
 title: "Custom String Encodings"
 description: "Custom String Encodings allows you to define your own string encoding/decoding functions."
+slug: "options/customStringEncodings"
 ---
 
 - Option name: `"customStringEncodings"`
@@ -15,39 +16,76 @@ description: "Custom String Encodings allows you to define your own string encod
 
 This example showcases how `Custom String Encodings` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  customStringEncodings: [
-    {
-      code: `
-            function {fnName}(str){
-              return atob(str)
-            }
-            `,
-      encode: function(str) {
-              return btoa(str);
-            },
-      decode: function(str) {
-              return atob(str);
-            },
-    },
-  ],
-  stringConcealing: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
-
-      // Base64 Encoding Demo
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
+// Base64 Encoding Demo
 
       var str = "Hello, World!";
       console.log(str); // "Hello, World!"
-      
+
+// Output.js
+function Fe_NY0(Fe_NY0) {
+  return atob(Fe_NY0);
+}
+function qbnCKnK(qbnCKnK) {
+  if (typeof B2QtGKd[qbnCKnK] === 'undefined') {
+    return B2QtGKd[qbnCKnK] = Fe_NY0(_2YKEdt[qbnCKnK]);
+  }
+  return B2QtGKd[qbnCKnK];
+}
+var B2QtGKd = {},
+  _2YKEdt = ["dWJKVXhxcDN4NkVlRTVPOVREMUFTMHRuTFZ6VFd1SEdBaXJrR0FocG9X", "WlNBaW1Db1JEUDdkdndXV2c=", "cGp3ZlZGZTJob3VRcElyRENV", "TkNJVVRkdXFESmMyZ0pJdkNTaXlxb1RiTFhTaUNYcm1rSnJnRkR5RFFSNjNmdnFUUw==", "ckpDeFRjbktlTldVWTV4ZldDR25IWUxEbFJIMmNpMGYzM3lrUGRRVHFaaw==", "bGZoNGZ2TUlnU3JJWUY=", "WWhwSmRyT0FFc1RKVkcxZEI1dmVYSFZGTDNFZA==", "blZPWGhFMDY=", "ZWRuZ0JhT3NuOTk4Vzk=", "VGp4UFVCU2ExbEU5WktTeFhRbmZGWmZyaGhhb3lBdlFzOUxHU2VI", "QndXSDNLTzB5ZjE1dFowRVNqZXBNbkx0Sg==", "ZGJWWkM3b2JaWkxDYmtkYUozUlE5", "YmYyVmlxNUxwUkVUMktxMTZ6aVNaS3dmdTRHTG5GY09sQmpvQlg1TG5ub1M=", "Unhwc3dHbWhqMEFvbm43c0ZMT3dKUXV2WHkwZnVkeHpSaw==", "bzB3c2VTS1ptdWFXYjk=", "Vkg4MUh1", "YUtZdExvcmNkUlgxcjBMVGJyeWFxa1gyTjJJUW9hVVZTamx0bTJJaWhGcmE=", "TUpmU09sRjFlQ1M4VkhD", "RnRHdGh0aFFxUHJ3NmdMbkg2c3JOb210Y0NkZzIwdnI2UGlqVkZmYWMw", "YmNObTBDVktVUGFhRWZPTjFDNHRTYndKOGxaNDlZYWtwQk04U3E=", "dlBQNDl6NWNqaU5WeGhmQkprYUZ0SDMz", "UXFHalczYXdhaEtIeHpmSzhDQmVpN2lUb0hBV3QyT214MjRG", "Q3hEVWszN3BURDBLVk4zaTM0bnJJMUM1YzRIYUFsM09ZRjlsZkZI", "V1hVYXU5TXJQdXNXMTFyS0thQVo2ZnF5Vjg=", "T1BydUZocTA2Wg==", "UXhMYnR2UFdTdzdkVFNCRDd4S1Q=", "MnRqSUhuWDFBTW9zVVBVYU5EOVZBcEZXQ2tWQXZzQUZzR0c0S0x6dkpMTmJTZHQ=", "UUNibE5IU0RCemdpdjREVg==", "VFNCbzZqd0RmRVhWam1vc09ueDExWEZnV2tlazJuNHViTTQ4MTVpNWdnUXc=", "UlZ2U2xsbnpJMWVsNld4UWlz", "bkU0Y3RvNXJpQXlzUw==", "SGZRVE56RmNkZzBUVjF0NGJkRHlrb28zNDRkM1NlUURtbm8yRG42T05PZQ==", "b29HR0pTZTlTUHVnT2hLUWhnMElFRG5kcE1OMG1xZURseG5FRGE4ejlC", "RkROYjlqdnBFVWhZVnFjVGJJNVRnMGR2VW9XNHVjMHFONjg2V3VKdEZzOQ==", "cUVZa0s=", "cFA3cmFuYVEyZzZOQ0dydkI=", "QjZlYzVIUHBaVW1SQUdneG1iWjNnd2ZRM0luT1hPUFY=", "MFkzTWtkbnNJT0I4RUNXY0RwSWl2TUg5TmxodVRHM0dMcA==", "Y0dJOVlMT0xiT0w1ZHBldW1PanJBNTVXWnlDQVdyRUxJcTJ4dndFWGhtTlY=", "YWxwWEFHTzV1TXpyUVZKbk9RaUZTVURI", "RGgxRlFmSko1dno0aW1aQzNmN1dodFRi", "emFxTWlIS2RCdUYwUG4zUFFOQg==", "aDE2bWc3SUgyWkdGSUN3YzRYUTROYlFRcndOUQ==", "dzlCQTZCNEhlbU80cFhqYmVYUG54SUpYenVrcFE5bTFhSEVo", "YUlOYW1tRnFwUVpUYkg4Mw==", "MElrSVhIRWdNTkgybzJ5VTk0VGJGTXFl", "bnFOM2xnSVloNm9CZThEV3N0dkhQRFVlazlhWnNZanQ0S1VKdzJMM2dRcVcxbk9JUA==", "U0N2bXU3RkF0NmdrVmJrRnZEbmNVRFVSeQ==", "YVUzNUFGaUFzNGJETGVtcFA5OFRYQ2Rq", "b2l5M3V1MlI3Z0pHSEp6a1owVmExcWhBNWE3UnJIckVCcmI0cQ==", "YkQwUWE5RmFDUUJaTTdYS0tHUmtnd3ZrVkJoOWk0S2Q=", "TkJlR0o=", "N20xZm0xSTk3a2RMeGYwT0ZmTlJ0RXgzeTNSVEJhcg==", "RmFHb2dHTW1pWHk3aTN0NWJaMzlNejZJMg==", "akVCMExuZWFzSGJyYjFOSXR5d3FV", "QXFLanRLZXB1YU9LTA==", "bVBZdlFGdFFZdWt2MVhJaE5kSFhFa3J2aU84b01oTjdmWmw2MHdIWUphWHYwSVhO", "WVpRQ09HYU1KWm9TeHVwMTJvbU1BQlowS3ByZEszVFZHMVBOUjFGMVRkY2g2WEQ=", "bjM0emNzOEZLVzROU3VhQThhYQ==", "bm1LVXM3amp5MkZnSUpEMThEb25GMQ==", "YW9qZm16", "aGd3Mm0zeExOMUE1VjdKOGNkcXlGWDFRWnRiWmU2MGxhMks=", "dzZVNzlH", "OHNHY3lDdVU4em1oVkJ2aVNTWHd4T0JwMA==", "MDF4TjNDSFRzcVFpZHlkcFNBQ1JvNjMySDNaa1lqeXVCQWtVSWUyWlhTOVA0M20wWQ==", "QjhiZjh2emtRSEdBTTVUUlJ6UGla", "RERhRk1CWnc3WXRrUmpsWFVLa25jaDhtQw==", "ZXh6eXZ6YUF1N1BBbEVj", "Rjl0a0RjNzVTcw==", "cGxQS2xkWGFSWlY1TmVuR3VnNDdNMkZtQWhyUzVOMFZkcUswTjlCMWs2Qg==", "RWQ4T0FjMnFo", "cXd0TVI=", "YWxqOWVhRVlX", "Yzl1OFNKa0pWSURxQlJWSnhOTmd6bFVUckxpZ3RWT2hDZmpRejBCUzlBSklM", "Mm9sMFIxdWtKUktYc3R6R0N4a3N4azB1d2x5YmVvdE15a2FlZQ==", "akJqekxVVjNzODM5eUFSUWI=", "N0tVR0dqMlE5enZsSVJDZWhMclU3N0xqdU94bUtBcEZwWTg4Y0FyVjI=", "cm9yV2swaU92aFFIWWl5RzhBZA==", "dWN1MmQzRkxsQkgxcjdsTE1YbFN6VnFyZEps", "bGJlVFhpVkNSc0JGNDFBRHdwdlRxVVlCRlF5UWJadUE=", "MGwzcHZPcUpZRjRQbVJFeTg4T2VYTTI5", "dFl1U0x4Z3dNemt1Y3ZDbkNNaHdS", "TGRrbXdjc2JJRlg=", "Rk9NY3VHRTl2ZmtrN1FxREk3RjM3MHNCR2hPMDJCcUhWZHBUWUpxTGhmWDUwVG8=", "Q1VQR2JySmdXV1BTdGR0UnVQY0hucHVKelBRSnRtNEljODdmZ2VFZW93", "V0U5cVo1QXRrUlNUMjFGY3h0TUpVaXhid05xY1pKeGN4bjlT", "Z0JwNnpOWVhSdWloQmpzWEFVRGZGNmw5a1luQzhIUFVDNlp0", "TERoUkxTTXQ=", "SGVsbG8sIFdvcmxkIQ==", "bG9n"];
+function oFzgzM() {
+  var Fe_NY0 = [function () {
+      return globalThis;
+    }, function () {
+      return global;
+    }, function () {
+      return window;
+    }, function () {
+      return new Function("return this")();
+    }],
+    qbnCKnK,
+    B2QtGKd = [];
+  try {
+    qbnCKnK = Object;
+    B2QtGKd.push("".__proto__.constructor.name);
+  } catch (e) {}
+  F9OV1I: for (var _2YKEdt = 0; _2YKEdt < Fe_NY0.length; _2YKEdt++) try {
+    qbnCKnK = Fe_NY0[_2YKEdt]();
+    for (var oFzgzM = 0; oFzgzM < B2QtGKd.length; oFzgzM++) if (typeof qbnCKnK[B2QtGKd[oFzgzM]] === "undefined") continue F9OV1I;
+    return qbnCKnK;
+  } catch (e) {}
+  return qbnCKnK || this;
+}
+var nQQogq = oFzgzM() || {},
+  acRRvX9 = nQQogq.TextDecoder,
+  mRldXpa = nQQogq.Uint8Array,
+  mX6wNFV = nQQogq.Buffer,
+  mKUVpv = nQQogq.String || String,
+  L9GNIJ = nQQogq.Array || Array,
+  iaOmY5B = function () {
+    var Fe_NY0 = new L9GNIJ(128),
+      qbnCKnK = mKUVpv.fromCodePoint || mKUVpv.fromCharCode,
+      B2QtGKd = [];
+    return function (_2YKEdt) {
+      var oFzgzM,
+        nQQogq,
+        acRRvX9 = _2YKEdt.length;
+      B2QtGKd.length = 0;
+      for (var mRldXpa = 0; mRldXpa < acRRvX9;) {
+        nQQogq = _2YKEdt[mRldXpa++];
+        nQQogq <= 0x7F ? oFzgzM = nQQogq : nQQogq <= 0xDF ? oFzgzM = (nQQogq & 0x1F) << 6 | _2YKEdt[mRldXpa++] & 0x3F : nQQogq <= 0xEF ? oFzgzM = (nQQogq & 0x0F) << 12 | (_2YKEdt[mRldXpa++] & 0x3F) << 6 | _2YKEdt[mRldXpa++] & 0x3F : mKUVpv.fromCodePoint ? oFzgzM = (nQQogq & 0x07) << 18 | (_2YKEdt[mRldXpa++] & 0x3F) << 12 | (_2YKEdt[mRldXpa++] & 0x3F) << 6 | _2YKEdt[mRldXpa++] & 0x3F : (oFzgzM = 63, mRldXpa += 3);
+        B2QtGKd.push(Fe_NY0[oFzgzM] || (Fe_NY0[oFzgzM] = qbnCKnK(oFzgzM)));
+      }
+      return B2QtGKd.join('');
+    };
+  }();
+function aKqz60k(Fe_NY0) {
+  return typeof acRRvX9 !== "undefined" && acRRvX9 ? new acRRvX9().decode(new mRldXpa(Fe_NY0)) : typeof mX6wNFV !== "undefined" && mX6wNFV ? mX6wNFV.from(Fe_NY0).toString("utf-8") : iaOmY5B(Fe_NY0);
+}
+var cGjYNd = qbnCKnK(88);
+console[qbnCKnK(89)](cGjYNd);
 ```
 
 ---
@@ -58,7 +96,7 @@ module.exports = {
 
       The Custom String Encoding API allows you to define your own string encoding/decoding functions. These encodings will be randomly inserted throughout the code.
       
-      ```js title="Options.js"
+      ```js title="Options.js" lines
       module.exports = {
         target: "node",
 
@@ -105,7 +143,7 @@ module.exports = {
 
       - This encoding algorithm is instantiated multiple times, each with a different shuffled charset. This makes it difficult to reverse-engineer the encoding algorithm. 
       
-      ```js title="Options.js"
+      ```js title="Options.js" lines
       const { Template } = require("js-confuser");
       const { stringLiteral } = require("@babel/types");
 

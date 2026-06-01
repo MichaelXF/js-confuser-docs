@@ -1,6 +1,7 @@
 ---
 title: "Dispatcher"
 description: "Creates a middleman function to process function calls."
+slug: "options/dispatcher"
 ---
 
 - Option name: `"dispatcher"`
@@ -15,23 +16,50 @@ description: "Creates a middleman function to process function calls."
 
 This example showcases how `Dispatcher` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  dispatcher: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
 function print(x){
   console.log(x);
 }
 
 print("Hello World"); // "Hello World"
+
+// Output.js
+var u0rA6M = Object.create(null),
+  vG8QRL;
+function bFSejcz(bFSejcz, UTWskj, sVTvGf7, wck76LF = {}) {
+  var ofWzDs,
+    N0D5bvA = {
+      "7e2GW1": function () {
+        var [bFSejcz] = vG8QRL;
+        console.log(bFSejcz);
+      }
+    };
+  if (UTWskj === "LTkdNGWkG4") {
+    vG8QRL = [];
+  }
+  if (UTWskj === "vGrT8NlMEW") {
+    function VoXFO9y() {
+      var UTWskj = function (...UTWskj) {
+          vG8QRL = UTWskj;
+          return N0D5bvA[bFSejcz].apply(this);
+        },
+        sVTvGf7 = wck76LF[bFSejcz];
+      if (sVTvGf7) {
+        kN7ttmL(UTWskj, sVTvGf7);
+      }
+      return UTWskj;
+    }
+    ofWzDs = u0rA6M[bFSejcz] || (u0rA6M[bFSejcz] = VoXFO9y());
+  } else {
+    ofWzDs = N0D5bvA[bFSejcz]();
+  }
+  return sVTvGf7 === "nm87c6OTXI" ? {
+    OoOagRpSBF: ofWzDs
+  } : ofWzDs;
+}
+function kN7ttmL() {}
+vG8QRL = ["Hello World"], bFSejcz("7e2GW1");
 ```
 
 ---

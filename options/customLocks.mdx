@@ -1,6 +1,7 @@
 ---
 title: "Custom Locks"
 description: "Customize the lock algorithm to your own implementation."
+slug: "options/lock.customLocks"
 ---
 
 - Option name: `"lock.customLocks"`
@@ -15,42 +16,36 @@ description: "Customize the lock algorithm to your own implementation."
 
 This example showcases how `Custom Locks` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  lock: {
-    countermeasures: 'countermeasures',
-    customLocks: [
-      {
-        code: `
-              function checkChrome(){
-                return navigator.userAgent.includes("Chrome")
-              }
-
-              if(!checkChrome()){
-                {countermeasures}
-              }
-              `,
-        percentagePerBlock: 0.5,
-        maxCount: 25,
-        minCount: 1,
-      },
-    ],
-  },
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
-
-      function countermeasures(){
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
+function countermeasures(){
         throw new Error("Invalid browser!");
       }
       console.log("This only runs in Chrome!");
-      
+
+// Output.js
+function q1j6If5() {
+  return navigator.userAgent.includes("Chrome");
+}
+if (!q1j6If5()) {
+  iAAgMD();
+}
+var MQCF2Nc = !1;
+function iAAgMD() {
+  if (MQCF2Nc) return;
+  MQCF2Nc = !0;
+  F2JEDCh();
+}
+function F2JEDCh() {
+  function MQCF2Nc() {
+    return navigator.userAgent.includes("Chrome");
+  }
+  if (!MQCF2Nc()) {
+    iAAgMD();
+  }
+  throw new Error("Invalid browser!");
+}
+console.log("This only runs in Chrome!");
 ```
 
 ---

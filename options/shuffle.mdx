@@ -1,6 +1,7 @@
 ---
 title: "Shuffle"
 description: "Shuffles the initial order of arrays. The order is brought back to the original during runtime."
+slug: "options/shuffle"
 ---
 
 - Option name: `"shuffle"`
@@ -15,19 +16,16 @@ description: "Shuffles the initial order of arrays. The order is brought back to
 
 This example showcases how `Shuffle` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  shuffle: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
 console.log([1,2,3,4,5,6,7,8,9,10]);
+
+// Output.js
+function IJm1mh(IJm1mh, kdtqxJ) {
+  for (var YL5ppT = 0; YL5ppT < kdtqxJ; YL5ppT++) IJm1mh.push(IJm1mh.shift());
+  return IJm1mh;
+}
+console.log(IJm1mh([7, 8, 9, 10, 1, 2, 3, 4, 5, 6], 24));
 ```
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Minify"
 description: "Minifies redundant code."
+slug: "options/minify"
 ---
 
 - Option name: `"minify"`
@@ -15,22 +16,15 @@ description: "Minifies redundant code."
 
 This example showcases how `Minify` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  minify: true,
-  renameVariables: true,
-  compact: false,
-};
-===END OPTIONS===
-
-      var { fullName } = { fullName: "John Doe" };
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
+var { fullName } = { fullName: "John Doe" };
 
       console.log(fullName); // "John Doe"
-      
+
+// Output.js
+var rCbUuCI = "John Doe";
+console.log(rCbUuCI);
 ```
 
 ---

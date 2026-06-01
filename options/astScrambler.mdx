@@ -1,6 +1,7 @@
 ---
 title: "AST Scrambler"
 description: "Semantically changes the AST to bypass automated tools."
+slug: "options/astScrambler"
 ---
 
 - Option name: `"astScrambler"`
@@ -15,23 +16,18 @@ description: "Semantically changes the AST to bypass automated tools."
 
 This example showcases how `AST Scrambler` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  astScrambler: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
-
-      console.log("My First Message");
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
+console.log("My First Message");
       console.log("My Second Message");
       console.log("My Third Message");
-      
+
+// Output.js
+ZRwxpc(console.log("My First Message"), console.log("My Second Message"));
+function ZRwxpc() {
+  ZRwxpc = function () {};
+}
+console.log("My Third Message");
 ```
 
 ---

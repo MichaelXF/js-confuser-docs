@@ -1,6 +1,7 @@
 ---
 title: "Variable Masking"
 description: "Local variables are consolidated into a rotating array."
+slug: "options/variableMasking"
 ---
 
 - Option name: `"variableMasking"`
@@ -15,25 +16,19 @@ description: "Local variables are consolidated into a rotating array."
 
 This example showcases how `Variable Masking` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  variableMasking: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
-
-      function add3(x, y, z){
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
+function add3(x, y, z){
         return x + y + z;
       }
 
       console.log(add3(1, 2, 3)); // 6
-      
+
+// Output.js
+function sYVSWz(...sYVSWz) {
+  return sYVSWz[0] + sYVSWz[1] + sYVSWz[2];
+}
+console.log(sYVSWz(1, 2, 3));
 ```
 
 ---

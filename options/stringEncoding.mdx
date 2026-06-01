@@ -1,6 +1,7 @@
 ---
 title: "String Encoding"
 description: "String Encoding transforms a string into an encoded representation."
+slug: "options/stringEncoding"
 ---
 
 - Option name: `"stringEncoding"`
@@ -15,20 +16,14 @@ description: "String Encoding transforms a string into an encoded representation
 
 This example showcases how `String Encoding` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  stringEncoding: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
 var str = "Hello, World!";
 console.log(str);
+
+// Output.js
+var McchSu = "\x48\x65\x6c\x6c\x6f\x2c\x20\x57\x6f\x72\x6c\x64\x21";
+console.log(McchSu);
 ```
 
 ---

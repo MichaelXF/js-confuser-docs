@@ -1,6 +1,7 @@
 ---
 title: "String Concealing"
 description: "String Concealing involves encoding strings to conceal plain-text values."
+slug: "options/stringConcealing"
 ---
 
 - Option name: `"stringConcealing"`
@@ -15,21 +16,101 @@ description: "String Concealing involves encoding strings to conceal plain-text 
 
 This example showcases how `String Concealing` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  stringConcealing: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
 var str = "Hello, World!";
 console.log(str);
-      
+
+// Output.js
+function BqdooxF(BqdooxF) {
+  var SzVhyfq = "NqIdUYGenclsSfiTApJX%$0;*4vzuw=?.`)^7(htbHMOWg/a2]#D\"y6RErKFQ~x_o|P5,&9{1B+C!LVj@Z}[>:k<38m",
+    eITdNF9 = "" + (BqdooxF || ""),
+    DQXnYk = eITdNF9.length,
+    bC_kTk = [],
+    Vy8FN1A = 0,
+    WKPl7mR = 0,
+    uRcyoWS = -1;
+  for (var hmsq6eE = 0; hmsq6eE < DQXnYk; hmsq6eE++) {
+    var lVHhzS = SzVhyfq.indexOf(eITdNF9[hmsq6eE]);
+    if (lVHhzS === -1) continue;
+    if (uRcyoWS < 0) {
+      uRcyoWS = lVHhzS;
+    } else {
+      uRcyoWS += lVHhzS * 91;
+      Vy8FN1A |= uRcyoWS << WKPl7mR;
+      WKPl7mR += (uRcyoWS & 8191) > 88 ? 13 : 14;
+      do {
+        bC_kTk.push(Vy8FN1A & 0xff);
+        Vy8FN1A >>= 8;
+        WKPl7mR -= 8;
+      } while (WKPl7mR > 7);
+      uRcyoWS = -1;
+    }
+  }
+  if (uRcyoWS > -1) {
+    bC_kTk.push((Vy8FN1A | uRcyoWS << WKPl7mR) & 0xff);
+  }
+  return DyMRXYl(bC_kTk);
+}
+function SzVhyfq(SzVhyfq) {
+  if (typeof eITdNF9[SzVhyfq] === 'undefined') {
+    return eITdNF9[SzVhyfq] = BqdooxF(DQXnYk[SzVhyfq]);
+  }
+  return eITdNF9[SzVhyfq];
+}
+var eITdNF9 = {},
+  DQXnYk = ["<9|.#CXq", "z;2cN)KKgi,B=h#)^rx\"]LTf@_HeP(y^bvn=+&;&U", "pJRu|j;er%l%tI.Mw,hU\"LP@MiN1dz((n{tc~y)\"~ix]o[Cv<|D.}[WIiTz", "&2lCC2#/4ia?St]bZBMD,1wCM%^)L*At", "+i%l$:6/Zr]&$Al%H{mn%FgCF|onoT8Ay|iR~Qd_Fs1U8U", "2(!#u{rH.PJCc~8HhO0R4hNK{oEu.d;bJrVUS&N", "DvqC7@we)Q$fAzG", "B;flQ2g^rxKPO}RHoF4G*r]HDS.z/4e(JJq6B7n/:fKLN", "z6|nR_~Hm%r9B4Vvabt\";!2@2Pc1Mv!4nOG!tai\"XX8+}h_wuvfReQW=d", "*%~+|/Dq", "%Q$u{+Qk%6I).[(*/DGcGyMSDr%!b2qO;q", "hwh!HBOaXS;|~*qMhG/?j#uJ3%bp{9t?Pg+n;:xSGRy\"q", "cvV!.^w&li$1&4itoxGclrj:LFauUtuM[imn=BjHU", "*|gUgEI*v|Jl6~St>uzwH,WJ4KEE)]EMy6}Ym\"N", "Q,f+$!M\"xn3we}HX1FNV1!KJqJQ_shfX", "y%%lS#0*<oa&/Kh(s;ke=bN", "VgN`xj]fY", "Rxf\"}#]XGKzz]130)Q.zl+4CGl<LD[Atx2R6O9}*E|>Jd9$uc(gl", ">47L.b!Sd6W\"Di)?{N", "WbZDE9&rTJxBQ2KH3u2]o/LHQsm5?[eX6GoG]EinWF3qQTG", "0;6\"3[1/npp*94@b:N", "Ev0u@!|w@ys;sv]t3n\"lb}OXn%Axq>94v;~lQ9!J0fqaozFp<%&R#KSI", "%Q%eC#|^@rHx<i/bD6}LoRUKSibB940HnwnVo/>\"8xLUbd", "YrACkV$yISW", "^w~l^@1/Fp@9MhbXU_~lb^Kkl%!.q", "zOIz7FrCv%K$q", "{,<GDK+bNraBB1^p+E(R@+dynfp=6]I=f([wvF7*j_D@(48u*{d", "6{7R@#jqJXO@)~c", "a{r6R(,@)S?F{vY4:gWea_sXpS`$7d", "hr(!v6M\"GX19Mf\"b#S6R%xJ*;oIVI#St+x2c", "mnCnR/WI", "T/dw|/v+Qxhx&*d*}DxUCrPGfF=*]2eJj4!+#/Br5rC/svS", "l(cC}h7Ja_027[N7ku_c51M\"Y", "EF9uPy[wb|=1aI*w", "&u/UCxYfPT9BM}d4#6lLv6~wVTos>[$u!,nG", ",(EGSxPSaPDE)Y6b<M9\"6}9*M%>_q", "GS*B|1b@yfv&+&Xz%btUf&VG,oK\"b[b?qr*GF1S/]SN|:QoM`20\"v", ";,;\":g.J[6v*NT)?s/ue", ")QCLt,1=4pzeq", "YS%w5yL:_y#BS2kub%nGNtN", "A{)Lf!k*5o^&H23)kgbDv!pH56cD@ak0grA=/Eq<2Jb", "`d*`g@+/pJh&8&u7j|rnS+hJ$o*!XI2z@d,L+r>\"mp^F0(ku2N", "W,1c`@nnj_a$y2Rw", "Tvo]Th7S7c_$Cv30>2tu;aV+QnL/@[E)n,Cwl2WbMp80JY", "R|\"y/}(^CnDJev`;i_.CC&Wbcpl1jF!thx`=sRi\"ZQ^", "Zd:{[xdfu|Xzp7e?qrW?Q>geG", "h{ZneR|w.$i)S{:zI.2]S#g_4pwz$1c4c^L+J", "})t!~)$XuF19kZ^49?xuuhsq5QAxS{@vDv=\"3Fpa{%Ia?ii", "mMtumBJ@ef+L3T{?b|=ca}pq", "G6p=8{~w!y[9m4^=*T=ut,=kw$,Q@^|7AOYRA", "5?/?52BD?Q7&M}sX#bczyKV/2J\"*|*e?.+NVM]|wYK_$)f<)+iqV!7N", "6;e\"eQEb|SPsM~|*/)cVcr#=8x4G|UshDb1]nR(erx(ppAF^/S<c&jFq", "JGdwIQ>)oS<r^i.(Pcwlc25_YXzK8Q+4N67l", "6iV{(alnzx2E\"T4)zvT\"ta.=yob", "|x9U<hR^4%A=*zEH_,{\"&j_&OsdGnTopt(:#lhv+AJ+.8*~^", "mxJ.&+$eJXR4udp%wQ+DT+x@Qihluap%5)[Y", "s;{uTxiIp6p&IYh4DcJzu", "/rdl[xJ/xy~iNdd7.+_U`@$H_y2ECvmH9N", "t|w+b_|H@cUKj9G", "72~+G#j&ayUK&7ibL;0et,|qaQg]%z{hGq", "Lxi?n!:p4%>+t}Atp(d", "]6qC=~?Z:f\"B,1I(AG~e", "q.&+xy9JfxACg]rwRxV]w\"\"=tfNV,*u=<Mh\"njM\"5S*", "mp!v?6\"=8KixI(YXk2mYZ!n/~F_s3d.p(Q0R`@jDF|e,7{G", "0SEcPx3\"ZrZ._9?w)wg?zb4e=FN60Y", "uO=?Q/]a/s89Z@ShGc\"L#C=SeK<L:Uu;a{SRwa5D3%SfD9t(Xb%L$b]aKi", "w6+ycro=tKA1c(D)o,].WC8pfPD!ezvucw4Gi", "V,bC>\"IMliF\"{hS%}iOL}xgqd", "Gc6!ihJ7NPdG3{v7YTPD2,PG?$&@dvn4[B;]$!cyqr30?I9?Y{=\",)]X#c", "^6LUI/%\"/F[4rU", "&GAV|ZPSfPx$lY", "2)OL8:l9/P15Z2nXar>{yK0k9K&.M]S", "Op=u,+|fFE,.h]f%VxQR(^ga\"6S(x]xMH{I", "MS{Uv[voT_l%yQo;hc0R8:hK5X_Pi(,hj?3B4FN", "Rr/]nxYe&6\"_K&LX0.BD1!Ff7XB4.z^(aD(?O@+GOpi%4UzHJ/dlcjoG;ft", "jg&eyKYXzxG;A[`?uTh?>gtr!i{4ntv7(QnG", "lwEcx)b/QF8XN{)=<%4C,)S*kf1u>TQMDDnc>F%*._P4ThbJ1%\"wd+E+<fK", "$GWwp[Y476gFnzku8t[Y+rhI]Pp*7[k)LN", "M(/U/K)I@cK9FdG*fJAGa(P+YX;x.zS%hpnc", "ji]G:{@/z%;%I(UJ0w&l$&+K!ilK1z\"bdJhu^:N", "YS&eAr!*\"XnGnTK7qUV\"U2pyBxS=Nzb?E2w!R>Rw+%b@:&<wkN", "({*]_y(C.Ja*bd6HfSS+zV4ycxFE!Fw^kg7eqQs_dr2xoFr^y,yu9#sf?JI(q", "e,#.Q)KI", "bD#z1RBrNP=1K}2bBD$\"L2cyXc@95zG", "]d?!9xb\"Ws<7q", "w{w!7^5w_Se;IY^p^rrGKym/dXOFZQruG{JC~2eyFi%G0(l", "h(aB,Q+Sri>0~*I(tD1])].*4x%R@^Y?OO%LM^fy#S7&*Aw^E2R\"p", "g{Mz5j^^G", "=,MD>F%/@Qy!7{jz,;lz)\"mS]_Ajq1WXyb$+:r1/|ri)@F94;6eVFD>@Mi", "LF`=<VM\"WxrLL27J=b?Bvr[rEfs(q", "q__GZ!VJHKZ.9Zz;_,\"y@{QIY", "tSocC[.*R%u&[vpty,>?u\"P/!E?!|2|p;,<\"j{N", "nO.cE_OfF%c;|1Lz", "z{hcqQtq]6EUC98w;,NcnQN", "h(&#w~rq", "<22]6t;y&K,BKhuMvq", "Vi2c`V3NACO@@*jY", "^Onc"];
+function bC_kTk() {
+  var BqdooxF = [function () {
+      return globalThis;
+    }, function () {
+      return global;
+    }, function () {
+      return window;
+    }, function () {
+      return new Function("return this")();
+    }],
+    SzVhyfq,
+    eITdNF9 = [];
+  try {
+    SzVhyfq = Object;
+    eITdNF9.push("".__proto__.constructor.name);
+  } catch (e) {}
+  BMIm0ze: for (var DQXnYk = 0; DQXnYk < BqdooxF.length; DQXnYk++) try {
+    SzVhyfq = BqdooxF[DQXnYk]();
+    for (var bC_kTk = 0; bC_kTk < eITdNF9.length; bC_kTk++) if (typeof SzVhyfq[eITdNF9[bC_kTk]] === "undefined") continue BMIm0ze;
+    return SzVhyfq;
+  } catch (e) {}
+  return SzVhyfq || this;
+}
+var Vy8FN1A = bC_kTk() || {},
+  WKPl7mR = Vy8FN1A.TextDecoder,
+  uRcyoWS = Vy8FN1A.Uint8Array,
+  hmsq6eE = Vy8FN1A.Buffer,
+  lVHhzS = Vy8FN1A.String || String,
+  vYSdga9 = Vy8FN1A.Array || Array,
+  Vne8bUG = function () {
+    var BqdooxF = new vYSdga9(128),
+      SzVhyfq = lVHhzS.fromCodePoint || lVHhzS.fromCharCode,
+      eITdNF9 = [];
+    return function (DQXnYk) {
+      var bC_kTk,
+        Vy8FN1A,
+        WKPl7mR = DQXnYk.length;
+      eITdNF9.length = 0;
+      for (var uRcyoWS = 0; uRcyoWS < WKPl7mR;) {
+        Vy8FN1A = DQXnYk[uRcyoWS++];
+        Vy8FN1A <= 0x7F ? bC_kTk = Vy8FN1A : Vy8FN1A <= 0xDF ? bC_kTk = (Vy8FN1A & 0x1F) << 6 | DQXnYk[uRcyoWS++] & 0x3F : Vy8FN1A <= 0xEF ? bC_kTk = (Vy8FN1A & 0x0F) << 12 | (DQXnYk[uRcyoWS++] & 0x3F) << 6 | DQXnYk[uRcyoWS++] & 0x3F : lVHhzS.fromCodePoint ? bC_kTk = (Vy8FN1A & 0x07) << 18 | (DQXnYk[uRcyoWS++] & 0x3F) << 12 | (DQXnYk[uRcyoWS++] & 0x3F) << 6 | DQXnYk[uRcyoWS++] & 0x3F : (bC_kTk = 63, uRcyoWS += 3);
+        eITdNF9.push(BqdooxF[bC_kTk] || (BqdooxF[bC_kTk] = SzVhyfq(bC_kTk)));
+      }
+      return eITdNF9.join('');
+    };
+  }();
+function DyMRXYl(BqdooxF) {
+  return typeof WKPl7mR !== "undefined" && WKPl7mR ? new WKPl7mR().decode(new uRcyoWS(BqdooxF)) : typeof hmsq6eE !== "undefined" && hmsq6eE ? hmsq6eE.from(BqdooxF).toString("utf-8") : Vne8bUG(BqdooxF);
+}
+var DkYk1W = SzVhyfq(96);
+console[SzVhyfq(97)](DkYk1W);
 ```
 
 ---

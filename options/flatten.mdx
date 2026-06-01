@@ -1,6 +1,7 @@
 ---
 title: "Flatten"
 description: "Brings independent declarations to the highest scope."
+slug: "options/flatten"
 ---
 
 - Option name: `"flatten"`
@@ -15,20 +16,9 @@ description: "Brings independent declarations to the highest scope."
 
 This example showcases how `Flatten` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  flatten: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
-
-      (function(){
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
+(function(){
         var stringToPrint = "Hello World";
         var timesPrinted = 0;
 
@@ -40,6 +30,38 @@ module.exports = {
         printString(); // "Hello World"
       })();
 
+// Output.js
+function HHBO9j([], HHBO9j) {
+  var DEx1fXX = "Hello World",
+    _fwZmR = 0;
+  function gxiYpls(...gxiYpls) {
+    var Hjy2D7 = {
+      get "xdKCsuD"() {
+        return _fwZmR;
+      },
+      set "xdKCsuD"(gxiYpls) {
+        _fwZmR = gxiYpls;
+      },
+      get "TvK0xy"() {
+        return DEx1fXX;
+      }
+    };
+    return HHBO9j.Kcq9i4(gxiYpls, Hjy2D7);
+  }
+  gxiYpls();
+}
+function DEx1fXX([], HHBO9j) {
+  HHBO9j.xdKCsuD++;
+  console.log(HHBO9j.TvK0xy);
+}
+(function (...qVFMWT) {
+  var HB_Ov4r = {
+    "Kcq9i4"(...qVFMWT) {
+      return DEx1fXX(...qVFMWT);
+    }
+  };
+  return HHBO9j(qVFMWT, HB_Ov4r);
+})();
 ```
 
 ---

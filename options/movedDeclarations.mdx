@@ -1,6 +1,7 @@
 ---
 title: "Moved Declarations"
 description: "Moves variable declarations to the top of the context."
+slug: "options/movedDeclarations"
 ---
 
 - Option name: `"movedDeclarations"`
@@ -15,20 +16,9 @@ description: "Moves variable declarations to the top of the context."
 
 This example showcases how `Moved Declarations` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  movedDeclarations: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
-
-      function getAreaOfCircle(radius) {
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
+function getAreaOfCircle(radius) {
         var pi = Math.PI;
         var radiusSquared = Math.pow(radius, 2);
         var area = pi * radiusSquared;
@@ -37,7 +27,15 @@ module.exports = {
       }
 
       console.log(getAreaOfCircle(3)); // 28.274333882308138
-  
+
+// Output.js
+function JPKGdpq(JPKGdpq, VBlMMx, V9xncq, CAi5D5) {
+  VBlMMx = Math.PI;
+  V9xncq = Math.pow(JPKGdpq, 2);
+  CAi5D5 = VBlMMx * V9xncq;
+  return CAi5D5;
+}
+console.log(JPKGdpq(3));
 ```
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Calculator"
 description: "Creates a calculator function to handle arithmetic and logical expressions."
+slug: "options/calculator"
 ---
 
 - Option name: `"calculator"`
@@ -15,22 +16,20 @@ description: "Creates a calculator function to handle arithmetic and logical exp
 
 This example showcases how `Calculator` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  calculator: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
-
-      var result = 9 + 3 * 2;
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
+var result = 9 + 3 * 2;
       console.log(result);
-      
+
+// Output.js
+function MggIMM(MggIMM, UsSgcPj, FJ_Dteq) {
+  switch (MggIMM) {
+    case "CeD5Ds":
+      return UsSgcPj * FJ_Dteq;
+  }
+}
+var UsSgcPj = 9 + MggIMM("CeD5Ds", 3, 2);
+console.log(UsSgcPj);
 ```
 
 ---

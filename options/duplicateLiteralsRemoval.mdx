@@ -1,6 +1,7 @@
 ---
 title: "Duplicate Literals Removal"
 description: "Duplicate Literals Removal replaces duplicate literals with a single variable name."
+slug: "options/duplicateLiteralsRemoval"
 ---
 
 - Option name: `"duplicateLiteralsRemoval"`
@@ -15,24 +16,18 @@ description: "Duplicate Literals Removal replaces duplicate literals with a sing
 
 This example showcases how `Duplicate Literals Removal` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js title="Input.js" lines
-// This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
-
-module.exports = {
-  target: 'browser',
-  duplicateLiteralsRemoval: true,
-  renameVariables: true,
-  compact: false,
-  minify: true,
-};
-===END OPTIONS===
-
-      var myBool1 = true;
+```js title="Input.js" lines interactive-mode="obfuscate"
+// Input.js
+var myBool1 = true;
       var myBool2 = true
 
       console.log(myBool1 === myBool2); // true
-      
+
+// Output.js
+const ufsmKR = [!0];
+var VJ8_cL7 = ufsmKR[0],
+  LO6WHPK = ufsmKR[0];
+console.log(VJ8_cL7 === LO6WHPK);
 ```
 
 ---
