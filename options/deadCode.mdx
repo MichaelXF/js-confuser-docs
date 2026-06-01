@@ -25,90 +25,72 @@ if (true) {
 }
 
 // Output.js
-if ('Oh7cb5' in wz_XpF) {
-  YL95zGB();
+if ('ibB17S' in XkxoVOK) {
+  XGlB68U();
 }
-function YL95zGB() {
-  var YL95zGB = function (YL95zGB) {
-    var wz_XpF = 0,
-      QjhcLHF = {},
-      EPdimm = 0,
-      ZbVl92 = 0,
-      SlO2zZ = 0,
-      y9cnhEh = YL95zGB.length;
-    for (var amTEi1r = 0; amTEi1r < y9cnhEh; amTEi1r++) {
-      QjhcLHF = {};
-      EPdimm = 0;
-      ZbVl92 = 1;
-      for (var BVctkZ1 = amTEi1r + 1; BVctkZ1 < y9cnhEh; BVctkZ1++) {
+function XGlB68U() {
+  var XGlB68U = function (XGlB68U) {
+    var XkxoVOK = 0,
+      Veyho3 = {},
+      tMDcbf = 0,
+      leIfF5 = 0,
+      E62CiP = 0,
+      harHny = XGlB68U.length;
+    for (var f7oyuS = 0; f7oyuS < harHny; f7oyuS++) {
+      Veyho3 = {};
+      tMDcbf = 0;
+      leIfF5 = 1;
+      for (var nlyHkGS = f7oyuS + 1; nlyHkGS < harHny; nlyHkGS++) {
         if (
-          YL95zGB[amTEi1r].x === YL95zGB[BVctkZ1].x &&
-          YL95zGB[amTEi1r].y === YL95zGB[BVctkZ1].y
+          XGlB68U[f7oyuS].x === XGlB68U[nlyHkGS].x &&
+          XGlB68U[f7oyuS].y === XGlB68U[nlyHkGS].y
         ) {
-          ZbVl92++;
+          leIfF5++;
           continue;
         }
-        YL95zGB[amTEi1r].y === YL95zGB[BVctkZ1].y
-          ? (SlO2zZ = Number.MAX_SAFE_INTEGER)
-          : (SlO2zZ =
-              (YL95zGB[amTEi1r].x - YL95zGB[BVctkZ1].x) /
-              (YL95zGB[amTEi1r].y - YL95zGB[BVctkZ1].y));
-        if (!QjhcLHF[SlO2zZ]) QjhcLHF[SlO2zZ] = 0;
-        QjhcLHF[SlO2zZ]++;
-        EPdimm = Math.max(EPdimm, QjhcLHF[SlO2zZ]);
+        XGlB68U[f7oyuS].y === XGlB68U[nlyHkGS].y
+          ? (E62CiP = Number.MAX_SAFE_INTEGER)
+          : (E62CiP =
+              (XGlB68U[f7oyuS].x - XGlB68U[nlyHkGS].x) /
+              (XGlB68U[f7oyuS].y - XGlB68U[nlyHkGS].y));
+        if (!Veyho3[E62CiP]) Veyho3[E62CiP] = 0;
+        Veyho3[E62CiP]++;
+        tMDcbf = Math.max(tMDcbf, Veyho3[E62CiP]);
       }
-      EPdimm += ZbVl92;
-      wz_XpF = Math.max(wz_XpF, EPdimm);
+      tMDcbf += leIfF5;
+      XkxoVOK = Math.max(XkxoVOK, tMDcbf);
     }
-    return wz_XpF;
+    return XkxoVOK;
   };
-  console.log(YL95zGB);
+  console.log(XGlB68U);
 }
-function wz_XpF() {}
+function XkxoVOK() {}
 {
-  if ('JuQqM3P' in wz_XpF) {
-    QjhcLHF();
+  if ('FOIH9A' in XkxoVOK) {
+    Veyho3();
   }
-  function QjhcLHF() {
-    var YL95zGB = function (YL95zGB) {
-      this.capacity = YL95zGB;
-      this.length = 0;
-      this.map = {};
-      this.head = null;
-      this.tail = null;
+  function Veyho3() {
+    function XGlB68U() {}
+    var XkxoVOK = function (XkxoVOK, Veyho3) {
+      var QtLFPFG = 0,
+        Vzq9qL = 0,
+        R1SaU4 = new XGlB68U(0),
+        NIVWJhA = R1SaU4,
+        Hga12no = XkxoVOK,
+        Eyp8DP = Veyho3;
+      while (Hga12no !== null || Eyp8DP !== null) {
+        Vzq9qL =
+          (Hga12no ? Hga12no.val : 0) + (Eyp8DP ? Eyp8DP.val : 0) + QtLFPFG;
+        QtLFPFG = Math.floor(Vzq9qL / 10);
+        NIVWJhA.next = new XGlB68U(Vzq9qL % 10);
+        NIVWJhA = NIVWJhA.next;
+        Hga12no = Hga12no ? Hga12no.next : null;
+        Eyp8DP = Eyp8DP ? Eyp8DP.next : null;
+      }
+      if (QtLFPFG) NIVWJhA.next = new XGlB68U(QtLFPFG);
+      return R1SaU4.next;
     };
-    YL95zGB.prototype.get = function (YL95zGB) {
-      var wz_XpF = this.map[YL95zGB];
-      return wz_XpF
-        ? (this.remove(wz_XpF), this.insert(wz_XpF.key, wz_XpF.val), wz_XpF.val)
-        : -1;
-    };
-    YL95zGB.prototype.put = function (YL95zGB, wz_XpF) {
-      this.map[YL95zGB]
-        ? (this.remove(this.map[YL95zGB]), this.insert(YL95zGB, wz_XpF))
-        : this.length === this.capacity
-          ? (this.remove(this.head), this.insert(YL95zGB, wz_XpF))
-          : (this.insert(YL95zGB, wz_XpF), this.length++);
-    };
-    YL95zGB.prototype.remove = function (YL95zGB) {
-      var wz_XpF = YL95zGB.prev,
-        QjhcLHF = YL95zGB.next;
-      if (QjhcLHF) QjhcLHF.prev = wz_XpF;
-      if (wz_XpF) wz_XpF.next = QjhcLHF;
-      if (this.head === YL95zGB) this.head = QjhcLHF;
-      if (this.tail === YL95zGB) this.tail = wz_XpF;
-      delete this.map[YL95zGB.key];
-    };
-    YL95zGB.prototype.insert = function (YL95zGB, wz_XpF) {
-      var QjhcLHF = new List(YL95zGB, wz_XpF);
-      !this.tail
-        ? ((this.tail = QjhcLHF), (this.head = QjhcLHF))
-        : ((this.tail.next = QjhcLHF),
-          (QjhcLHF.prev = this.tail),
-          (this.tail = QjhcLHF));
-      this.map[YL95zGB] = QjhcLHF;
-    };
-    console.log(YL95zGB);
+    console.log(XkxoVOK);
   }
   console.log('This code runs');
 }

@@ -1,0 +1,7 @@
+.max-lg:contents.lg:flex-1.lg:min-w-0 > div.scroll-mt-[var(--scroll-mt)] {
+  max-width: 100rem;
+}
+
+header#navbar > div.mx-auto {
+  max-width: 100rem;
+}
