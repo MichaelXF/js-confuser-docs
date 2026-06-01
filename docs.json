@@ -25,7 +25,6 @@
       {
         "group": "Getting Started",
         "pages": [
-          "index",
           "getting-started/what-is-obfuscation",
           "getting-started/playground",
           "getting-started/installation",
@@ -36,35 +35,56 @@
         ]
       },
       {
-        "group": "Options",
-        "pages": [
-          "options/all-options",
-          {
-            "group": "Build Settings",
-            "pages": [
-              "options/target",
-              "options/pack"
-            ]
-          },
-          {
-            "group": "Identifiers",
-            "pages": [
-              "identifier-generator",
-              "options/renameVariables",
-              "rename-globals",
-              "options/renameLabels",
-              "moved-declarations"
-            ]
-          }
-        ]
-      },
-      {
         "group": "Presets",
         "pages": [
-          "presets/all-presets",
+          "presets",
           "presets/high",
           "presets/medium",
           "presets/low"
+        ]
+      },
+      {
+        "group": "Options",
+        "pages": [
+          "options",
+          "options/target",
+          "options/pack",
+          "options/identifierGenerator",
+          "options/renameVariables",
+          "options/renameGlobals",
+          "options/renameLabels",
+          "options/movedDeclarations",
+          "options/stringCompression",
+          "options/stringConcealing",
+          "options/customStringEncodings",
+          "options/stringEncoding",
+          "options/stringSplitting",
+          "options/calculator",
+          "options/objectExtraction",
+          "options/globalConcealing",
+          "options/shuffle",
+          "options/duplicateLiteralsRemoval",
+          "options/controlFlowFlattening",
+          "options/dispatcher",
+          "options/opaquePredicates",
+          "options/deadCode",
+          "options/astScrambler",
+          "options/variableMasking",
+          "options/flatten",
+          "options/rgf",
+          "options/domainLock",
+          "options/startDate",
+          "options/endDate",
+          "options/tamperProtection",
+          "options/selfDefending",
+          "options/customLocks",
+          "options/integrity",
+          "options/antiDebug",
+          "options/countermeasures",
+          "options/hexadecimalNumbers",
+          "options/compact",
+          "options/minify",
+          "options/preserveFunctionLength"
         ]
       }
     ]
