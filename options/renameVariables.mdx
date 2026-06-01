@@ -1,20 +1,23 @@
 ---
 title: "Rename Variables"
-description: "Determines if variables should be renamed"
+description: "Determines if variables should be renamed."
 ---
 
 - Option name: `"renameVariables"`
+
 - Option values: `true/false/Function`
 
 ---
+
+
 
 #### Input / Output
 
 This example showcases how `Rename Variables` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js
+```js title="Input.js" lines
 // This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/docs/getting-started/playground#jsconfuser-ts
+// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
 
 module.exports = {
   target: 'browser',
@@ -48,7 +51,9 @@ test();
 
 ---
 
-#### Access the renamed variable
+
+
+      #### Access the renamed variable
 
 The comment syntax `/* @js-confuser-var */ "varName"` provides a method to access variable mappings. This is especially useful for `eval()` scenarios where you want preserve the mapping.
 
@@ -86,23 +91,21 @@ var jRLf713 = "My other message";
 console.log(__NO_JS_CONFUSER_RENAME__message1),
 console.log(jRLf713)
 ```
-
+      
 ---
 
-#### Custom Implementation
 
+#### Custom Implementation
 ###### `options.renameVariables(varName)`
 
 Control which variable names are changed. Returns a `boolean`.
-
 | Parameter | Type | Description |
 | --- | --- | --- |
 | `varName` | `string` | The variable name proposed to be changed. |
-
-```js
+```js title="Options.js" lines
 module.exports = {
   target: "node",
-  
+
   // Disable renaming a certain variable
   renameVariables: (varName) => varName != "jQuery",
 };
@@ -114,7 +117,7 @@ module.exports = {
 
 The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
-```js
+```js title="Usage Example" lines
 import JSConfuser from "js-confuser";
 import {readFileSync, writeFileSync} from "fs";
 
@@ -140,4 +143,7 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 - [High Preset](/presets/high): Yes
 - [Medium Preset](/presets/medium): Yes
-- [Low Preset](/presets/low): Yes
+- [Low Preset](/presets/low): Yes 
+
+
+

@@ -1,11 +1,11 @@
 ---
-title: "Target"
-description: "The execution context for your output."
+title: "Self Defending"
+description: "Prevents the use of code beautifiers or formatters against your code."
 ---
 
-- Option name: `"target"`
+- Option name: `"lock.selfDefending"`
 
-- Option values: `"browser"/"node"`
+- Option values: `true/false`
 
 ---
 
@@ -26,8 +26,10 @@ import {readFileSync, writeFileSync} from "fs";
 // Read input code
 const sourceCode = readFileSync("input.js", "utf8");
 const options = {
-  target: 'node',
-  compact: true,
+  target: 'browser',
+  lock: {
+    selfDefending: true,
+  },
 };
 
 JSConfuser.obfuscate(sourceCode, options).then((result)=>{
@@ -43,9 +45,14 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ##### Enabled In
 
-- [High Preset](/presets/high): Yes
-- [Medium Preset](/presets/medium): Yes
-- [Low Preset](/presets/low): Yes 
+- [High Preset](/presets/high): No
+- [Medium Preset](/presets/medium): No
+- [Low Preset](/presets/low): No 
 
 
 
+---
+
+##### See Also
+
+- [Countermeasures](/options/countermeasures)

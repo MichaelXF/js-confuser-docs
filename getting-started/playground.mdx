@@ -3,9 +3,10 @@ title: "Playground"
 description: "Try out JS-Confuser in your browser"
 ---
 
-The JS-Confuser Playground is a rich code editor for obfuscating your JavaScript code.
+### Playground
 
-[Try It Out](https://js-confuser.com/editor)
+The JS-Confuser Playground is a rich code editor for obfuscating your JavaScript code.
+[Try It Out](/editor)
 
 #### How to use
 
@@ -26,32 +27,32 @@ JS-Confuser.com saves recently opened files in your browser's file storage. Thes
 
 #### Prettier Formatter
 
-JS-Confuser.com comes with Prettier enabled by default. You can disable the auto-formatting feature by navigating to **File** \> **Format On Save** \> **Uncheck**.
+JS-Confuser.com comes with Prettier enabled by default. You can disable the auto-formatting feature by navigating to **File** > **Format On Save** > **Uncheck**.
 
 ---
 
 #### JSConfuser.ts
 
-The file `JSConfuser.ts` can be edited by navigating to **Tools** \> **Edit JSConfuser.ts**. The file serves as a JSON representation for your obfuscator settings. The file is evaluated and can additionally include custom implementations.
+The file `JSConfuser.ts` can be edited by navigating to **Tools** > **Edit JSConfuser.ts**. The file serves as a JSON representation for your obfuscator settings. The file is evaluated and can additionally include custom implementations.
 
-```js
+```js title="JSConfuser.ts"
 var counter = 0;
 
 module.exports = {
   target: "browser",
   renameVariables: true,
-  
+
   // Custom Identifier Generator implementation
   // Returns `var_0`, `var_1`, `var_2`
   identifierGenerator: () => `var_${counter++}`,
-  
+
   // Custom String Concealing
   // Always encrypt API endpoints
   stringConcealing: (str) => {
     if (str.includes("https://api-example.com")) {
       return true;
     }
-    
+
     // 60% for other strings
     return Math.random() < 0.6;
   },
@@ -64,5 +65,5 @@ module.exports = {
 
 #### See also
 
-- [Rename Variables](/options/renameVariables)
-- [String Concealing](/options/stringConcealing)
+- [Rename Variables](../options/renameVariables)
+- [String Concealing](..options/stringConcealing)

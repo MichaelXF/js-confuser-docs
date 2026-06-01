@@ -1,11 +1,11 @@
 ---
-title: "Target"
-description: "The execution context for your output."
+title: "Rename Globals"
+description: "Renames top-level variables, turn this off for web-related scripts. **Enabled by default.**"
 ---
 
-- Option name: `"target"`
+- Option name: `"renameGlobals"`
 
-- Option values: `"browser"/"node"`
+- Option values: `true/false/Function`
 
 ---
 
@@ -14,6 +14,16 @@ description: "The execution context for your output."
 
 
 
+#### Custom Implementation
+###### `options.renameGlobals(varName)`
+
+Control which global names are changed. Returns a `boolean`.
+| Parameter | Type | Description |
+| --- | --- | --- |
+| `varName` | `string` | The global name proposed to be changed. |
+
+
+---
 
 #### Usage Example
 
@@ -26,8 +36,8 @@ import {readFileSync, writeFileSync} from "fs";
 // Read input code
 const sourceCode = readFileSync("input.js", "utf8");
 const options = {
-  target: 'node',
-  compact: true,
+  target: 'browser',
+  renameGlobals: true,
 };
 
 JSConfuser.obfuscate(sourceCode, options).then((result)=>{

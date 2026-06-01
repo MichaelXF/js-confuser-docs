@@ -3,7 +3,9 @@ title: "What Is Obfuscation?"
 description: "Learn more about what obfuscation is"
 ---
 
-Obfuscation is the process of transforming code in a way that makes it difficult to understand, while still maintaining its functionality. This is done by transforming the code in a way that makes it difficult for humans and automated tools to understand, but preserving the original functionality of the code.
+### What Is obfuscation?
+
+Obfuscation is the process of transforming code in a way that makes it difficult to understand, while still maintaining its functionality. This is  done by transforming the code in a way that makes it difficult for humans and automated tools to understand, but preserving the original functionality of the code.
 
 #### Key Features
 
@@ -23,12 +25,12 @@ JS-Confuser provides the following features:
 
 This example has `Compact` enabled. This simply removes comments and whitespace from your code.
 
-```js
+```js title="Comment removal / minification" lines
 // Input.js
 // Verify the user's license key
 async function checkUserLicense(){
   const licenseKey = "YOUR_LICENSE_KEY";
-  
+
   // Send a request to the license server
   const response = await fetch({
     url: "https://api.example.com/check-license",
@@ -36,7 +38,7 @@ async function checkUserLicense(){
     body: JSON.stringify({ licenseKey })
   });
   const data = await response.json();
-  
+
   // User does not have a valid license :(
   if (!data.licenseStatus) {
     alert("You do not have a valid license.");
@@ -52,7 +54,7 @@ async function checkUserLicense(){const licenseKey='YOUR_LICENSE_KEY';const resp
 
 This example has `Rename Variables` enabled, which changes all variable names in your code to randomized names. This is a 'one-way' function as the original names are permanently lost, making it a great obfuscation technique.
 
-```js
+```js title="Rename Variables" lines
 // Input.js
 var twoSum = function (nums, target) {
   var hash = {};
@@ -82,7 +84,7 @@ var _O2mOcF = function (kB4uXM, w_07HXS) {
 
 This example has `Control Flow Flattening` enabled. This obfuscation technique makes your code significantly harder to understand by altering its logical structure, however, it can severely decrease performance. Thus, it should be used sparingly.
 
-```js
+```js title="Control Flow Obfuscation"
 // Input.js
 var startNum = 1
 var endNum = 10;
@@ -227,7 +229,7 @@ Code obfuscation has both it's pros and cons, so it's important to balance it ac
 - Protect intellectual property
 - Prevent others from stealing your code
 - Prevent modding your app
-- Enforce client-side license checks
+- Enforce client-side license checks 
 
 ##### Cons
 
@@ -239,6 +241,6 @@ Code obfuscation has both it's pros and cons, so it's important to balance it ac
 
 #### See also
 
-- [Playground](/getting-started/playground)
-- [FAQ](/getting-started/faq)
-- [Installation](/getting-started/installation)
+- [Playground](./Playground)
+- [FAQ](./faq)
+- [Installation](./Installation)

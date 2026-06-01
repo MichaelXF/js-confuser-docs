@@ -1,22 +1,29 @@
 ---
 title: "Pack"
-description: "Packs the output code into a single `Function()` call. Designed to escape strict mode constraints"
+description: "Packs the output code into a single `Function()` call. Designed to escape strict mode constraints."
 ---
 
 - Option name: `"pack"`
+
 - Option values: `true/false`
 
-> \[!WARNING\] Requires Eval The obfuscated code will contain unsafe eval expressions. The code will not work properly in [environments that have disabled eval](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_eval_expressions)
+
+<Card title="Requires Eval" type="warning">
+The obfuscated code will contain unsafe eval expressions.
+The code will not work properly in [environments that have disabled eval](https://developer.mozilla.org/en-US/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_eval_expressions)
+</Card>
 
 ---
+
+
 
 #### Input / Output
 
 This example showcases how `Pack` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
-```js
+```js title="Input.js" lines
 // This file is evaluated as JavaScript. You can use JavaScript here.
-// Learn more: https://js-confuser.com/docs/getting-started/playground#jsconfuser-ts
+// Learn more: https://js-confuser.com/getting-started/playground#jsconfuser-ts
 
 module.exports = {
   target: 'browser',
@@ -32,9 +39,12 @@ var myVar = "Initial Value";
 eval((/* @js-confuser-var */ "myVar") + ' = "Modified Value"');
 
 console.log(myVar); // "Modified Value"
+      
 ```
 
 ---
+
+
 
 #### Bypass Strict Mode
 
@@ -42,16 +52,18 @@ The `Pack` option is designed to bypass strict mode constraints. This is achieve
 
 Several obfuscation techniques require non-strict mode JavaScript. These include:
 
-- With Statement (Control Flow Flattening)
-- Eval scope access (Tamper Protection)
-
+- Control Flow Flattening (With Statement)
+- Tamper Protection (Eval scope access)
+      
 ---
+
+
 
 #### Usage Example
 
 The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
-```js
+```js title="Usage Example" lines
 import JSConfuser from "js-confuser";
 import {readFileSync, writeFileSync} from "fs";
 
@@ -77,4 +89,7 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 - [High Preset](/presets/high): Yes
 - [Medium Preset](/presets/medium): Yes
-- [Low Preset](/presets/low): No
+- [Low Preset](/presets/low): No 
+
+
+

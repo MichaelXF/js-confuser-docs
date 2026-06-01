@@ -1,11 +1,11 @@
 ---
-title: "Rename Labels"
-description: "Renames labeled control-flow statements, and removes unnecessary labels. **Enabled by default.**"
+title: "Flatten"
+description: "Brings independent declarations to the highest scope."
 ---
 
-- Option name: `"renameLabels"`
+- Option name: `"flatten"`
 
-- Option values: `true/false/Function`
+- Option values: `true/false/0-1/Function`
 
 ---
 
@@ -13,7 +13,7 @@ description: "Renames labeled control-flow statements, and removes unnecessary l
 
 #### Input / Output
 
-This example showcases how `Rename Labels` transforms the code. Try it out by changing the input code and see changes apply in real-time.
+This example showcases how `Flatten` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
 ```js title="Input.js" lines
 // This file is evaluated as JavaScript. You can use JavaScript here.
@@ -21,24 +21,25 @@ This example showcases how `Rename Labels` transforms the code. Try it out by ch
 
 module.exports = {
   target: 'browser',
-  renameLabels: true,
+  flatten: true,
   renameVariables: true,
   compact: false,
   minify: true,
 };
 ===END OPTIONS===
 
-      A: for(var i = 0; i < 10; i++) {
-        if (i % 2 === 0) {
-          continue A;
+      (function(){
+        var stringToPrint = "Hello World";
+        var timesPrinted = 0;
+
+        function printString(){
+          timesPrinted++;
+          console.log(stringToPrint);
         }
-        
-        B: {
-          console.log(i);
-          break B;
-        }
-      }
-      
+
+        printString(); // "Hello World"
+      })();
+
 ```
 
 ---
@@ -47,12 +48,12 @@ module.exports = {
 
 
 #### Custom Implementation
-###### `options.renameLabels(labelName)`
+###### `options.flatten(fnName)`
 
-Control which label names are changed. Returns a `boolean`.
+Control which functions are changed. Returns a `boolean`.
 | Parameter | Type | Description |
 | --- | --- | --- |
-| `labelName` | `string` | The label name proposed to be changed. |
+| `fnName` | `string` | The function name proposed to be changed. |
 
 
 ---
@@ -69,7 +70,7 @@ import {readFileSync, writeFileSync} from "fs";
 const sourceCode = readFileSync("input.js", "utf8");
 const options = {
   target: 'browser',
-  renameLabels: true,
+  flatten: true,
 };
 
 JSConfuser.obfuscate(sourceCode, options).then((result)=>{
@@ -86,8 +87,8 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 ##### Enabled In
 
 - [High Preset](/presets/high): Yes
-- [Medium Preset](/presets/medium): Yes
-- [Low Preset](/presets/low): Yes 
+- [Medium Preset](/presets/medium): No
+- [Low Preset](/presets/low): No 
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Rename Labels"
-description: "Renames labeled control-flow statements, and removes unnecessary labels. **Enabled by default.**"
+title: "AST Scrambler"
+description: "Semantically changes the AST to bypass automated tools."
 ---
 
-- Option name: `"renameLabels"`
+- Option name: `"astScrambler"`
 
-- Option values: `true/false/Function`
+- Option values: `true/false/0-1`
 
 ---
 
@@ -13,7 +13,7 @@ description: "Renames labeled control-flow statements, and removes unnecessary l
 
 #### Input / Output
 
-This example showcases how `Rename Labels` transforms the code. Try it out by changing the input code and see changes apply in real-time.
+This example showcases how `AST Scrambler` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
 ```js title="Input.js" lines
 // This file is evaluated as JavaScript. You can use JavaScript here.
@@ -21,23 +21,16 @@ This example showcases how `Rename Labels` transforms the code. Try it out by ch
 
 module.exports = {
   target: 'browser',
-  renameLabels: true,
+  astScrambler: true,
   renameVariables: true,
   compact: false,
   minify: true,
 };
 ===END OPTIONS===
 
-      A: for(var i = 0; i < 10; i++) {
-        if (i % 2 === 0) {
-          continue A;
-        }
-        
-        B: {
-          console.log(i);
-          break B;
-        }
-      }
+      console.log("My First Message");
+      console.log("My Second Message");
+      console.log("My Third Message");
       
 ```
 
@@ -46,16 +39,6 @@ module.exports = {
 
 
 
-#### Custom Implementation
-###### `options.renameLabels(labelName)`
-
-Control which label names are changed. Returns a `boolean`.
-| Parameter | Type | Description |
-| --- | --- | --- |
-| `labelName` | `string` | The label name proposed to be changed. |
-
-
----
 
 #### Usage Example
 
@@ -69,7 +52,7 @@ import {readFileSync, writeFileSync} from "fs";
 const sourceCode = readFileSync("input.js", "utf8");
 const options = {
   target: 'browser',
-  renameLabels: true,
+  astScrambler: true,
 };
 
 JSConfuser.obfuscate(sourceCode, options).then((result)=>{

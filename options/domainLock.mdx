@@ -1,11 +1,11 @@
 ---
-title: "Target"
-description: "The execution context for your output."
+title: "Domain Lock"
+description: "Ensures the script can only execute on the specified domain. Set the Counter Measures option to control what happens if violated."
 ---
 
-- Option name: `"target"`
+- Option name: `"lock.domainLock"`
 
-- Option values: `"browser"/"node"`
+- Option values: `RegExp[]/string[]`
 
 ---
 
@@ -26,8 +26,13 @@ import {readFileSync, writeFileSync} from "fs";
 // Read input code
 const sourceCode = readFileSync("input.js", "utf8");
 const options = {
-  target: 'node',
-  compact: true,
+  target: 'browser',
+  lock: {
+    domainLock: [
+      'https://example.com',
+      'https://example.org',
+    ],
+  },
 };
 
 JSConfuser.obfuscate(sourceCode, options).then((result)=>{
@@ -43,9 +48,14 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ##### Enabled In
 
-- [High Preset](/presets/high): Yes
-- [Medium Preset](/presets/medium): Yes
-- [Low Preset](/presets/low): Yes 
+- [High Preset](/presets/high): No
+- [Medium Preset](/presets/medium): No
+- [Low Preset](/presets/low): No 
 
 
 
+---
+
+##### See Also
+
+- [Countermeasures](/options/countermeasures)
