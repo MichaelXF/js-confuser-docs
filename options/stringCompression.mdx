@@ -12,7 +12,7 @@ slug: "options/stringCompression"
 
 
 
-#### Input / Output
+### Input / Output
 
 This example showcases how `String Compression` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
@@ -25,441 +25,451 @@ var str2 = 'Hello, World!';
 console.log(str2);
 
 // Output.js
-var ZYqFZcM = (function () {
-  var wanPKzZ = String.fromCharCode,
-    eglnKx =
+var amf96r = (function () {
+  var UVFvUB = String.fromCharCode,
+    eyCerz =
       'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',
-    KV7wSuz =
+    hcEXuYy =
       'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-$',
-    Amaur4 = {};
-  function dp9NXtF(dp9NXtF, V8Biea8) {
-    if (!Amaur4[dp9NXtF]) {
-      Amaur4[dp9NXtF] = {};
-      for (var FjNQsaK = 0; FjNQsaK < dp9NXtF.length; FjNQsaK++)
-        Amaur4[dp9NXtF][dp9NXtF.charAt(FjNQsaK)] = FjNQsaK;
+    o2CxpC = {};
+  function qSbPb7(qSbPb7, wsvF2us) {
+    if (!o2CxpC[qSbPb7]) {
+      o2CxpC[qSbPb7] = {};
+      for (var GqdRlw = 0; GqdRlw < qSbPb7.length; GqdRlw++)
+        o2CxpC[qSbPb7][qSbPb7.charAt(GqdRlw)] = GqdRlw;
     }
-    return Amaur4[dp9NXtF][V8Biea8];
+    return o2CxpC[qSbPb7][wsvF2us];
   }
-  var V8Biea8 = {
-    compressToBase64: function (Amaur4) {
-      if (null == Amaur4) return '';
-      var dp9NXtF = V8Biea8._compress(Amaur4, 6, function (dp9NXtF) {
-        return eglnKx.charAt(dp9NXtF);
+  var wsvF2us = {
+    compressToBase64: function (o2CxpC) {
+      if (null == o2CxpC) return '';
+      var qSbPb7 = wsvF2us._compress(o2CxpC, 6, function (qSbPb7) {
+        return eyCerz.charAt(qSbPb7);
       });
-      switch (dp9NXtF.length % 4) {
+      switch (qSbPb7.length % 4) {
         default:
         case 0:
-          return dp9NXtF;
+          return qSbPb7;
         case 1:
-          return dp9NXtF + '===';
+          return qSbPb7 + '===';
         case 2:
-          return dp9NXtF + '==';
+          return qSbPb7 + '==';
         case 3:
-          return dp9NXtF + '=';
+          return qSbPb7 + '=';
       }
     },
-    decompressFromBase64: function (Amaur4) {
-      return null == Amaur4
+    decompressFromBase64: function (o2CxpC) {
+      return null == o2CxpC
         ? ''
-        : '' == Amaur4
+        : '' == o2CxpC
           ? null
-          : V8Biea8._decompress(Amaur4.length, 32, function (V8Biea8) {
-              return dp9NXtF(eglnKx, Amaur4.charAt(V8Biea8));
+          : wsvF2us._decompress(o2CxpC.length, 32, function (wsvF2us) {
+              return qSbPb7(eyCerz, o2CxpC.charAt(wsvF2us));
             });
     },
-    compressToUTF16: function (KV7wSuz) {
-      return null == KV7wSuz
+    compressToUTF16: function (hcEXuYy) {
+      return null == hcEXuYy
         ? ''
-        : V8Biea8._compress(KV7wSuz, 15, function (Amaur4) {
-            return wanPKzZ(Amaur4 + 32);
+        : wsvF2us._compress(hcEXuYy, 15, function (o2CxpC) {
+            return UVFvUB(o2CxpC + 32);
           }) + ' ';
     },
-    decompressFromUTF16: function (KV7wSuz) {
-      return null == KV7wSuz
+    decompressFromUTF16: function (hcEXuYy) {
+      return null == hcEXuYy
         ? ''
-        : '' == KV7wSuz
+        : '' == hcEXuYy
           ? null
-          : V8Biea8._decompress(KV7wSuz.length, 16384, function (Amaur4) {
-              return KV7wSuz.charCodeAt(Amaur4) - 32;
+          : wsvF2us._decompress(hcEXuYy.length, 16384, function (o2CxpC) {
+              return hcEXuYy.charCodeAt(o2CxpC) - 32;
             });
     },
-    compressToUint8Array: function (SJsnA2X) {
+    compressToUint8Array: function (fyj5H7) {
       for (
-        var ptc1vJw = V8Biea8.compress(SJsnA2X),
-          kbBb87 = new Uint8Array(2 * ptc1vJw.length),
-          PfFg4QJ = 0,
-          _BTDiL = ptc1vJw.length;
-        PfFg4QJ < _BTDiL;
-        PfFg4QJ++
+        var lXpUoB = wsvF2us.compress(fyj5H7),
+          ZoIftIZ = new Uint8Array(2 * lXpUoB.length),
+          H46iCEp = 0,
+          O9Mqzkl = lXpUoB.length;
+        H46iCEp < O9Mqzkl;
+        H46iCEp++
       ) {
-        var Vc4Yie = ptc1vJw.charCodeAt(PfFg4QJ);
-        ((kbBb87[2 * PfFg4QJ] = Vc4Yie >>> 8),
-          (kbBb87[2 * PfFg4QJ + 1] = Vc4Yie % 256));
+        var z3Yojnd = lXpUoB.charCodeAt(H46iCEp);
+        ((ZoIftIZ[2 * H46iCEp] = z3Yojnd >>> 8),
+          (ZoIftIZ[2 * H46iCEp + 1] = z3Yojnd % 256));
       }
-      return kbBb87;
+      return ZoIftIZ;
     },
-    decompressFromUint8Array: function (Nqp3P7) {
-      if (null == Nqp3P7) return V8Biea8.decompress(Nqp3P7);
+    decompressFromUint8Array: function (jh50Nv) {
+      if (null == jh50Nv) return wsvF2us.decompress(jh50Nv);
       for (
-        var H5qpu91 = new Array(Nqp3P7.length / 2),
-          gaMKjac = 0,
-          vi12Oqr = H5qpu91.length;
-        gaMKjac < vi12Oqr;
-        gaMKjac++
+        var nSA2jH = new Array(jh50Nv.length / 2),
+          xPtJU0 = 0,
+          TBCz9Xx = nSA2jH.length;
+        xPtJU0 < TBCz9Xx;
+        xPtJU0++
       )
-        H5qpu91[gaMKjac] = 256 * Nqp3P7[2 * gaMKjac] + Nqp3P7[2 * gaMKjac + 1];
-      var ElLmFen = [];
+        nSA2jH[xPtJU0] = 256 * jh50Nv[2 * xPtJU0] + jh50Nv[2 * xPtJU0 + 1];
+      var htrVhpQ = [];
       return (
-        H5qpu91.forEach(function (H5qpu91) {
-          ElLmFen.push(wanPKzZ(H5qpu91));
+        nSA2jH.forEach(function (nSA2jH) {
+          htrVhpQ.push(UVFvUB(nSA2jH));
         }),
-        V8Biea8.decompress(ElLmFen.join(''))
+        wsvF2us.decompress(htrVhpQ.join(''))
       );
     },
-    compressToEncodedURIComponent: function (eglnKx) {
-      return null == eglnKx
+    compressToEncodedURIComponent: function (eyCerz) {
+      return null == eyCerz
         ? ''
-        : V8Biea8._compress(eglnKx, 6, function (Amaur4) {
-            return KV7wSuz.charAt(Amaur4);
+        : wsvF2us._compress(eyCerz, 6, function (o2CxpC) {
+            return hcEXuYy.charAt(o2CxpC);
           });
     },
-    decompressFromEncodedURIComponent: function (Amaur4) {
-      return null == Amaur4
+    decompressFromEncodedURIComponent: function (o2CxpC) {
+      return null == o2CxpC
         ? ''
-        : '' == Amaur4
+        : '' == o2CxpC
           ? null
-          : ((Amaur4 = Amaur4.replace(/ /g, '+')),
-            V8Biea8._decompress(Amaur4.length, 32, function (V8Biea8) {
-              return dp9NXtF(KV7wSuz, Amaur4.charAt(V8Biea8));
+          : ((o2CxpC = o2CxpC.replace(/ /g, '+')),
+            wsvF2us._decompress(o2CxpC.length, 32, function (wsvF2us) {
+              return qSbPb7(hcEXuYy, o2CxpC.charAt(wsvF2us));
             }));
     },
-    compress: function (KV7wSuz) {
-      return V8Biea8._compress(KV7wSuz, 16, function (Amaur4) {
-        return wanPKzZ(Amaur4);
+    compress: function (hcEXuYy) {
+      return wsvF2us._compress(hcEXuYy, 16, function (o2CxpC) {
+        return UVFvUB(o2CxpC);
       });
     },
-    _compress: function (FfJGnL, L4dlLy, LVXacXY) {
-      if (null == FfJGnL) return '';
-      var ad_VYCm,
-        BjHSCd,
-        P3jV2H,
-        ejO49H = {},
-        KlEPK_n = {},
-        Sm_1VK = '',
-        gU44ypb = '',
-        aPoyTE = '',
-        R5ml46 = 2,
-        zY1OFz = 3,
-        gsra9PW = 2,
-        vWWeH5 = [],
-        bWVChzT = 0,
-        IDFLrd = 0;
-      for (P3jV2H = 0; P3jV2H < FfJGnL.length; P3jV2H++)
+    _compress: function (Yxi90t3, gQ0uxy, QvrK6n) {
+      if (null == Yxi90t3) return '';
+      var RpzgdpW,
+        _oPUCSW,
+        cvGMnP_,
+        ObV5Dl = {},
+        rIBBKQ = {},
+        MBaY6w = '',
+        uxdPKM0 = '',
+        UC1bVF = '',
+        ARRgJU = 2,
+        oz3Cxpn = 3,
+        fQLhPX = 2,
+        CFz1Qh7 = [],
+        KiNzfLv = 0,
+        CXkYVdQ = 0;
+      for (cvGMnP_ = 0; cvGMnP_ < Yxi90t3.length; cvGMnP_++)
         if (
-          ((Sm_1VK = FfJGnL.charAt(P3jV2H)),
-          Object.prototype.hasOwnProperty.call(ejO49H, Sm_1VK) ||
-            ((ejO49H[Sm_1VK] = zY1OFz++), (KlEPK_n[Sm_1VK] = !0)),
-          (gU44ypb = aPoyTE + Sm_1VK),
-          Object.prototype.hasOwnProperty.call(ejO49H, gU44ypb))
+          ((MBaY6w = Yxi90t3.charAt(cvGMnP_)),
+          Object.prototype.hasOwnProperty.call(ObV5Dl, MBaY6w) ||
+            ((ObV5Dl[MBaY6w] = oz3Cxpn++), (rIBBKQ[MBaY6w] = !0)),
+          (uxdPKM0 = UC1bVF + MBaY6w),
+          Object.prototype.hasOwnProperty.call(ObV5Dl, uxdPKM0))
         )
-          aPoyTE = gU44ypb;
+          UC1bVF = uxdPKM0;
         else {
-          if (Object.prototype.hasOwnProperty.call(KlEPK_n, aPoyTE)) {
-            if (aPoyTE.charCodeAt(0) < 256) {
-              for (ad_VYCm = 0; ad_VYCm < gsra9PW; ad_VYCm++)
-                ((bWVChzT <<= 1),
-                  IDFLrd == L4dlLy - 1
-                    ? ((IDFLrd = 0),
-                      vWWeH5.push(LVXacXY(bWVChzT)),
-                      (bWVChzT = 0))
-                    : IDFLrd++);
+          if (Object.prototype.hasOwnProperty.call(rIBBKQ, UC1bVF)) {
+            if (UC1bVF.charCodeAt(0) < 256) {
+              for (RpzgdpW = 0; RpzgdpW < fQLhPX; RpzgdpW++)
+                ((KiNzfLv <<= 1),
+                  CXkYVdQ == gQ0uxy - 1
+                    ? ((CXkYVdQ = 0),
+                      CFz1Qh7.push(QvrK6n(KiNzfLv)),
+                      (KiNzfLv = 0))
+                    : CXkYVdQ++);
               for (
-                BjHSCd = aPoyTE.charCodeAt(0), ad_VYCm = 0;
-                ad_VYCm < 8;
-                ad_VYCm++
+                _oPUCSW = UC1bVF.charCodeAt(0), RpzgdpW = 0;
+                RpzgdpW < 8;
+                RpzgdpW++
               )
-                ((bWVChzT = (bWVChzT << 1) | (1 & BjHSCd)),
-                  IDFLrd == L4dlLy - 1
-                    ? ((IDFLrd = 0),
-                      vWWeH5.push(LVXacXY(bWVChzT)),
-                      (bWVChzT = 0))
-                    : IDFLrd++,
-                  (BjHSCd >>= 1));
+                ((KiNzfLv = (KiNzfLv << 1) | (1 & _oPUCSW)),
+                  CXkYVdQ == gQ0uxy - 1
+                    ? ((CXkYVdQ = 0),
+                      CFz1Qh7.push(QvrK6n(KiNzfLv)),
+                      (KiNzfLv = 0))
+                    : CXkYVdQ++,
+                  (_oPUCSW >>= 1));
             } else {
-              for (BjHSCd = 1, ad_VYCm = 0; ad_VYCm < gsra9PW; ad_VYCm++)
-                ((bWVChzT = (bWVChzT << 1) | BjHSCd),
-                  IDFLrd == L4dlLy - 1
-                    ? ((IDFLrd = 0),
-                      vWWeH5.push(LVXacXY(bWVChzT)),
-                      (bWVChzT = 0))
-                    : IDFLrd++,
-                  (BjHSCd = 0));
+              for (_oPUCSW = 1, RpzgdpW = 0; RpzgdpW < fQLhPX; RpzgdpW++)
+                ((KiNzfLv = (KiNzfLv << 1) | _oPUCSW),
+                  CXkYVdQ == gQ0uxy - 1
+                    ? ((CXkYVdQ = 0),
+                      CFz1Qh7.push(QvrK6n(KiNzfLv)),
+                      (KiNzfLv = 0))
+                    : CXkYVdQ++,
+                  (_oPUCSW = 0));
               for (
-                BjHSCd = aPoyTE.charCodeAt(0), ad_VYCm = 0;
-                ad_VYCm < 16;
-                ad_VYCm++
+                _oPUCSW = UC1bVF.charCodeAt(0), RpzgdpW = 0;
+                RpzgdpW < 16;
+                RpzgdpW++
               )
-                ((bWVChzT = (bWVChzT << 1) | (1 & BjHSCd)),
-                  IDFLrd == L4dlLy - 1
-                    ? ((IDFLrd = 0),
-                      vWWeH5.push(LVXacXY(bWVChzT)),
-                      (bWVChzT = 0))
-                    : IDFLrd++,
-                  (BjHSCd >>= 1));
+                ((KiNzfLv = (KiNzfLv << 1) | (1 & _oPUCSW)),
+                  CXkYVdQ == gQ0uxy - 1
+                    ? ((CXkYVdQ = 0),
+                      CFz1Qh7.push(QvrK6n(KiNzfLv)),
+                      (KiNzfLv = 0))
+                    : CXkYVdQ++,
+                  (_oPUCSW >>= 1));
             }
-            (0 == --R5ml46 && ((R5ml46 = Math.pow(2, gsra9PW)), gsra9PW++),
-              delete KlEPK_n[aPoyTE]);
+            (0 == --ARRgJU && ((ARRgJU = Math.pow(2, fQLhPX)), fQLhPX++),
+              delete rIBBKQ[UC1bVF]);
           } else
             for (
-              BjHSCd = ejO49H[aPoyTE], ad_VYCm = 0;
-              ad_VYCm < gsra9PW;
-              ad_VYCm++
+              _oPUCSW = ObV5Dl[UC1bVF], RpzgdpW = 0;
+              RpzgdpW < fQLhPX;
+              RpzgdpW++
             )
-              ((bWVChzT = (bWVChzT << 1) | (1 & BjHSCd)),
-                IDFLrd == L4dlLy - 1
-                  ? ((IDFLrd = 0), vWWeH5.push(LVXacXY(bWVChzT)), (bWVChzT = 0))
-                  : IDFLrd++,
-                (BjHSCd >>= 1));
-          (0 == --R5ml46 && ((R5ml46 = Math.pow(2, gsra9PW)), gsra9PW++),
-            (ejO49H[gU44ypb] = zY1OFz++),
-            (aPoyTE = String(Sm_1VK)));
+              ((KiNzfLv = (KiNzfLv << 1) | (1 & _oPUCSW)),
+                CXkYVdQ == gQ0uxy - 1
+                  ? ((CXkYVdQ = 0),
+                    CFz1Qh7.push(QvrK6n(KiNzfLv)),
+                    (KiNzfLv = 0))
+                  : CXkYVdQ++,
+                (_oPUCSW >>= 1));
+          (0 == --ARRgJU && ((ARRgJU = Math.pow(2, fQLhPX)), fQLhPX++),
+            (ObV5Dl[uxdPKM0] = oz3Cxpn++),
+            (UC1bVF = String(MBaY6w)));
         }
-      if ('' !== aPoyTE) {
-        if (Object.prototype.hasOwnProperty.call(KlEPK_n, aPoyTE)) {
-          if (aPoyTE.charCodeAt(0) < 256) {
-            for (ad_VYCm = 0; ad_VYCm < gsra9PW; ad_VYCm++)
-              ((bWVChzT <<= 1),
-                IDFLrd == L4dlLy - 1
-                  ? ((IDFLrd = 0), vWWeH5.push(LVXacXY(bWVChzT)), (bWVChzT = 0))
-                  : IDFLrd++);
+      if ('' !== UC1bVF) {
+        if (Object.prototype.hasOwnProperty.call(rIBBKQ, UC1bVF)) {
+          if (UC1bVF.charCodeAt(0) < 256) {
+            for (RpzgdpW = 0; RpzgdpW < fQLhPX; RpzgdpW++)
+              ((KiNzfLv <<= 1),
+                CXkYVdQ == gQ0uxy - 1
+                  ? ((CXkYVdQ = 0),
+                    CFz1Qh7.push(QvrK6n(KiNzfLv)),
+                    (KiNzfLv = 0))
+                  : CXkYVdQ++);
             for (
-              BjHSCd = aPoyTE.charCodeAt(0), ad_VYCm = 0;
-              ad_VYCm < 8;
-              ad_VYCm++
+              _oPUCSW = UC1bVF.charCodeAt(0), RpzgdpW = 0;
+              RpzgdpW < 8;
+              RpzgdpW++
             )
-              ((bWVChzT = (bWVChzT << 1) | (1 & BjHSCd)),
-                IDFLrd == L4dlLy - 1
-                  ? ((IDFLrd = 0), vWWeH5.push(LVXacXY(bWVChzT)), (bWVChzT = 0))
-                  : IDFLrd++,
-                (BjHSCd >>= 1));
+              ((KiNzfLv = (KiNzfLv << 1) | (1 & _oPUCSW)),
+                CXkYVdQ == gQ0uxy - 1
+                  ? ((CXkYVdQ = 0),
+                    CFz1Qh7.push(QvrK6n(KiNzfLv)),
+                    (KiNzfLv = 0))
+                  : CXkYVdQ++,
+                (_oPUCSW >>= 1));
           } else {
-            for (BjHSCd = 1, ad_VYCm = 0; ad_VYCm < gsra9PW; ad_VYCm++)
-              ((bWVChzT = (bWVChzT << 1) | BjHSCd),
-                IDFLrd == L4dlLy - 1
-                  ? ((IDFLrd = 0), vWWeH5.push(LVXacXY(bWVChzT)), (bWVChzT = 0))
-                  : IDFLrd++,
-                (BjHSCd = 0));
+            for (_oPUCSW = 1, RpzgdpW = 0; RpzgdpW < fQLhPX; RpzgdpW++)
+              ((KiNzfLv = (KiNzfLv << 1) | _oPUCSW),
+                CXkYVdQ == gQ0uxy - 1
+                  ? ((CXkYVdQ = 0),
+                    CFz1Qh7.push(QvrK6n(KiNzfLv)),
+                    (KiNzfLv = 0))
+                  : CXkYVdQ++,
+                (_oPUCSW = 0));
             for (
-              BjHSCd = aPoyTE.charCodeAt(0), ad_VYCm = 0;
-              ad_VYCm < 16;
-              ad_VYCm++
+              _oPUCSW = UC1bVF.charCodeAt(0), RpzgdpW = 0;
+              RpzgdpW < 16;
+              RpzgdpW++
             )
-              ((bWVChzT = (bWVChzT << 1) | (1 & BjHSCd)),
-                IDFLrd == L4dlLy - 1
-                  ? ((IDFLrd = 0), vWWeH5.push(LVXacXY(bWVChzT)), (bWVChzT = 0))
-                  : IDFLrd++,
-                (BjHSCd >>= 1));
+              ((KiNzfLv = (KiNzfLv << 1) | (1 & _oPUCSW)),
+                CXkYVdQ == gQ0uxy - 1
+                  ? ((CXkYVdQ = 0),
+                    CFz1Qh7.push(QvrK6n(KiNzfLv)),
+                    (KiNzfLv = 0))
+                  : CXkYVdQ++,
+                (_oPUCSW >>= 1));
           }
-          (0 == --R5ml46 && ((R5ml46 = Math.pow(2, gsra9PW)), gsra9PW++),
-            delete KlEPK_n[aPoyTE]);
+          (0 == --ARRgJU && ((ARRgJU = Math.pow(2, fQLhPX)), fQLhPX++),
+            delete rIBBKQ[UC1bVF]);
         } else
           for (
-            BjHSCd = ejO49H[aPoyTE], ad_VYCm = 0;
-            ad_VYCm < gsra9PW;
-            ad_VYCm++
+            _oPUCSW = ObV5Dl[UC1bVF], RpzgdpW = 0;
+            RpzgdpW < fQLhPX;
+            RpzgdpW++
           )
-            ((bWVChzT = (bWVChzT << 1) | (1 & BjHSCd)),
-              IDFLrd == L4dlLy - 1
-                ? ((IDFLrd = 0), vWWeH5.push(LVXacXY(bWVChzT)), (bWVChzT = 0))
-                : IDFLrd++,
-              (BjHSCd >>= 1));
-        0 == --R5ml46 && ((R5ml46 = Math.pow(2, gsra9PW)), gsra9PW++);
+            ((KiNzfLv = (KiNzfLv << 1) | (1 & _oPUCSW)),
+              CXkYVdQ == gQ0uxy - 1
+                ? ((CXkYVdQ = 0), CFz1Qh7.push(QvrK6n(KiNzfLv)), (KiNzfLv = 0))
+                : CXkYVdQ++,
+              (_oPUCSW >>= 1));
+        0 == --ARRgJU && ((ARRgJU = Math.pow(2, fQLhPX)), fQLhPX++);
       }
-      for (BjHSCd = 2, ad_VYCm = 0; ad_VYCm < gsra9PW; ad_VYCm++)
-        ((bWVChzT = (bWVChzT << 1) | (1 & BjHSCd)),
-          IDFLrd == L4dlLy - 1
-            ? ((IDFLrd = 0), vWWeH5.push(LVXacXY(bWVChzT)), (bWVChzT = 0))
-            : IDFLrd++,
-          (BjHSCd >>= 1));
+      for (_oPUCSW = 2, RpzgdpW = 0; RpzgdpW < fQLhPX; RpzgdpW++)
+        ((KiNzfLv = (KiNzfLv << 1) | (1 & _oPUCSW)),
+          CXkYVdQ == gQ0uxy - 1
+            ? ((CXkYVdQ = 0), CFz1Qh7.push(QvrK6n(KiNzfLv)), (KiNzfLv = 0))
+            : CXkYVdQ++,
+          (_oPUCSW >>= 1));
       for (;;) {
-        if (((bWVChzT <<= 1), IDFLrd == L4dlLy - 1)) {
-          vWWeH5.push(LVXacXY(bWVChzT));
+        if (((KiNzfLv <<= 1), CXkYVdQ == gQ0uxy - 1)) {
+          CFz1Qh7.push(QvrK6n(KiNzfLv));
           break;
         }
-        IDFLrd++;
+        CXkYVdQ++;
       }
-      return vWWeH5.join('');
+      return CFz1Qh7.join('');
     },
-    decompress: function (KV7wSuz) {
-      return null == KV7wSuz
+    decompress: function (hcEXuYy) {
+      return null == hcEXuYy
         ? ''
-        : '' == KV7wSuz
+        : '' == hcEXuYy
           ? null
-          : V8Biea8._decompress(KV7wSuz.length, 32768, function (Amaur4) {
-              return KV7wSuz.charCodeAt(Amaur4);
+          : wsvF2us._decompress(hcEXuYy.length, 32768, function (o2CxpC) {
+              return hcEXuYy.charCodeAt(o2CxpC);
             });
     },
-    _decompress: function (GGzbC8F, rEL239t, KhwDmL) {
-      var TpVlmn0,
-        Nf7vU8,
-        EO_6Wl,
-        rpuKCW,
-        oHLNAwA,
-        l2rSMsf,
-        nwVX4y,
-        Go0LOd = [],
-        ITprL1 = 4,
-        AlP0rXM = 4,
-        qvf1Ux = 3,
-        JJXv6j = '',
-        xSMAxkH = [],
-        C36Aa1m = {
-          val: KhwDmL(0),
-          position: rEL239t,
+    _decompress: function (fmVEoQ, uuN0PC2, GdzcMrx) {
+      var H4TvJ5,
+        o2hn4Y,
+        NeMKYhX,
+        dIHlfql,
+        LERNHw,
+        pAcG3JW,
+        Vnxll2,
+        bofJoo = [],
+        Z7vhCR = 4,
+        Dt2E_X = 4,
+        lJYlc6 = 3,
+        XsHblm = '',
+        hpApK7s = [],
+        DY4nwSr = {
+          val: GdzcMrx(0),
+          position: uuN0PC2,
           index: 1,
         };
-      for (TpVlmn0 = 0; TpVlmn0 < 3; TpVlmn0++) Go0LOd[TpVlmn0] = TpVlmn0;
+      for (H4TvJ5 = 0; H4TvJ5 < 3; H4TvJ5++) bofJoo[H4TvJ5] = H4TvJ5;
       for (
-        EO_6Wl = 0, oHLNAwA = Math.pow(2, 2), l2rSMsf = 1;
-        l2rSMsf != oHLNAwA;
+        NeMKYhX = 0, LERNHw = Math.pow(2, 2), pAcG3JW = 1;
+        pAcG3JW != LERNHw;
 
       )
-        ((rpuKCW = C36Aa1m.val & C36Aa1m.position),
-          (C36Aa1m.position >>= 1),
-          0 == C36Aa1m.position &&
-            ((C36Aa1m.position = rEL239t),
-            (C36Aa1m.val = KhwDmL(C36Aa1m.index++))),
-          (EO_6Wl |= (rpuKCW > 0 ? 1 : 0) * l2rSMsf),
-          (l2rSMsf <<= 1));
-      switch (EO_6Wl) {
+        ((dIHlfql = DY4nwSr.val & DY4nwSr.position),
+          (DY4nwSr.position >>= 1),
+          0 == DY4nwSr.position &&
+            ((DY4nwSr.position = uuN0PC2),
+            (DY4nwSr.val = GdzcMrx(DY4nwSr.index++))),
+          (NeMKYhX |= (dIHlfql > 0 ? 1 : 0) * pAcG3JW),
+          (pAcG3JW <<= 1));
+      switch (NeMKYhX) {
         case 0:
           for (
-            EO_6Wl = 0, oHLNAwA = Math.pow(2, 8), l2rSMsf = 1;
-            l2rSMsf != oHLNAwA;
+            NeMKYhX = 0, LERNHw = Math.pow(2, 8), pAcG3JW = 1;
+            pAcG3JW != LERNHw;
 
           )
-            ((rpuKCW = C36Aa1m.val & C36Aa1m.position),
-              (C36Aa1m.position >>= 1),
-              0 == C36Aa1m.position &&
-                ((C36Aa1m.position = rEL239t),
-                (C36Aa1m.val = KhwDmL(C36Aa1m.index++))),
-              (EO_6Wl |= (rpuKCW > 0 ? 1 : 0) * l2rSMsf),
-              (l2rSMsf <<= 1));
-          nwVX4y = wanPKzZ(EO_6Wl);
+            ((dIHlfql = DY4nwSr.val & DY4nwSr.position),
+              (DY4nwSr.position >>= 1),
+              0 == DY4nwSr.position &&
+                ((DY4nwSr.position = uuN0PC2),
+                (DY4nwSr.val = GdzcMrx(DY4nwSr.index++))),
+              (NeMKYhX |= (dIHlfql > 0 ? 1 : 0) * pAcG3JW),
+              (pAcG3JW <<= 1));
+          Vnxll2 = UVFvUB(NeMKYhX);
           break;
         case 1:
           for (
-            EO_6Wl = 0, oHLNAwA = Math.pow(2, 16), l2rSMsf = 1;
-            l2rSMsf != oHLNAwA;
+            NeMKYhX = 0, LERNHw = Math.pow(2, 16), pAcG3JW = 1;
+            pAcG3JW != LERNHw;
 
           )
-            ((rpuKCW = C36Aa1m.val & C36Aa1m.position),
-              (C36Aa1m.position >>= 1),
-              0 == C36Aa1m.position &&
-                ((C36Aa1m.position = rEL239t),
-                (C36Aa1m.val = KhwDmL(C36Aa1m.index++))),
-              (EO_6Wl |= (rpuKCW > 0 ? 1 : 0) * l2rSMsf),
-              (l2rSMsf <<= 1));
-          nwVX4y = wanPKzZ(EO_6Wl);
+            ((dIHlfql = DY4nwSr.val & DY4nwSr.position),
+              (DY4nwSr.position >>= 1),
+              0 == DY4nwSr.position &&
+                ((DY4nwSr.position = uuN0PC2),
+                (DY4nwSr.val = GdzcMrx(DY4nwSr.index++))),
+              (NeMKYhX |= (dIHlfql > 0 ? 1 : 0) * pAcG3JW),
+              (pAcG3JW <<= 1));
+          Vnxll2 = UVFvUB(NeMKYhX);
           break;
         case 2:
           return '';
       }
-      for (Go0LOd[3] = nwVX4y, Nf7vU8 = nwVX4y, xSMAxkH.push(nwVX4y); ; ) {
-        if (C36Aa1m.index > GGzbC8F) return '';
+      for (bofJoo[3] = Vnxll2, o2hn4Y = Vnxll2, hpApK7s.push(Vnxll2); ; ) {
+        if (DY4nwSr.index > fmVEoQ) return '';
         for (
-          EO_6Wl = 0, oHLNAwA = Math.pow(2, qvf1Ux), l2rSMsf = 1;
-          l2rSMsf != oHLNAwA;
+          NeMKYhX = 0, LERNHw = Math.pow(2, lJYlc6), pAcG3JW = 1;
+          pAcG3JW != LERNHw;
 
         )
-          ((rpuKCW = C36Aa1m.val & C36Aa1m.position),
-            (C36Aa1m.position >>= 1),
-            0 == C36Aa1m.position &&
-              ((C36Aa1m.position = rEL239t),
-              (C36Aa1m.val = KhwDmL(C36Aa1m.index++))),
-            (EO_6Wl |= (rpuKCW > 0 ? 1 : 0) * l2rSMsf),
-            (l2rSMsf <<= 1));
-        switch ((nwVX4y = EO_6Wl)) {
+          ((dIHlfql = DY4nwSr.val & DY4nwSr.position),
+            (DY4nwSr.position >>= 1),
+            0 == DY4nwSr.position &&
+              ((DY4nwSr.position = uuN0PC2),
+              (DY4nwSr.val = GdzcMrx(DY4nwSr.index++))),
+            (NeMKYhX |= (dIHlfql > 0 ? 1 : 0) * pAcG3JW),
+            (pAcG3JW <<= 1));
+        switch ((Vnxll2 = NeMKYhX)) {
           case 0:
             for (
-              EO_6Wl = 0, oHLNAwA = Math.pow(2, 8), l2rSMsf = 1;
-              l2rSMsf != oHLNAwA;
+              NeMKYhX = 0, LERNHw = Math.pow(2, 8), pAcG3JW = 1;
+              pAcG3JW != LERNHw;
 
             )
-              ((rpuKCW = C36Aa1m.val & C36Aa1m.position),
-                (C36Aa1m.position >>= 1),
-                0 == C36Aa1m.position &&
-                  ((C36Aa1m.position = rEL239t),
-                  (C36Aa1m.val = KhwDmL(C36Aa1m.index++))),
-                (EO_6Wl |= (rpuKCW > 0 ? 1 : 0) * l2rSMsf),
-                (l2rSMsf <<= 1));
-            ((Go0LOd[AlP0rXM++] = wanPKzZ(EO_6Wl)),
-              (nwVX4y = AlP0rXM - 1),
-              ITprL1--);
+              ((dIHlfql = DY4nwSr.val & DY4nwSr.position),
+                (DY4nwSr.position >>= 1),
+                0 == DY4nwSr.position &&
+                  ((DY4nwSr.position = uuN0PC2),
+                  (DY4nwSr.val = GdzcMrx(DY4nwSr.index++))),
+                (NeMKYhX |= (dIHlfql > 0 ? 1 : 0) * pAcG3JW),
+                (pAcG3JW <<= 1));
+            ((bofJoo[Dt2E_X++] = UVFvUB(NeMKYhX)),
+              (Vnxll2 = Dt2E_X - 1),
+              Z7vhCR--);
             break;
           case 1:
             for (
-              EO_6Wl = 0, oHLNAwA = Math.pow(2, 16), l2rSMsf = 1;
-              l2rSMsf != oHLNAwA;
+              NeMKYhX = 0, LERNHw = Math.pow(2, 16), pAcG3JW = 1;
+              pAcG3JW != LERNHw;
 
             )
-              ((rpuKCW = C36Aa1m.val & C36Aa1m.position),
-                (C36Aa1m.position >>= 1),
-                0 == C36Aa1m.position &&
-                  ((C36Aa1m.position = rEL239t),
-                  (C36Aa1m.val = KhwDmL(C36Aa1m.index++))),
-                (EO_6Wl |= (rpuKCW > 0 ? 1 : 0) * l2rSMsf),
-                (l2rSMsf <<= 1));
-            ((Go0LOd[AlP0rXM++] = wanPKzZ(EO_6Wl)),
-              (nwVX4y = AlP0rXM - 1),
-              ITprL1--);
+              ((dIHlfql = DY4nwSr.val & DY4nwSr.position),
+                (DY4nwSr.position >>= 1),
+                0 == DY4nwSr.position &&
+                  ((DY4nwSr.position = uuN0PC2),
+                  (DY4nwSr.val = GdzcMrx(DY4nwSr.index++))),
+                (NeMKYhX |= (dIHlfql > 0 ? 1 : 0) * pAcG3JW),
+                (pAcG3JW <<= 1));
+            ((bofJoo[Dt2E_X++] = UVFvUB(NeMKYhX)),
+              (Vnxll2 = Dt2E_X - 1),
+              Z7vhCR--);
             break;
           case 2:
-            return xSMAxkH.join('');
+            return hpApK7s.join('');
         }
         if (
-          (0 == ITprL1 && ((ITprL1 = Math.pow(2, qvf1Ux)), qvf1Ux++),
-          Go0LOd[nwVX4y])
+          (0 == Z7vhCR && ((Z7vhCR = Math.pow(2, lJYlc6)), lJYlc6++),
+          bofJoo[Vnxll2])
         )
-          JJXv6j = Go0LOd[nwVX4y];
+          XsHblm = bofJoo[Vnxll2];
         else {
-          if (nwVX4y !== AlP0rXM) return null;
-          JJXv6j = Nf7vU8 + Nf7vU8.charAt(0);
+          if (Vnxll2 !== Dt2E_X) return null;
+          XsHblm = o2hn4Y + o2hn4Y.charAt(0);
         }
-        (xSMAxkH.push(JJXv6j),
-          (Go0LOd[AlP0rXM++] = Nf7vU8 + JJXv6j.charAt(0)),
-          (Nf7vU8 = JJXv6j),
-          0 == --ITprL1 && ((ITprL1 = Math.pow(2, qvf1Ux)), qvf1Ux++));
+        (hpApK7s.push(XsHblm),
+          (bofJoo[Dt2E_X++] = o2hn4Y + XsHblm.charAt(0)),
+          (o2hn4Y = XsHblm),
+          0 == --Z7vhCR && ((Z7vhCR = Math.pow(2, lJYlc6)), lJYlc6++));
       }
     },
   };
-  return V8Biea8;
+  return wsvF2us;
 })();
 'function' == typeof define && define.amd
   ? define(function () {
-      return ZYqFZcM;
+      return amf96r;
     })
   : 'undefined' != typeof module && null != module
-    ? (module.exports = ZYqFZcM)
+    ? (module.exports = amf96r)
     : 'undefined' != typeof angular &&
       null != angular &&
       angular.module('LZString', []).factory('LZString', function () {
-        return ZYqFZcM;
+        return amf96r;
       });
-var wanPKzZ;
+var UVFvUB;
 (function () {
-  var eglnKx =
+  var eyCerz =
       '\u0262\u4C2D\u4C3E\u6054@\u3AC4\u0293F\u0230\u0405\u01EC\u4020 ',
-    KV7wSuz = ZYqFZcM.decompressFromUTF16(eglnKx),
-    TkfbBTP = KV7wSuz.split('|');
-  wanPKzZ = function (eglnKx) {
-    return TkfbBTP[eglnKx];
+    hcEXuYy = amf96r.decompressFromUTF16(eyCerz),
+    zp0Z3h = hcEXuYy.split('|');
+  UVFvUB = function (eyCerz) {
+    return zp0Z3h[eyCerz];
   };
 })();
-var eglnKx = wanPKzZ(0);
-console[wanPKzZ(1)](eglnKx);
-var KV7wSuz = wanPKzZ(0);
-console[wanPKzZ(1)](KV7wSuz);
+var eyCerz = UVFvUB(0);
+console[UVFvUB(1)](eyCerz);
+var hcEXuYy = UVFvUB(0);
+console[UVFvUB(1)](hcEXuYy);
 ```
 
 ---
@@ -467,8 +477,8 @@ console[wanPKzZ(1)](KV7wSuz);
 
 
 
-#### Custom Implementation
-###### `options.stringCompression(strValue)`
+### Custom Implementation
+##### `options.stringCompression(strValue)`
 
 Control which strings are changed. Returns a `boolean`.
 | Parameter | Type | Description |
@@ -478,7 +488,7 @@ Control which strings are changed. Returns a `boolean`.
 
 ---
 
-#### Usage Example
+### Usage Example
 
 The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
@@ -504,7 +514,7 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ---
 
-##### Enabled In
+#### Enabled In
 
 - [High Preset](/presets/high): Yes
 - [Medium Preset](/presets/medium): No

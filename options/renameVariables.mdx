@@ -12,7 +12,7 @@ slug: "options/renameVariables"
 
 
 
-#### Input / Output
+### Input / Output
 
 This example showcases how `Rename Variables` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
@@ -41,26 +41,26 @@ var test = function () {
 test();
 
 // Output.js
-var EISnOO = function (EISnOO, Xer_tVQ) {
-    var F8hLYzC = {},
-      K4QCt6K = EISnOO.length;
-    for (var A9o9riI = 0; A9o9riI < K4QCt6K; A9o9riI++) {
-      if (EISnOO[A9o9riI] in F8hLYzC) {
-        return [F8hLYzC[EISnOO[A9o9riI]], A9o9riI];
+var zGVjPLO = function (zGVjPLO, yyyzhsG) {
+    var ReYX4u = {},
+      GOm3Qu = zGVjPLO.length;
+    for (var DTMBBB = 0; DTMBBB < GOm3Qu; DTMBBB++) {
+      if (zGVjPLO[DTMBBB] in ReYX4u) {
+        return [ReYX4u[zGVjPLO[DTMBBB]], DTMBBB];
       }
-      F8hLYzC[Xer_tVQ - EISnOO[A9o9riI]] = A9o9riI;
+      ReYX4u[yyyzhsG - zGVjPLO[DTMBBB]] = DTMBBB;
     }
     return [-1, -1];
   },
-  Xer_tVQ = function () {
-    var Xer_tVQ = [2, 7, 11, 15],
-      fLNOKB = 9,
-      _iZyHj0 = [0, 1],
-      N5YQscB = EISnOO(Xer_tVQ, fLNOKB);
-    ok(N5YQscB[0] === _iZyHj0[0]);
-    ok(N5YQscB[1] === _iZyHj0[1]);
+  yyyzhsG = function () {
+    var yyyzhsG = [2, 7, 11, 15],
+      ZsfmKM = 9,
+      eCqHByA = [0, 1],
+      GhWRRw = zGVjPLO(yyyzhsG, ZsfmKM);
+    ok(GhWRRw[0] === eCqHByA[0]);
+    ok(GhWRRw[1] === eCqHByA[1]);
   };
-Xer_tVQ();
+yyyzhsG();
 ```
 
 ---
@@ -109,8 +109,8 @@ console.log(jRLf713)
 ---
 
 
-#### Custom Implementation
-###### `options.renameVariables(varName)`
+### Custom Implementation
+##### `options.renameVariables(varName)`
 
 Control which variable names are changed. Returns a `boolean`.
 | Parameter | Type | Description |
@@ -127,7 +127,7 @@ module.exports = {
 
 ---
 
-#### Usage Example
+### Usage Example
 
 The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
@@ -153,7 +153,7 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ---
 
-##### Enabled In
+#### Enabled In
 
 - [High Preset](/presets/high): Yes
 - [Medium Preset](/presets/medium): Yes

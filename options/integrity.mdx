@@ -12,7 +12,7 @@ slug: "options/lock.integrity"
 
 
 
-#### Input / Output
+### Input / Output
 
 This example showcases how `Integrity` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
@@ -25,56 +25,56 @@ function protectedFunction() {
 protectedFunction(); // "This code is protected"
 
 // Output.js
-function LP8Ri2j(LP8Ri2j, fNWWIB) {
-  fNWWIB |= 0;
-  var Q8UJWB = (LP8Ri2j & 0x003fffff) * fNWWIB;
-  if (LP8Ri2j & 0xffc00000) Q8UJWB += ((LP8Ri2j & 0xffc00000) * fNWWIB) | 0;
-  return Q8UJWB | 0;
+function seGEqY(seGEqY, Dq3iILx) {
+  Dq3iILx |= 0;
+  var T48XXw = (seGEqY & 0x003fffff) * Dq3iILx;
+  if (seGEqY & 0xffc00000) T48XXw += ((seGEqY & 0xffc00000) * Dq3iILx) | 0;
+  return T48XXw | 0;
 }
-var fNWWIB = Math.imul || LP8Ri2j;
-function Q8UJWB(LP8Ri2j, Q8UJWB) {
-  var d4Xkeip = 0xdeadbeef ^ Q8UJWB,
-    BegVLV7 = 0x41c6ce57 ^ Q8UJWB;
-  for (var qy5I6y = 0, Z8OL9G; qy5I6y < LP8Ri2j.length; qy5I6y++) {
-    Z8OL9G = LP8Ri2j.charCodeAt(qy5I6y);
-    d4Xkeip = fNWWIB(d4Xkeip ^ Z8OL9G, 2654435761);
-    BegVLV7 = fNWWIB(BegVLV7 ^ Z8OL9G, 1597334677);
+var Dq3iILx = Math.imul || seGEqY;
+function T48XXw(seGEqY, T48XXw) {
+  var tLAMTJ = 0xdeadbeef ^ T48XXw,
+    NEBpEVZ = 0x41c6ce57 ^ T48XXw;
+  for (var yx31PU = 0, fhX8m3H; yx31PU < seGEqY.length; yx31PU++) {
+    fhX8m3H = seGEqY.charCodeAt(yx31PU);
+    tLAMTJ = Dq3iILx(tLAMTJ ^ fhX8m3H, 2654435761);
+    NEBpEVZ = Dq3iILx(NEBpEVZ ^ fhX8m3H, 1597334677);
   }
-  d4Xkeip =
-    fNWWIB(d4Xkeip ^ (d4Xkeip >>> 16), 2246822507) ^
-    fNWWIB(BegVLV7 ^ (BegVLV7 >>> 13), 3266489909);
-  BegVLV7 =
-    fNWWIB(BegVLV7 ^ (BegVLV7 >>> 16), 2246822507) ^
-    fNWWIB(d4Xkeip ^ (d4Xkeip >>> 13), 3266489909);
-  return 4294967296 * (2097151 & BegVLV7) + (d4Xkeip >>> 0);
+  tLAMTJ =
+    Dq3iILx(tLAMTJ ^ (tLAMTJ >>> 16), 2246822507) ^
+    Dq3iILx(NEBpEVZ ^ (NEBpEVZ >>> 13), 3266489909);
+  NEBpEVZ =
+    Dq3iILx(NEBpEVZ ^ (NEBpEVZ >>> 16), 2246822507) ^
+    Dq3iILx(tLAMTJ ^ (tLAMTJ >>> 13), 3266489909);
+  return 4294967296 * (2097151 & NEBpEVZ) + (tLAMTJ >>> 0);
 }
-function d4Xkeip(
-  LP8Ri2j,
-  fNWWIB,
-  d4Xkeip = new RegExp(' |\\n|;|,|\\{|\\}|\\(|\\)|\\.|\\[|\\]', 'g'),
+function tLAMTJ(
+  seGEqY,
+  Dq3iILx,
+  tLAMTJ = new RegExp(' |\\n|;|,|\\{|\\}|\\(|\\)|\\.|\\[|\\]', 'g'),
 ) {
-  var BegVLV7 = LP8Ri2j.toString().replace(d4Xkeip, '');
-  return Q8UJWB(BegVLV7, fNWWIB);
+  var NEBpEVZ = seGEqY.toString().replace(tLAMTJ, '');
+  return T48XXw(NEBpEVZ, Dq3iILx);
 }
-function BegVLV7() {
+function NEBpEVZ() {
   console.log('This code is protected');
 }
-function qy5I6y() {
-  var VW0bWS = qy5I6y.mJ5lZsL || (qy5I6y.mJ5lZsL = d4Xkeip(BegVLV7, 6644229));
-  if (VW0bWS === 7862938957676643) {
-    return BegVLV7(...arguments);
+function yx31PU() {
+  var uHu0fFG = yx31PU.JOu3au || (yx31PU.JOu3au = tLAMTJ(NEBpEVZ, 6700757));
+  if (uHu0fFG === 6549616135580178) {
+    return NEBpEVZ(...arguments);
   } else {
     while (true) {}
   }
 }
-qy5I6y();
+yx31PU();
 ```
 
 ---
 
 
 
-      #### How is this possible?
+      ### How is this possible?
 
 JavaScript has a sneaky method to view the source code any function. Calling `Function.toString()` on any function reveals the raw source code.
 
@@ -84,18 +84,17 @@ Integrity uses a hashing algorithm on the obfuscated code during the obfuscation
 
 An additional RegEx is utilized to remove spaces, newlines, braces, and commas. This ensures the hash isn't too sensitive.
 
-#### Tamper Detection
+### Tamper Detection
 
 If tampering is detected, the `lock.countermeasures` function will be invoked. If you don't provide a `lock.countermeasures` function, the default behavior is to crash the program.
-
 
 [Learn more about the countermeasures function](Countermeasures.md)
       
 ---
 
 
-#### Custom Implementation
-###### `options.lock.integrity(fnName)`
+### Custom Implementation
+##### `options.lock.integrity(fnName)`
 
 Control which functions are changed. Returns a `boolean`.
 | Parameter | Type | Description |
@@ -105,7 +104,7 @@ Control which functions are changed. Returns a `boolean`.
 
 ---
 
-#### Usage Example
+### Usage Example
 
 The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
@@ -133,7 +132,7 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ---
 
-##### Enabled In
+#### Enabled In
 
 - [High Preset](/presets/high): No
 - [Medium Preset](/presets/medium): No
@@ -141,7 +140,7 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ---
 
-      #### Potential Issues
+      ### Potential Issues
 
 If you decide to use Integrity, consider the following:
 

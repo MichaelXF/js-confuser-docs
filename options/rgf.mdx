@@ -18,7 +18,7 @@ The code will not work properly in [environments that have disabled eval](https:
 
 
 
-#### Input / Output
+### Input / Output
 
 This example showcases how `RGF` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
@@ -31,42 +31,41 @@ function printToConsole(message) {
 printToConsole('Hello World'); // "Hello World"
 
 // Output.js
-function Xhr8WG(Xhr8WG = !0) {
-  return Xhr8WG;
+function HCfNFA(HCfNFA = !0) {
+  return HCfNFA;
 }
-var WjJnc9H = Xhr8WG(),
-  c5O1KM = [
-    Cz86a7A(
-      'function ZVnlwk(){var[ZVnlwk,_nmwVqA]=arguments;function f4g1JB(ZVnlwk){console.log(ZVnlwk)}return f4g1JB.apply(this,_nmwVqA)}ZVnlwk;',
+var a1FgCZa = HCfNFA(),
+  UEqSOw = [
+    FiUwUG(
+      'function OU6Db81(){var[OU6Db81,x_K2dP6]=arguments;function YBKUxu(OU6Db81){console.log(OU6Db81)}return YBKUxu.apply(this,x_K2dP6)}OU6Db81;',
     ),
   ];
-function ni0rbJC() {
-  return c5O1KM[0].apply(this, [c5O1KM, arguments]);
+function pbWrnk() {
+  return UEqSOw[0].apply(this, [UEqSOw, arguments]);
 }
-function Cz86a7A(Xhr8WG) {
-  if (WjJnc9H) {
-    return eval(Xhr8WG);
+function FiUwUG(HCfNFA) {
+  if (a1FgCZa) {
+    return eval(HCfNFA);
   }
 }
-ni0rbJC('Hello World');
+pbWrnk('Hello World');
 ```
 
 ---
 
 
 
-      #### Independent Functions
+      ### Independent Functions
 
       RGF will only transform functions that are independent of their scope. A function referencing a variable outside of its scope disqualifies it from being transformed.
 
-      
       If you enable [Flatten](./flatten), you can isolate functions from their original scope so then RGF can then apply on them. This is the recommended way to use RGF.
       
 ---
 
 
-#### Custom Implementation
-###### `options.rgf(fnName)`
+### Custom Implementation
+##### `options.rgf(fnName)`
 
 Control which functions are changed. Returns a `boolean`.
 | Parameter | Type | Description |
@@ -76,7 +75,7 @@ Control which functions are changed. Returns a `boolean`.
 
 ---
 
-#### Usage Example
+### Usage Example
 
 The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
@@ -102,14 +101,14 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ---
 
-##### Enabled In
+#### Enabled In
 
 - [High Preset](/presets/high): No
 - [Medium Preset](/presets/medium): No
 - [Low Preset](/presets/low): No 
 
 ---
-##### Other notes
+### Other notes
       
       RGF only applies to:
 

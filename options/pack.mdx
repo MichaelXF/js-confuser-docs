@@ -18,7 +18,7 @@ The code will not work properly in [environments that have disabled eval](https:
 
 
 
-#### Input / Output
+### Input / Output
 
 This example showcases how `Pack` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
@@ -32,8 +32,8 @@ console.log(myVar); // "Modified Value"
 
 // Output.js
 Function(
-  'dgrtcde',
-  'var iikEeET="Initial Value";eval("iikEeET"+" = \\"Modified Value\\"");return console.log(iikEeET);',
+  'WZi6o3',
+  'var B0M70X="Initial Value";eval("B0M70X"+" = \\"Modified Value\\"");return console.log(B0M70X);',
 )({});
 ```
 
@@ -41,7 +41,7 @@ Function(
 
 
 
-#### Bypass Strict Mode
+### Bypass Strict Mode
 
 The `Pack` option is designed to bypass strict mode constraints. This is achieved by wrapping the output code in a `Function()` call. This allows the code to be executed in a different context, where strict mode is not enforced.
 
@@ -54,7 +54,7 @@ Several obfuscation techniques require non-strict mode JavaScript. These include
 
 
 
-#### Usage Example
+### Usage Example
 
 The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
@@ -80,7 +80,7 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ---
 
-##### Enabled In
+#### Enabled In
 
 - [High Preset](/presets/high): Yes
 - [Medium Preset](/presets/medium): Yes

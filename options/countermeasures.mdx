@@ -12,7 +12,7 @@ slug: "options/lock.countermeasures"
 
 
 
-#### Input / Output
+### Input / Output
 
 This example showcases how `Countermeasures` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
@@ -23,13 +23,13 @@ function onTamperDetected() {
 }
 
 // Output.js
-var obsTG_ = !1;
-function FQ1SBs() {
-  if (obsTG_) return;
-  obsTG_ = !0;
-  Ft9H9s();
+var mDz6kZZ = !1;
+function tHKC6Lr() {
+  if (mDz6kZZ) return;
+  mDz6kZZ = !0;
+  Jabkwo();
 }
-function Ft9H9s() {
+function Jabkwo() {
   throw new Error('The code has been tampered with!');
 }
 ```
@@ -38,7 +38,7 @@ function Ft9H9s() {
 
 
 
-#### Crash Process
+### Crash Process
 
 The default behavior is to crash the process This is done by an infinite loop to ensure the process becomes useless.
 
@@ -48,7 +48,7 @@ while(true) {
 }
 ```
 
-#### Custom Callback
+### Custom Callback
 
 By setting countermeasures to a string, it can point to a callback to invoke when a lock is triggered. The countermeasures callback function can either be a local name or an external name.
 
@@ -59,7 +59,7 @@ Examples:
 
 If the function is defined within the locked code, it must follow the local name rules.
 
-#### Local Name rules
+### Local Name rules
 
 1. The function must be defined at the top-level of your program.
 2. The function must not rely on any scoped variables.
@@ -67,17 +67,17 @@ If the function is defined within the locked code, it must follow the local name
 
 These rules are necessary to prevent an infinite loop from occurring.
 
-#### Test your countermeasure
+### Test your countermeasure
 
-##### Domain Lock:
+#### Domain Lock:
 
 Try your code within DevTools while on another website.
 
-##### Time Lock:
+#### Time Lock:
 
 Try setting your machine time to before or past the allowed range.
 
-##### Integrity:
+#### Integrity:
 
 Try changing a string within your code.
       
@@ -85,7 +85,7 @@ Try changing a string within your code.
 
 
 
-#### Usage Example
+### Usage Example
 
 The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
@@ -113,7 +113,7 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ---
 
-##### Enabled In
+#### Enabled In
 
 - [High Preset](/presets/high): No
 - [Medium Preset](/presets/medium): No

@@ -15,10 +15,7 @@
     "pages": [
       {
         "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
+        "pages": ["index", "quickstart"]
       }
     ],
     "groups": [
@@ -40,10 +37,7 @@
           "options",
           {
             "group": "Build Settings",
-            "pages": [
-              "options/target",
-              "options/pack"
-            ]
+            "pages": ["options/target", "options/sourceMap", "options/pack"]
           },
           {
             "group": "Identifiers",
@@ -120,12 +114,7 @@
       },
       {
         "group": "Presets",
-        "pages": [
-          "presets",
-          "presets/high",
-          "presets/medium",
-          "presets/low"
-        ]
+        "pages": ["presets", "presets/high", "presets/medium", "presets/low"]
       }
     ]
   },

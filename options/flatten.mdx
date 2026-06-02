@@ -12,7 +12,7 @@ slug: "options/flatten"
 
 
 
-#### Input / Output
+### Input / Output
 
 This example showcases how `Flatten` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
@@ -31,36 +31,36 @@ This example showcases how `Flatten` transforms the code. Try it out by changing
 })();
 
 // Output.js
-function Tey58A([], Tey58A) {
-  var ZW3OuL = 'Hello World',
-    nOwTyV = 0;
-  function EjGHrVC(...EjGHrVC) {
-    var Mb56Tk = {
-      get ZlhWgNI() {
-        return nOwTyV;
+function mBmyYb([], mBmyYb) {
+  var E_62Iu = 'Hello World',
+    vKTwe41 = 0;
+  function poqgp0(...poqgp0) {
+    var TraoqlM = {
+      get c_gIucs() {
+        return vKTwe41;
       },
-      set ZlhWgNI(EjGHrVC) {
-        nOwTyV = EjGHrVC;
+      set c_gIucs(poqgp0) {
+        vKTwe41 = poqgp0;
       },
-      get sUaOqV7() {
-        return ZW3OuL;
+      get bQU6bcC() {
+        return E_62Iu;
       },
     };
-    return Tey58A.Teuk77(EjGHrVC, Mb56Tk);
+    return mBmyYb.uCGd5dH(poqgp0, TraoqlM);
   }
-  EjGHrVC();
+  poqgp0();
 }
-function ZW3OuL([], Tey58A) {
-  Tey58A.ZlhWgNI++;
-  console.log(Tey58A.sUaOqV7);
+function E_62Iu([], mBmyYb) {
+  mBmyYb.c_gIucs++;
+  console.log(mBmyYb.bQU6bcC);
 }
-(function (...WAS0tK) {
-  var NreSOp = {
-    Teuk77(...WAS0tK) {
-      return ZW3OuL(...WAS0tK);
+(function (...fBdu7E3) {
+  var QctT7U = {
+    uCGd5dH(...fBdu7E3) {
+      return E_62Iu(...fBdu7E3);
     },
   };
-  return Tey58A(WAS0tK, NreSOp);
+  return mBmyYb(fBdu7E3, QctT7U);
 })();
 ```
 
@@ -69,8 +69,8 @@ function ZW3OuL([], Tey58A) {
 
 
 
-#### Custom Implementation
-###### `options.flatten(fnName)`
+### Custom Implementation
+##### `options.flatten(fnName)`
 
 Control which functions are changed. Returns a `boolean`.
 | Parameter | Type | Description |
@@ -80,7 +80,7 @@ Control which functions are changed. Returns a `boolean`.
 
 ---
 
-#### Usage Example
+### Usage Example
 
 The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
@@ -106,7 +106,7 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ---
 
-##### Enabled In
+#### Enabled In
 
 - [High Preset](/presets/high): Yes
 - [Medium Preset](/presets/medium): No

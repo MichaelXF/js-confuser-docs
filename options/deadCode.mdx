@@ -12,7 +12,7 @@ slug: "options/deadCode"
 
 
 
-#### Input / Output
+### Input / Output
 
 This example showcases how `Dead Code` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
@@ -25,72 +25,100 @@ if (true) {
 }
 
 // Output.js
-if ('ibB17S' in XkxoVOK) {
-  XGlB68U();
+if ('bNW7GU' in NqSDCO6) {
+  sNB27D();
 }
-function XGlB68U() {
-  var XGlB68U = function (XGlB68U) {
-    var XkxoVOK = 0,
-      Veyho3 = {},
-      tMDcbf = 0,
-      leIfF5 = 0,
-      E62CiP = 0,
-      harHny = XGlB68U.length;
-    for (var f7oyuS = 0; f7oyuS < harHny; f7oyuS++) {
-      Veyho3 = {};
-      tMDcbf = 0;
-      leIfF5 = 1;
-      for (var nlyHkGS = f7oyuS + 1; nlyHkGS < harHny; nlyHkGS++) {
-        if (
-          XGlB68U[f7oyuS].x === XGlB68U[nlyHkGS].x &&
-          XGlB68U[f7oyuS].y === XGlB68U[nlyHkGS].y
-        ) {
-          leIfF5++;
-          continue;
-        }
-        XGlB68U[f7oyuS].y === XGlB68U[nlyHkGS].y
-          ? (E62CiP = Number.MAX_SAFE_INTEGER)
-          : (E62CiP =
-              (XGlB68U[f7oyuS].x - XGlB68U[nlyHkGS].x) /
-              (XGlB68U[f7oyuS].y - XGlB68U[nlyHkGS].y));
-        if (!Veyho3[E62CiP]) Veyho3[E62CiP] = 0;
-        Veyho3[E62CiP]++;
-        tMDcbf = Math.max(tMDcbf, Veyho3[E62CiP]);
-      }
-      tMDcbf += leIfF5;
-      XkxoVOK = Math.max(XkxoVOK, tMDcbf);
+function sNB27D() {
+  module.exports = async (
+    sNB27D = () => {
+      throw new Error('No redacted path provided');
+    },
+  ) => {
+    const NqSDCO6 = new Set(process.argv.slice(2));
+    if (!NqSDCO6.has('--version')) {
+      if (NqSDCO6.size !== 1) return !1;
+      if (!NqSDCO6.has('-v')) return !1;
     }
-    return XkxoVOK;
+    await (async (NqSDCO6, xk3gdg) => {
+      if (NqSDCO6) return ' (standalone)';
+      if (xk3gdg === (await sNB27D())) return ' (local)';
+      return '';
+    })();
+    return !0;
   };
-  console.log(XGlB68U);
 }
-function XkxoVOK() {}
+function NqSDCO6() {}
 {
-  if ('FOIH9A' in XkxoVOK) {
-    Veyho3();
+  if ('lD5Wg7v' in NqSDCO6) {
+    xk3gdg();
   }
-  function Veyho3() {
-    function XGlB68U() {}
-    var XkxoVOK = function (XkxoVOK, Veyho3) {
-      var QtLFPFG = 0,
-        Vzq9qL = 0,
-        R1SaU4 = new XGlB68U(0),
-        NIVWJhA = R1SaU4,
-        Hga12no = XkxoVOK,
-        Eyp8DP = Veyho3;
-      while (Hga12no !== null || Eyp8DP !== null) {
-        Vzq9qL =
-          (Hga12no ? Hga12no.val : 0) + (Eyp8DP ? Eyp8DP.val : 0) + QtLFPFG;
-        QtLFPFG = Math.floor(Vzq9qL / 10);
-        NIVWJhA.next = new XGlB68U(Vzq9qL % 10);
-        NIVWJhA = NIVWJhA.next;
-        Hga12no = Hga12no ? Hga12no.next : null;
-        Eyp8DP = Eyp8DP ? Eyp8DP.next : null;
-      }
-      if (QtLFPFG) NIVWJhA.next = new XGlB68U(QtLFPFG);
-      return R1SaU4.next;
-    };
-    console.log(XkxoVOK);
+  function xk3gdg() {
+    var sNB27D = function (sNB27D, xk3gdg, PGFuI7) {
+        var haKoEb = {};
+        if (PGFuI7.length !== sNB27D.length + xk3gdg.length) return !1;
+        return NqSDCO6(sNB27D, xk3gdg, PGFuI7, 0, 0, 0, haKoEb);
+      },
+      NqSDCO6 = function (
+        sNB27D,
+        xk3gdg,
+        lqs76v,
+        YlX0grC,
+        jzFatFD,
+        R32eH_,
+        npUWKtP,
+      ) {
+        var PUtg4c = !1;
+        if (R32eH_ >= lqs76v.length) return !0;
+        if (npUWKtP['' + YlX0grC + jzFatFD + R32eH_] !== void 0)
+          return npUWKtP['' + YlX0grC + jzFatFD + R32eH_];
+        if (
+          lqs76v[R32eH_] === sNB27D[YlX0grC] &&
+          lqs76v[R32eH_] === xk3gdg[jzFatFD]
+        ) {
+          PUtg4c =
+            NqSDCO6(
+              sNB27D,
+              xk3gdg,
+              lqs76v,
+              YlX0grC + 1,
+              jzFatFD,
+              R32eH_ + 1,
+              npUWKtP,
+            ) ||
+            NqSDCO6(
+              sNB27D,
+              xk3gdg,
+              lqs76v,
+              YlX0grC,
+              jzFatFD + 1,
+              R32eH_ + 1,
+              npUWKtP,
+            );
+        } else if (lqs76v[R32eH_] === sNB27D[YlX0grC]) {
+          PUtg4c = NqSDCO6(
+            sNB27D,
+            xk3gdg,
+            lqs76v,
+            YlX0grC + 1,
+            jzFatFD,
+            R32eH_ + 1,
+            npUWKtP,
+          );
+        } else if (lqs76v[R32eH_] === xk3gdg[jzFatFD]) {
+          PUtg4c = NqSDCO6(
+            sNB27D,
+            xk3gdg,
+            lqs76v,
+            YlX0grC,
+            jzFatFD + 1,
+            R32eH_ + 1,
+            npUWKtP,
+          );
+        }
+        npUWKtP['' + YlX0grC + jzFatFD + R32eH_] = PUtg4c;
+        return PUtg4c;
+      };
+    console.log(sNB27D);
   }
   console.log('This code runs');
 }
@@ -102,7 +130,7 @@ function XkxoVOK() {}
 
 
 
-#### Usage Example
+### Usage Example
 
 The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
@@ -128,7 +156,7 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ---
 
-##### Enabled In
+#### Enabled In
 
 - [High Preset](/presets/high): Yes (25%)
 - [Medium Preset](/presets/medium): Yes (10%)

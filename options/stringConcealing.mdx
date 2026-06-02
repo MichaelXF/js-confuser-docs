@@ -12,7 +12,7 @@ slug: "options/stringConcealing"
 
 
 
-#### Input / Output
+### Input / Output
 
 This example showcases how `String Concealing` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
@@ -22,157 +22,126 @@ var str = 'Hello, World!';
 console.log(str);
 
 // Output.js
-function DJ6q4X(DJ6q4X) {
-  var nPpeIG =
-      '"#fzEu:We3!H(V?RqID~p7P2vYbw^n,KZr>6h/C.dc}xaiT$&lQ%y|5N_mB9*;]A)`Jk=F0M<s{U+GXLjgt8[o@O14S',
-    jO7yi9r = '' + (DJ6q4X || ''),
-    yO7lP0 = jO7yi9r.length,
-    AgKLokk = [],
-    _GUBfYx = 0,
-    ycJXo2J = 0,
-    QgLea5 = -1;
-  for (var CPOJz3e = 0; CPOJz3e < yO7lP0; CPOJz3e++) {
-    var hDFsNFl = nPpeIG.indexOf(jO7yi9r[CPOJz3e]);
-    if (hDFsNFl === -1) continue;
-    if (QgLea5 < 0) {
-      QgLea5 = hDFsNFl;
+function whV3LGc(whV3LGc) {
+  var f65H9D =
+      '6PWALenFBN;Rv*qk=1)/{fI9E+sbh&"!JD2p#Hm$c}]i@5da,GoXzUC<xT`y?|YSZQ%7(^l_u30M:rt8.V4>K~g[jOw',
+    agAVmDF = '' + (whV3LGc || ''),
+    MQZkrG = agAVmDF.length,
+    jTqa4fB = [],
+    GdL_nS = 0,
+    _6fOdI = 0,
+    GZc3nVD = -1;
+  for (var M_zT5L = 0; M_zT5L < MQZkrG; M_zT5L++) {
+    var VTDR7Tq = f65H9D.indexOf(agAVmDF[M_zT5L]);
+    if (VTDR7Tq === -1) continue;
+    if (GZc3nVD < 0) {
+      GZc3nVD = VTDR7Tq;
     } else {
-      QgLea5 += hDFsNFl * 91;
-      _GUBfYx |= QgLea5 << ycJXo2J;
-      ycJXo2J += (QgLea5 & 8191) > 88 ? 13 : 14;
+      GZc3nVD += VTDR7Tq * 91;
+      GdL_nS |= GZc3nVD << _6fOdI;
+      _6fOdI += (GZc3nVD & 8191) > 88 ? 13 : 14;
       do {
-        AgKLokk.push(_GUBfYx & 0xff);
-        _GUBfYx >>= 8;
-        ycJXo2J -= 8;
-      } while (ycJXo2J > 7);
-      QgLea5 = -1;
+        jTqa4fB.push(GdL_nS & 0xff);
+        GdL_nS >>= 8;
+        _6fOdI -= 8;
+      } while (_6fOdI > 7);
+      GZc3nVD = -1;
     }
   }
-  if (QgLea5 > -1) {
-    AgKLokk.push((_GUBfYx | (QgLea5 << ycJXo2J)) & 0xff);
+  if (GZc3nVD > -1) {
+    jTqa4fB.push((GdL_nS | (GZc3nVD << _6fOdI)) & 0xff);
   }
-  return xa84tOa(AgKLokk);
+  return y42FSrN(jTqa4fB);
 }
-function nPpeIG(nPpeIG) {
-  if (typeof jO7yi9r[nPpeIG] === 'undefined') {
-    return (jO7yi9r[nPpeIG] = DJ6q4X(yO7lP0[nPpeIG]));
+function f65H9D(f65H9D) {
+  if (typeof agAVmDF[f65H9D] === 'undefined') {
+    return (agAVmDF[f65H9D] = whV3LGc(MQZkrG[f65H9D]));
   }
-  return jO7yi9r[nPpeIG];
+  return agAVmDF[f65H9D];
 }
-var jO7yi9r = {},
-  yO7lP0 = [
-    'IT/EUg>yTAu/dM)vji&:l%x#p3j0q*w2A:",g]:T5);sbtzDoK7{{C*v?7',
-    '//DUQT]fB`(N1M<C.pTyWhPTIDrvqw0Y^*5WGQ#cz',
-    'J]#<pyc#o5(LeR:KfmB%^oev4BWB2CZ}4HHnH&dyVJTF=wX.',
-    'G%MsZd>D*`.&19rKG2EGn',
-    'oz[GZ6W#QA3z^81q2mo{i=bvVJ}',
-    'hmZw1y6Vxp<#"M:/h*vw1C:va`l^#',
-    '8>8uM>{TIm6<0bfvpb;{<L&j}?iE"R*,!#',
-    '7m1l)hMA"J2`l&WDR*DZF<m2>m=sHRYcim[|3&$c)m+|PgRwW6=u^',
-    'mi9!=NH|*?tDWt`K_zY,K50:C~7Km<92g`$59B2n`(lj$BB^',
-    'Ndobm%M%E5#w6Q8wN:Iw(]l6cB#UOC"Dj/]^ndsU*_@A#',
-    'pZF!7o~$UpnW8b@qKxv3',
-    'yK|WtmXDeIqUXY@w/*.ys+3VV9E/Ew,,',
-    'yiJe<*9n=~NE^$_}rn(nPmzO8mvpMb=,G91:',
-    'Dd:WN|cVE',
-    'wMJeb8lW&|KL/ljw}]0NvXHV,A"<ewnnQ3<l+{HA^]v',
-    'K5<l**k#JRILyEr2',
-    'EMDZ:F[>3N<Y&$yd7(iWQ%2|%3QF=8)vy:z<}/7c)*}',
-    '2MF^wsa,U]ADmv7dI/)scs<:LAH`HQS}P{&:I8|6>m5',
-    'zx5W#&x~EVk07*c~N%J|<Lsn.BFYG*&.nTUe3Lvy"Ax95;6D4>;K(]|WSp',
-    'E2uK.5MUYI*A"w2>NMBni;Sd~*B?.BD>LHt%(&2$G_D<R8<br%bZv+Df',
-    '_5^GVmbv9ey+J/w};5oKOXFV`A5EE8_>BM*|?C4nID',
-    '7R/{0FOFE',
-    '_2OEU&Dy6)`l,l/K53F!h6WVl3vB*R~p;>[n:<Pfxe',
-    '.&WX3h"',
-    'h&cw_B$m~mu2JV4}<&/y|U,,s?)#8f',
-    '~(tZXg42D5{kmh#Io:obSCk2g(P%8CH~>%E!',
-    '1i5^om=B(]%6%C6,>>]EnMOcPBFj1En2KTD<J{N6R71Ro*+.lxPKgr6A:',
-    '4HGM6Xrc,JD<Z$hvi]R58gVV8~|s&*.Y2*rUtFHWn?}jL$9c.&.3',
-    '#l$^EhsmqA+ACV:vi(q,tQydQ(1)3&J,&mBnOQ@d3I35dM^,[z.yA.TB:',
-    'e{DwdA5y9?/s(z%c*zf',
-    'N];K^5O#',
-    'N=D%^6$WE~Lhj64n/b]N*[K6!N!5M0>vN5GE!]Mce!aj+9,v}=W3',
-    ';MAy*&}dH?Mj=E3~bR+G6j>vu5UeJlKIU/a!>y|WW',
-    '.My|eh7gz~UH<wKnEmvr|<]B7)om9?4^G_Fyk{OW9?.NDuY2tz`5B%yfL(',
-    'fDl:v$&TaH^`jzcC(ZOE3&@dH]1keRdbi=z',
-    '6*OyN>k6sB;Gy<.~$%8|tX"',
-    ':Z9eWgJv:',
-    'fZTWQ0^v3?^>>YJh#n"3YMrmu)GE1$Vwx:)5LFg6!`tGgv?',
-    'Fz#wOQ|#}99?lE%>[:,Na_dB>5WBJg!',
-    's%q:q{rn]RL05CkYz(7NqCZ,P~CF3/m2IAn^&%lctA&jd9oc02f',
-    'Q%&l*T)T)ACL.z>vnpl%nsBj1BWz8026Dmc<^M{@83rL]Y$.dps5B0/Uj(',
-    '^{o{k]7VaI&vRf^}J/o{UN9V)*#/CVmccMF^29eT&|A#Obo^{ITyN.tv7~2+"',
-    'z*9Z90KWID/^f;rK63(nN/VVC)Zz=9~c9&5+a%GV`AbF,/Y2^xYwImFVE',
-    'EABnf{8LuVDzc&WYB>E{E*%2KJBZB/)v/MD<@ryTp5VUj$EKgz/NANY|z',
-    '#lcZ(@LmdpH5pzKInd}%_*<Dr5>9lq:xQ`G+lG<(%33=Sl0YFsy|/6Pv[~',
-    'Jz45{*$U)(LE!/qw`2r5!&tv9eJZ)8p>a/GW&.P):',
-    'L0zGe+"',
-    '2`d3J[0B%3r',
-    '#{/K6oi6JA?U#Y+C*?yn7mn~y)l9h8{bU%~!',
-    'rzh{:@&y+e[0@?kvp*&3',
-    '.(|N6sB@#R|6NtD^7d7NB0"eTeF0~QiwZ>[{VmLn/B[0nqI.2*FQLF=,%~',
-    '9=:rB*AnI5)9r&cY./b%UNw~=~ZNrEhIBMn{njQBk*"fpROn',
-    'ji53uNFVn9)J#',
-    '80j5W>eeI3j0/V0YM2U|J{I#x]^BNBP>^=GMkTxWu',
-    'bbK^mGavZ7gH@l?',
-    '@^&38m1>VD`6Y&LbL>}U|tY6>*e%_RpdLI3,x0"',
-    '4&+M:@O6Le*Grq6h`^FWJ*4In?%Kk0^}Vb~n5t[yXer',
-    'CxhG~9[v:',
-    'Gi$lNAVcu5bz1z6YI*f%Z$[d|BN6NB}Cy"',
-    '$>8uR{{,|5!B#',
-    'N%cZ`*{,n9#/&8B^w/@^a6mn99?28b?~"JV+.="vl*)l]Y7cs"',
-    'z2m:k>66fR0E8bOPZ3)s&U5f8(0G&R,hl%!UbC.#',
-    '6=wniUgWrDe;[95cYdCNN%r~|VV<<v|d_p/{`hE}#J3B{ge',
-    '3T#5?h.W3?m0KwZD7:d,+h,f"R2pOf",M%Z3I8!,,AHq#',
-    'l:iN@My{V9~w[6=C*]y!G+"',
-    'TpAlthddu',
-    'hbcwo+PTEVuLeR"Db2?K0N?f',
-    'E*_52XEDJ*}FDt{Yvnf<Iy"',
-    '/n3:]&rU9IT+%z^2S.knkTh{E5(pm<mcs_Z3I',
-    '<5aK^$O#ADq2Kb/~0p"X)T%ntR_sr;o^{2W+dU"',
-    'S&W3dsN#[mfUf;7c]zLE2QFA`Rq]1MDpL915qg5,nD^%#',
-    'K{]Wgg{,9e}zN?e',
-    ')3XEYy>)Xellj6u~@iO5b',
-    'pbL3xt76yVFGZ8:vI%q:gm.AxI":16Ipgi?K4CzYYI6zrqkhE21:5GFcT7',
-    'xmK^jm.gZD&vcqDdVZI%=&h(cph^CV8cL0FK)*Gc<Brv#',
-    'tKa!)TTD#3e2nEZ/b2<:^',
-    '~:)3R]qv~(0J#',
-    'HE0K1Q*@+]{HpR3~2{8njm%cu',
-    '=]T+n$n~p)R]I<SPf3&lq]?vsB7F_8M/z7xnIyH#NBYzObWCs_fUXC],654P#',
-    ':=I<gy=,:V}&Bgi.EMzu',
-    '*2nN].@@E',
-    ']>u{sgFnw`Cz]/J/h2;W',
-    'DAUuU8TT@V2%ZM?bf*oyU{/$lD|E?ggwY#',
-    '$`{n^8}TqDoR^$ExXpD%fgUU;9U_`E;hCMBGDXev&JptMbUY9?WyZM_y:',
-    'E6uKbyf0i9XHNBm^o0=G.=JDE',
-    '0`tGYs"',
-    '9dm5il_d!?4{2w~cY`hNtF):,9+|[zdKcd;{BB66J~2LsE/,FI$3Z$"',
-    'f{M3mTsWn]!2.fi~MIe,/jy,4?',
-    'Hnku8F/$V?B6QVScNm9!0|]BDAGG8R3Cp2VN,oY$TR*',
-    '}:u!BGk2ZDg_Y<O6C=W+&.:,~mo#_wpwCm)3BG&@%mXAeR`v',
-    'S.3:4rN#THxvk?ow',
-    '4&8u^j%cK(^Lmg#Ko945+F$A)D!%"w0C8zj3',
-    'Hl!n@M2|4?VN:u*2#5]KQ[FmDm=|SF^}LIp{kTC)&Dks68)}CI[Qw',
-    'q5M5P+fespOD#',
-    '7bTEm%)D:!QJ.t/KP5?+o+4oj*msewgdm>8|hUVc#Rh^ObScK3Al49"',
-    'NI|!.=XdoVAA=RS}M"',
-    '$:><S9z|a96F!bv}',
-    'vMx{:gj>qmq/`&Z,0%o{e]ve;]A6<8A/X=i!$=B{Te5JCV]hCMe:?',
-    '`=.50&i6i9C',
-    'Op+G7+4299xygEFCL]fGW@4IW',
-    '/5FQwm5d6~hLMMJ,SIcwXgnAAA!;$0sK0&15v',
-    '6(KyK6H~ym5se.t^!by{jC4#',
-    'R%y{|/4mBI6!Fhy^+>vr,;+yG?pL"qVblm@++8Nc&7P!}Y:',
-    '[?Gb48KnD5FJV<kI:=fwj8E@xH8*2fQwPbp!,o9Fa?}]Hf',
-    'a%%|>oY|.BgGBBqdppPW',
-    'mIZsYXvyR*,`Mb+bWA:+,$LF#A8|fgY6x]y|;[t>(?aKCY?dh&#',
-    'ji3Z&tf@n7NluqR.gKr,Xmb,PB=^6bYn|>keG+^vs]H<;<H.gK]y(',
-    'X?&3rX1"qUxjjvLu',
-    '6xe3',
+var agAVmDF = {},
+  MQZkrG = [
+    'TCmGVmUa]{',
+    '{9yUbCE"LT4obq%9b(KUVTZ`DT^GXqLEBitF"|#)K*Mljp6iX5FCE',
+    '=d+n9oa*3{US8m}!C,c3~:n`8U9<4Vr$WGZN6`3*AZU:wlm+;_OJQ#W]6N',
+    'S9<N<Hv)h1^JrEzh:5jC<$JZ?B0dzy){ApMe1#h.zCs',
+    'E9?Usy[ToC2YtGL"4,4UC4mv_*',
+    'a_L&Yd/*ak@1,A6)eiyByU#"S):x%^.2`Hr!dS)B]yA8z=+]bNRr#(e/K*',
+    ')T+C*VqB]qI:U=}si_VXImN/YBtLVEL!DN;M}xtd?xSd?yR$^9TnpGmEVvVIP',
+    'bHp&n?e+;<:0o*(1PG6"uV$p!kS+P',
+    'ZcCh!3Pp&)7+`+92{df;!_**+qkHeKB',
+    '5c]ujyddQ)?z3?i$OU`X/',
+    '@(JC!~7&)TtlG=5mz5[hVzwz|U8G<m;+V6',
+    'z!DbJae[,)',
+    'GTrs^,sW',
+    '>]jncSSPB<QGy4u!@2u3oHT*]{)^?EZ#iYW',
+    'j2H<o`|&YBD{_sB!?C^:tY[8n`W=(>%)+P',
+    'I9lFqVcczZvQq|^+c9XBV<WZpN4+BA',
+    'YQAJ{cC.iQ$:CqcHS9)u2.^Ts{m:7bp"[yf;r>mv[Z+^pA#"FP',
+    'aH&<1:SpGNp;3,%Eh_[zWU*}c`.?P#8sw5}nAuFM$*>URqwI&HwBZ`_T/?h86',
+    '^HRrgTC)5YB{e,Kh{C.3ormWdU1^aaK2{N7JYrv#h1;A.a4hI9@rX46',
+    'eT]X^2r&A/;bZyw]W)su=',
+    'X5^s@SJEwqhXE>JE<cqFjt6',
+    'nG^<n,W#N;;uEu(Ef_n:AuAMQTX',
+    'BiAu{zm`R{6t0q^)u5}"oMX}H`weoGn)Us5<bc1P',
+    'T_GXrTj2P)R|>W',
+    '7n:&VDldK/=nP',
+    ':xMs;0?drR,F%V#!Uc9z}x?gJvClK.9}tRU<]MfP',
+    'sQ8hcMQ&01?fj>g=}00ByX4vRQm;haasDHEDw3jzQkc.D,;',
+    '[{(e#aiM6%MpAlO=75NtB:!p%?^k@yb&n_,3.>X*4S0P{Ay&GC7rKyJ.[*',
+    '1S9Cqm@zR1(%?A',
+    'u]0X,4VFiRW2EbL!DNPb=mnEOQ_3Z#X2B)E":Y~&WT/,aq%HN&50Y06',
+    's2obK>,cF',
+    '6TY!DaD^U/EAC|nmi{,nM>c)x*;`P',
+    '.YK&Z2+}:Rpuy>jI`N"hmCE#JfD',
+    'pv0XipxdiRa:{AM+m_@r<X*/2SxzXmjI.!mFg^W)/Cc:Lb}maNL&vmwv5)C^P',
+    'i_NumHz0_*rUNKIcBd]uiMyaA',
+    'j3Nbm~YEGS87Z?pHcT@<"cZ):Y2',
+    ')_6DI^AU]QZ3k_DHx{2JCdlg//m8Ak1s<AazA<{za%T3TL',
+    '/TZCHG2WeZaF"H[&kXF:^,pF,%BMw+:$.y#F9tf}a)>7=?N!,CyBg_6',
+    'lCtN]3dz2/T32m[&1_lGWge+c*ll*=|&^1<L',
+    'Bpe0;VKEEQQ+ZAu/,iCF5ppF}1E{GLnitYA',
+    'rxoUhy5PkvlJ8lY"6doby2xzzN%3nsw}#(WJ>Tl"h1`LuyT9=Jh;ppIdA',
+    'XC>o+tq`wY98o`_HTqh0.#/}E1',
+    'nTUh+>cvXv,Lp4y1_Hbrv0k+7?U',
+    's2I:l2Kv6ktdLbv$O{Y!|$"z4vbQ.kk',
+    'OqE"g~5/hqb,h>F)59jN*#|P',
+    'bC7U>T?)~/":TL/2C,bJlYt)LZaG"eb1M5$GYKw21T"{6_.svP',
+    'Wff0?24g,v!u4q%9NS^sn#[^iy]zlVR/2N"z=',
+    '!9,nS8%nn',
+    '&d9"#(nlDTz:)e;/p?,Nr5hZQNS)ps^+{?LF:<j26TgrQ?y&IT"hvg6',
+    'nL~!zdfPN`s,$4q{DXIGE>t)yBQh^L[&~2@0R^@)n',
+    ';T*!$p("6)L83+;sj1tF>>F+&fkHhbe"}(WecM6',
+    'rhbrr#G/#*[7>q3mn_QXjt6lXN',
+    's0g!.mXPQ)}ABkohJ&h&pc2"Av',
+    '[YEDcCdW&)m^j_KI<YIG0YnB2SwV3L',
+    '05ED|,5F)?c3FbabCT7Jn</}iR}:#,N/,HcN80tn>v?r^L',
+    'RsZ3,xCgx{na{kIb?_f!V_}*o/U.QuB)?,*;8:_^}1Mp7lN$6iW',
+    '+{ahV<")rq#AMlc)6T%&4Tu`GNjTEA4bC(TCB<=#)/u36b&9{vMB',
+    'E_z&N?D&4Sf{a4F/ZNsX1m!^~/lroq{2b&]Mv',
+    'i!#;yULE|y,E+ujpK++C)^qENYR(jE%#;J":w53Fc*[S.k[hO2X&L0gc`R',
+    '`1jGH|@zM1*MtVqss2q!:mCW{*B|Mm3/X,4X+',
+    '@2sbbcvlF*7k;H#!Z(^;D(&}$*qYPu~pFpr!:oA}}q@',
+    ')&ENo(QPjQ0rX>`#}nyrk:D/{CG.RA*sav)MJC,d~CDQ<4*{NJGC62Znhf',
+    '=N&;3,$Te',
+    '8XIF$SP+]YBnE_4cHXg_F#TP',
+    'fS~hTu%vYU^U$l?#iYFt:::zc*|Rj>o2KQ93C2!pe/Ch,A=$&2W',
+    'XXc"9>7*JS33=bGb6kWJTlgvPNg)XqSHv_H!#x5/[*',
+    '%Nsu&|x`O1PQQ?Z#rxkC6?o`#ZC%T,kbXXW',
+    'EXINI^jd#/2u&H#maN_Ne8(`T{~0ia.s1Jf;',
+    '2caGL,&UZU0R%H#)%]_N#cu`I`Pn^#F!fCa:e0pa7T"Q^L',
+    'jQ,C5(%d{TVIFs1$45&z/yMFj1LN6_w=5i=CUM6',
+    'FCSG?XV&okjdRsUbpC+b.Tn`O`lPYV8$Sq1tzrK`pNi',
+    '1_WuZK792vI{Sl{bzvd:5GOp4S@Lo+Mm/Nz&"3@WQC@:4^p)BJ(e/V|a4TfXP',
+    'p,X;<8R}:xqbAmFm/)j3n^m#GNo!~?,2!A}C/_aM@xb!P',
+    '=dNt5GDMe*iE{_QHD,0r(06',
+    '+sz;CuT&fZ!bBkmHz_*:O3~}?yP"SmB)"P',
+    '!?f<80$*YB3lU+y]#iW',
+    'tq,NDtj6=Mi..E8e',
+    'piBN',
   ];
-function AgKLokk() {
-  var DJ6q4X = [
+function jTqa4fB() {
+  var whV3LGc = [
       function () {
         return globalThis;
       },
@@ -186,68 +155,68 @@ function AgKLokk() {
         return new Function('return this')();
       },
     ],
-    nPpeIG,
-    jO7yi9r = [];
+    f65H9D,
+    agAVmDF = [];
   try {
-    nPpeIG = Object;
-    jO7yi9r.push(''.__proto__.constructor.name);
+    f65H9D = Object;
+    agAVmDF.push(''.__proto__.constructor.name);
   } catch (e) {}
-  m37uA5: for (var yO7lP0 = 0; yO7lP0 < DJ6q4X.length; yO7lP0++)
+  ZaYKZI: for (var MQZkrG = 0; MQZkrG < whV3LGc.length; MQZkrG++)
     try {
-      nPpeIG = DJ6q4X[yO7lP0]();
-      for (var AgKLokk = 0; AgKLokk < jO7yi9r.length; AgKLokk++)
-        if (typeof nPpeIG[jO7yi9r[AgKLokk]] === 'undefined') continue m37uA5;
-      return nPpeIG;
+      f65H9D = whV3LGc[MQZkrG]();
+      for (var jTqa4fB = 0; jTqa4fB < agAVmDF.length; jTqa4fB++)
+        if (typeof f65H9D[agAVmDF[jTqa4fB]] === 'undefined') continue ZaYKZI;
+      return f65H9D;
     } catch (e) {}
-  return nPpeIG || this;
+  return f65H9D || this;
 }
-var _GUBfYx = AgKLokk() || {},
-  ycJXo2J = _GUBfYx.TextDecoder,
-  QgLea5 = _GUBfYx.Uint8Array,
-  CPOJz3e = _GUBfYx.Buffer,
-  hDFsNFl = _GUBfYx.String || String,
-  hl0Cx9 = _GUBfYx.Array || Array,
-  LItBvt6 = (function () {
-    var DJ6q4X = new hl0Cx9(128),
-      nPpeIG = hDFsNFl.fromCodePoint || hDFsNFl.fromCharCode,
-      jO7yi9r = [];
-    return function (yO7lP0) {
-      var AgKLokk,
-        _GUBfYx,
-        ycJXo2J = yO7lP0.length;
-      jO7yi9r.length = 0;
-      for (var QgLea5 = 0; QgLea5 < ycJXo2J; ) {
-        _GUBfYx = yO7lP0[QgLea5++];
-        _GUBfYx <= 0x7f
-          ? (AgKLokk = _GUBfYx)
-          : _GUBfYx <= 0xdf
-            ? (AgKLokk = ((_GUBfYx & 0x1f) << 6) | (yO7lP0[QgLea5++] & 0x3f))
-            : _GUBfYx <= 0xef
-              ? (AgKLokk =
-                  ((_GUBfYx & 0x0f) << 12) |
-                  ((yO7lP0[QgLea5++] & 0x3f) << 6) |
-                  (yO7lP0[QgLea5++] & 0x3f))
-              : hDFsNFl.fromCodePoint
-                ? (AgKLokk =
-                    ((_GUBfYx & 0x07) << 18) |
-                    ((yO7lP0[QgLea5++] & 0x3f) << 12) |
-                    ((yO7lP0[QgLea5++] & 0x3f) << 6) |
-                    (yO7lP0[QgLea5++] & 0x3f))
-                : ((AgKLokk = 63), (QgLea5 += 3));
-        jO7yi9r.push(DJ6q4X[AgKLokk] || (DJ6q4X[AgKLokk] = nPpeIG(AgKLokk)));
+var GdL_nS = jTqa4fB() || {},
+  _6fOdI = GdL_nS.TextDecoder,
+  GZc3nVD = GdL_nS.Uint8Array,
+  M_zT5L = GdL_nS.Buffer,
+  VTDR7Tq = GdL_nS.String || String,
+  u6ZoTHt = GdL_nS.Array || Array,
+  G5bX5q = (function () {
+    var whV3LGc = new u6ZoTHt(128),
+      f65H9D = VTDR7Tq.fromCodePoint || VTDR7Tq.fromCharCode,
+      agAVmDF = [];
+    return function (MQZkrG) {
+      var jTqa4fB,
+        GdL_nS,
+        _6fOdI = MQZkrG.length;
+      agAVmDF.length = 0;
+      for (var GZc3nVD = 0; GZc3nVD < _6fOdI; ) {
+        GdL_nS = MQZkrG[GZc3nVD++];
+        GdL_nS <= 0x7f
+          ? (jTqa4fB = GdL_nS)
+          : GdL_nS <= 0xdf
+            ? (jTqa4fB = ((GdL_nS & 0x1f) << 6) | (MQZkrG[GZc3nVD++] & 0x3f))
+            : GdL_nS <= 0xef
+              ? (jTqa4fB =
+                  ((GdL_nS & 0x0f) << 12) |
+                  ((MQZkrG[GZc3nVD++] & 0x3f) << 6) |
+                  (MQZkrG[GZc3nVD++] & 0x3f))
+              : VTDR7Tq.fromCodePoint
+                ? (jTqa4fB =
+                    ((GdL_nS & 0x07) << 18) |
+                    ((MQZkrG[GZc3nVD++] & 0x3f) << 12) |
+                    ((MQZkrG[GZc3nVD++] & 0x3f) << 6) |
+                    (MQZkrG[GZc3nVD++] & 0x3f))
+                : ((jTqa4fB = 63), (GZc3nVD += 3));
+        agAVmDF.push(whV3LGc[jTqa4fB] || (whV3LGc[jTqa4fB] = f65H9D(jTqa4fB)));
       }
-      return jO7yi9r.join('');
+      return agAVmDF.join('');
     };
   })();
-function xa84tOa(DJ6q4X) {
-  return typeof ycJXo2J !== 'undefined' && ycJXo2J
-    ? new ycJXo2J().decode(new QgLea5(DJ6q4X))
-    : typeof CPOJz3e !== 'undefined' && CPOJz3e
-      ? CPOJz3e.from(DJ6q4X).toString('utf-8')
-      : LItBvt6(DJ6q4X);
+function y42FSrN(whV3LGc) {
+  return typeof _6fOdI !== 'undefined' && _6fOdI
+    ? new _6fOdI().decode(new GZc3nVD(whV3LGc))
+    : typeof M_zT5L !== 'undefined' && M_zT5L
+      ? M_zT5L.from(whV3LGc).toString('utf-8')
+      : G5bX5q(whV3LGc);
 }
-var I1NhOF = nPpeIG(107);
-console[nPpeIG(108)](I1NhOF);
+var BSlw7GT = f65H9D(76);
+console[f65H9D(77)](BSlw7GT);
 ```
 
 ---
@@ -261,8 +230,8 @@ console[nPpeIG(108)](I1NhOF);
 ---
 
 
-#### Custom Implementation
-###### `options.stringConcealing(strValue)`
+### Custom Implementation
+##### `options.stringConcealing(strValue)`
 
 Control which strings are changed. Returns a `boolean`.
 | Parameter | Type | Description |
@@ -288,7 +257,7 @@ module.exports = {
 
 ---
 
-#### Usage Example
+### Usage Example
 
 The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
@@ -314,7 +283,7 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ---
 
-##### Enabled In
+#### Enabled In
 
 - [High Preset](/presets/high): Yes
 - [Medium Preset](/presets/medium): Yes

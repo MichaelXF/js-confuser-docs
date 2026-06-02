@@ -12,7 +12,7 @@ slug: "options/stringEncoding"
 
 
 
-#### Input / Output
+### Input / Output
 
 This example showcases how `String Encoding` transforms the code. Try it out by changing the input code and see changes apply in real-time.
 
@@ -22,8 +22,9 @@ var str = 'Hello, World!';
 console.log(str);
 
 // Output.js
-var _0BTS1 = '\x48\x65\x6c\x6c\x6f\x2c\x20\x57\x6f\x72\x6c\x64\x21';
-console.log(_0BTS1);
+var nudtSP =
+  '\u0048\u0065\u006c\u006c\u006f\u002c\u0020\u0057\u006f\u0072\u006c\u0064\u0021';
+console.log(nudtSP);
 ```
 
 ---
@@ -31,8 +32,8 @@ console.log(_0BTS1);
 
 
 
-#### Custom Implementation
-###### `options.stringEncoding(strValue)`
+### Custom Implementation
+##### `options.stringEncoding(strValue)`
 
 Control which strings are changed. Returns a `boolean`.
 | Parameter | Type | Description |
@@ -42,7 +43,7 @@ Control which strings are changed. Returns a `boolean`.
 
 ---
 
-#### Usage Example
+### Usage Example
 
 The provided code example will obfuscate the file `input.js` and write the output to a file named `output.js`.
 
@@ -68,7 +69,7 @@ JSConfuser.obfuscate(sourceCode, options).then((result)=>{
 
 ---
 
-##### Enabled In
+#### Enabled In
 
 - [High Preset](/presets/high): Yes
 - [Medium Preset](/presets/medium): No
