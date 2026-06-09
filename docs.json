@@ -164,7 +164,7 @@
     "library": "fontawesome"
   },
   "banner": {
-    "content": "This is not finished. Live documentation: https://js-confuser.com/docs",
+    "content": "Still being worked on! Current documentation: https://js-confuser.com/docs",
     "dismissible": true
   }
 }
