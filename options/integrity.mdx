@@ -25,49 +25,49 @@ function protectedFunction() {
 protectedFunction(); // "This code is protected"
 
 // Output.js
-function seGEqY(seGEqY, Dq3iILx) {
-  Dq3iILx |= 0;
-  var T48XXw = (seGEqY & 0x003fffff) * Dq3iILx;
-  if (seGEqY & 0xffc00000) T48XXw += ((seGEqY & 0xffc00000) * Dq3iILx) | 0;
-  return T48XXw | 0;
+function jb598RU(jb598RU, JKVP7D) {
+  JKVP7D |= 0;
+  var lcjpEql = (jb598RU & 0x003fffff) * JKVP7D;
+  if (jb598RU & 0xffc00000) lcjpEql += ((jb598RU & 0xffc00000) * JKVP7D) | 0;
+  return lcjpEql | 0;
 }
-var Dq3iILx = Math.imul || seGEqY;
-function T48XXw(seGEqY, T48XXw) {
-  var tLAMTJ = 0xdeadbeef ^ T48XXw,
-    NEBpEVZ = 0x41c6ce57 ^ T48XXw;
-  for (var yx31PU = 0, fhX8m3H; yx31PU < seGEqY.length; yx31PU++) {
-    fhX8m3H = seGEqY.charCodeAt(yx31PU);
-    tLAMTJ = Dq3iILx(tLAMTJ ^ fhX8m3H, 2654435761);
-    NEBpEVZ = Dq3iILx(NEBpEVZ ^ fhX8m3H, 1597334677);
+var JKVP7D = Math.imul || jb598RU;
+function lcjpEql(jb598RU, lcjpEql) {
+  var UXqnfXh = 0xdeadbeef ^ lcjpEql,
+    eNMJddo = 0x41c6ce57 ^ lcjpEql;
+  for (var cBtcj9 = 0, nJG7oY; cBtcj9 < jb598RU.length; cBtcj9++) {
+    nJG7oY = jb598RU.charCodeAt(cBtcj9);
+    UXqnfXh = JKVP7D(UXqnfXh ^ nJG7oY, 2654435761);
+    eNMJddo = JKVP7D(eNMJddo ^ nJG7oY, 1597334677);
   }
-  tLAMTJ =
-    Dq3iILx(tLAMTJ ^ (tLAMTJ >>> 16), 2246822507) ^
-    Dq3iILx(NEBpEVZ ^ (NEBpEVZ >>> 13), 3266489909);
-  NEBpEVZ =
-    Dq3iILx(NEBpEVZ ^ (NEBpEVZ >>> 16), 2246822507) ^
-    Dq3iILx(tLAMTJ ^ (tLAMTJ >>> 13), 3266489909);
-  return 4294967296 * (2097151 & NEBpEVZ) + (tLAMTJ >>> 0);
+  UXqnfXh =
+    JKVP7D(UXqnfXh ^ (UXqnfXh >>> 16), 2246822507) ^
+    JKVP7D(eNMJddo ^ (eNMJddo >>> 13), 3266489909);
+  eNMJddo =
+    JKVP7D(eNMJddo ^ (eNMJddo >>> 16), 2246822507) ^
+    JKVP7D(UXqnfXh ^ (UXqnfXh >>> 13), 3266489909);
+  return 4294967296 * (2097151 & eNMJddo) + (UXqnfXh >>> 0);
 }
-function tLAMTJ(
-  seGEqY,
-  Dq3iILx,
-  tLAMTJ = new RegExp(' |\\n|;|,|\\{|\\}|\\(|\\)|\\.|\\[|\\]', 'g'),
+function UXqnfXh(
+  jb598RU,
+  JKVP7D,
+  UXqnfXh = new RegExp(' |\\n|;|,|\\{|\\}|\\(|\\)|\\.|\\[|\\]', 'g'),
 ) {
-  var NEBpEVZ = seGEqY.toString().replace(tLAMTJ, '');
-  return T48XXw(NEBpEVZ, Dq3iILx);
+  var eNMJddo = jb598RU.toString().replace(UXqnfXh, '');
+  return lcjpEql(eNMJddo, JKVP7D);
 }
-function NEBpEVZ() {
+function eNMJddo() {
   console.log('This code is protected');
 }
-function yx31PU() {
-  var uHu0fFG = yx31PU.JOu3au || (yx31PU.JOu3au = tLAMTJ(NEBpEVZ, 6700757));
-  if (uHu0fFG === 6549616135580178) {
-    return NEBpEVZ(...arguments);
+function cBtcj9() {
+  var I8cFpOp = cBtcj9.fbhBa2Q || (cBtcj9.fbhBa2Q = UXqnfXh(eNMJddo, 4349025));
+  if (I8cFpOp === 4853002617990608) {
+    return eNMJddo(...arguments);
   } else {
     while (true) {}
   }
 }
-yx31PU();
+cBtcj9();
 ```
 
 ---
@@ -94,7 +94,7 @@ If tampering is detected, the `lock.countermeasures` function will be invoked. I
 
 
 ### Custom Implementation
-##### `options.lock.integrity(fnName)`
+#### `options.lock.integrity(fnName)`
 
 Control which functions are changed. Returns a `boolean`.
 | Parameter | Type | Description |
@@ -150,6 +150,6 @@ If you decide to use Integrity, consider the following:
 
 ---
 
-##### See Also
+#### See Also
 
 - [Countermeasures](/options/countermeasures)
