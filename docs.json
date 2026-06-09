@@ -52,7 +52,6 @@
           {
             "group": "Strings",
             "pages": [
-              "options/stringCompression",
               "options/stringConcealing",
               "options/customStringEncodings",
               "options/stringEncoding",
@@ -65,7 +64,6 @@
               "options/calculator",
               "options/objectExtraction",
               "options/globalConcealing",
-              "options/shuffle",
               "options/duplicateLiteralsRemoval"
             ]
           },

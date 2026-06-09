@@ -8,12 +8,6 @@ slug: "options/controlFlowFlattening"
 
 - Option values: `true/false/0-1`
 
-
-<Card title="Requires Non-Strict Mode" type="warning">
-The obfuscated code will not work properly in Strict Mode.
-You can use the [Pack](./pack) option to bypass Strict Mode constraints.
-</Card>
-
 ---
 
 
@@ -34,105 +28,106 @@ var number = 10;
 countTo(number); // 1,2,3,4,5,6,7,8,9,10
 
 // Output.js
-function kknRIe(kknRIe, ZPgqxhf) {
-  var Eeo68G = '',
-    rVfRwRF = ((ZPgqxhf % 95) + 95) % 95;
-  for (var bc5lmXP = 0; bc5lmXP < kknRIe.length; bc5lmXP++) {
-    var XZw4sFa = kknRIe.charCodeAt(bc5lmXP),
-      TmHf400 = XZw4sFa - 32,
-      tI8rsdY = (TmHf400 - rVfRwRF + 95) % 95;
-    Eeo68G += String.fromCharCode(tI8rsdY + 32);
+function yUNI20(yUNI20, XCDWsqE) {
+  var rnH2egO = '',
+    VYbmK0M = ((XCDWsqE % 95) + 95) % 95;
+  for (var JldP2NN = 0; JldP2NN < yUNI20.length; JldP2NN++) {
+    var Bkks2L = yUNI20.charCodeAt(JldP2NN),
+      OyggnU = Bkks2L - 32,
+      KzEwmcV = (OyggnU - VYbmK0M + 95) % 95;
+    rnH2egO += String.fromCharCode(KzEwmcV + 32);
   }
-  return Eeo68G;
+  return rnH2egO;
 }
-function ZPgqxhf(kknRIe) {
-  for (var ZPgqxhf = 0, Eeo68G = 0; Eeo68G < kknRIe.length; Eeo68G++)
-    ZPgqxhf += kknRIe[Eeo68G];
-  return ZPgqxhf;
+function XCDWsqE(yUNI20) {
+  for (var XCDWsqE = 0, rnH2egO = 0; rnH2egO < yUNI20.length; rnH2egO++)
+    XCDWsqE += yUNI20[rnH2egO];
+  return XCDWsqE;
 }
-function Eeo68G(
-  adiqy2,
-  f8WMTr = {
-    bWf0aOE: {},
+function rnH2egO(
+  lAzK_Z3,
+  QLZkcjn = {
+    WeQM9V: {},
   },
-  o6s6eJ5,
-  UqBVKB,
+  jBNuA9v,
+  MCi4Zlr,
 ) {
-  while (ZPgqxhf(adiqy2) !== 105)
-    switch (ZPgqxhf(adiqy2)) {
-      case adiqy2[3] - 302:
+  while (XCDWsqE(lAzK_Z3) !== -178)
+    switch (XCDWsqE(lAzK_Z3)) {
+      case -186:
+      case -189:
         [
-          f8WMTr[kknRIe('I?;HB"', adiqy2[2] + -73)][
-            kknRIe('#aH&)[`', adiqy2[adiqy2[0] + 535] + -(adiqy2[0] + 718))
+          QLZkcjn[yUNI20('B@-"/~', lAzK_Z3[1] + 226)][
+            yUNI20('-.[42u', lAzK_Z3[2] + -229)
           ],
-        ] = UqBVKB;
+        ] = MCi4Zlr;
         for (
-          f8WMTr.tjfsmM.BnfLS7 = 1;
-          f8WMTr.tjfsmM.BnfLS7 <= f8WMTr.tjfsmM.pO6svIN;
-          f8WMTr.tjfsmM.BnfLS7++
+          QLZkcjn.WUB7D4.ENrsJRf = 1;
+          QLZkcjn.WUB7D4.ENrsJRf <= QLZkcjn.WUB7D4.bc1igK;
+          QLZkcjn.WUB7D4.ENrsJRf++
         )
-          console.log(f8WMTr.tjfsmM.BnfLS7);
+          console.log(QLZkcjn.WUB7D4.ENrsJRf);
         return;
-      case adiqy2[3] - -63:
-      case -182:
-        [f8WMTr.bWf0aOE.e8CZj52, f8WMTr.bWf0aOE.C79EfWD] = [-39, -110];
-        ((adiqy2[0] += adiqy2[1] - 221), (adiqy2[3] += adiqy2[2] - 308));
+      case 79:
+      case lAzK_Z3[3] - -279:
+      case -13:
+        ((lAzK_Z3[0] += lAzK_Z3[4] - 56),
+          (lAzK_Z3[1] += lAzK_Z3[0] - -42),
+          (lAzK_Z3[2] += lAzK_Z3[3] - -110),
+          (lAzK_Z3[3] += lAzK_Z3[4] - -729),
+          (lAzK_Z3[4] += lAzK_Z3[2] - 84));
         break;
-      case -6:
-      case 108:
-      case 101:
-        ((adiqy2[0] += adiqy2[2] - 110),
-          (adiqy2[1] += adiqy2[2] - 289),
-          (adiqy2[2] += adiqy2[1] - 584),
-          (adiqy2[3] += adiqy2[0] - -47));
+      case 150:
+        ((lAzK_Z3[0] += lAzK_Z3[2] - 472),
+          (lAzK_Z3[2] += lAzK_Z3[4] - 216),
+          (lAzK_Z3[3] += lAzK_Z3[2] - -407),
+          (lAzK_Z3[4] += lAzK_Z3[3] - 209));
         break;
-      case -145:
-        [f8WMTr.bWf0aOE.e8CZj52, f8WMTr.bWf0aOE.C79EfWD] = [1, -182];
-        f8WMTr.bWf0aOE.oeLdZO = function (...adiqy2) {
-          return Eeo68G(
-            [-534, 107, 125, 156],
+      case 228:
+      case 225:
+      case 200:
+        ((lAzK_Z3[0] += lAzK_Z3[1] - 291),
+          (lAzK_Z3[3] += lAzK_Z3[1] - -270),
+          (lAzK_Z3[4] += lAzK_Z3[3] - 29));
+        break;
+      case lAzK_Z3[0] != 482 && lAzK_Z3[0] - 549:
+        ((lAzK_Z3[0] += lAzK_Z3[1] - 495),
+          (lAzK_Z3[2] += lAzK_Z3[3] - 82),
+          (lAzK_Z3[3] += lAzK_Z3[0] - 62),
+          (lAzK_Z3[4] += lAzK_Z3[0] - -211));
+        break;
+      case lAzK_Z3[2] - 241:
+        [QLZkcjn.WeQM9V.pPVZkr, QLZkcjn.WeQM9V.UsgNxl] = [90, 45];
+        ((lAzK_Z3[0] += lAzK_Z3[3] - 270),
+          (lAzK_Z3[1] += lAzK_Z3[4] - -708),
+          (lAzK_Z3[2] += lAzK_Z3[3] - 211),
+          (lAzK_Z3[3] += lAzK_Z3[0] - -330),
+          (lAzK_Z3[4] += lAzK_Z3[2] - -504));
+        break;
+      case lAzK_Z3[1] - -94:
+      case -35:
+        [QLZkcjn.WeQM9V.pPVZkr, QLZkcjn.WeQM9V.UsgNxl] = [-83, -221];
+        QLZkcjn.WeQM9V.OEKszZJ = function (...lAzK_Z3) {
+          return rnH2egO(
+            [134, -57, -14, -34, -215],
             {
-              bWf0aOE: f8WMTr.bWf0aOE,
-              tjfsmM: {},
+              WeQM9V: QLZkcjn.WeQM9V,
+              WUB7D4: {},
             },
-            o6s6eJ5,
-            adiqy2,
+            jBNuA9v,
+            lAzK_Z3,
           );
         };
-        f8WMTr.bWf0aOE.vHVR35 = adiqy2[2] + 29;
-        return (1, f8WMTr.bWf0aOE.oeLdZO)(f8WMTr.bWf0aOE.vHVR35);
-      case 23:
-      case -203:
-      case adiqy2[3] - -48:
-        [f8WMTr.bWf0aOE.e8CZj52, f8WMTr.bWf0aOE.C79EfWD] = [205, 197];
-      case -62:
-        ((adiqy2[0] += adiqy2[1] - -278),
-          (adiqy2[1] += adiqy2[2] - 299),
-          (adiqy2[2] += adiqy2[0] - 246),
-          (adiqy2[3] += adiqy2[1] - 334));
-        break;
-      case 78:
-      case adiqy2[0] - -540:
-      case -41:
-        ((adiqy2[0] += adiqy2[1] - -278),
-          (adiqy2[1] += adiqy2[2] - 299),
-          (adiqy2[2] += adiqy2[1] - 579),
-          (adiqy2[3] += adiqy2[1] - 402));
-        break;
+        QLZkcjn.WeQM9V.t3XEjET = lAzK_Z3[3] + -320;
+        return (1, QLZkcjn.WeQM9V.OEKszZJ)(QLZkcjn.WeQM9V.t3XEjET);
     }
 }
-Eeo68G([-149, 184, -19, -161]);
+rnH2egO([106, 91, -143, 330, -199]);
 ```
 
 ---
 
 
-
-### Requires Non-Strict Mode
-
-Control Flow Flattening requires non-strict mode to work. This is because the `with` statement is used to conceal local scope variables.
-
-- It is recommended to enable the [Pack](./pack) option when using Control Flow Flattening.
 
 ### Control Flow Flattening Process
 
